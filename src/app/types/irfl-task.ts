@@ -8,10 +8,10 @@ export class IRFLTask implements Jsonable {
     phrase: string;
     numOfSolution: number;
 
-    constructor(candidates: Candidate[], cue: string = '', numOfSolution: number = 0, id = '') {
+    constructor(candidates: Candidate[], phrase: string = '', numOfSolution: number = 0, id = '') {
         this.id = id;
         this.candidates = candidates;
-        this.phrase = cue;
+        this.phrase = phrase;
         this.numOfSolution = numOfSolution;
     }
 

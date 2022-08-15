@@ -133,9 +133,10 @@ export class ServerRequestService {
     }
 
     getLeaderboard(): Observable<UserStats[]> {
-        const url = `https://gvlab-backend.herokuapp.com/leaderboard`
-        return this.httpService.get<any>(url).pipe(map((leaderboard: any[]) => {
-            return leaderboard.map(((serverUserDetails, index) => new UserStats(index+1, serverUserDetails?.player_username, serverUserDetails['fool-the-ai'], serverUserDetails['solvable-by-humans'], serverUserDetails['solving-existing-associations'])));
-        }));
+        // const url = `https://gvlab-backend.herokuapp.com/leaderboard`
+        // return this.httpService.get<any>(url).pipe(map((leaderboard: any[]) => {
+        //     return leaderboard.map(((serverUserDetails, index) => new UserStats(index+1, serverUserDetails?.player_username, serverUserDetails['fool-the-ai'], serverUserDetails['solvable-by-humans'], serverUserDetails['solving-existing-associations'])));
+        // }));
+        return of([])
     }
 }

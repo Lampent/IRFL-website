@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {MainComponent} from './pages/main/main.component';
 import {DownloadComponent} from './pages/download/download.component';
-import {IRFLTaskComponent} from './pages/beat-the-ai/beat-the-ai.component';
+import {ExploreComponent} from './pages/explore/explore.component';
 import {MturkSolveComponent} from './pages/mturk-irfl-task/mturk-solve.component';
 import {LeaderboardComponent} from './pages/leaderboard/leaderboard.component';
 
@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: '*', component: MainComponent},
   { path: 'main', component: MainComponent },
   { path: 'download', component: DownloadComponent },
-  { path: IRFLTaskPath, component: IRFLTaskComponent },
+  { path: 'explore', component: ExploreComponent },
   { path: leaderboard, component: LeaderboardComponent },
   { path: 'mturk/solve/:id', component: MturkSolveComponent },
   { path: solveCratePath, component: MturkSolveComponent }

@@ -74,7 +74,6 @@
                 <li class="nav-item">
                     <a
                             class="nav-link"
-                            href="https://arxiv.org/pdf/2207.12576.pdf"
                     >
                         Paper
                     </a>
@@ -88,17 +87,6 @@
                             [routerLink]="['/explore']"
                     >
                         Explore
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a
-                            [style]="{'color': selectedTab === 'beat-the-ai' ? '#fd969e !important' : ''}"
-                            class="nav-link"
-                            href="javascript:void(0)"
-                            (click)="click.emit('beat-the-ai')"
-                            [routerLink]="['/challenge-the-ai']"
-                    >
-                        Challenge the AI
                     </a>
                 </li>
                 <li class="nav-item">

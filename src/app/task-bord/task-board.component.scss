@@ -16,7 +16,7 @@
     visibility: hidden !important;
 }
 
-@media (max-width: 610px) {
+@media (max-width: 835px) {
   .top-board {
     display: flex;
     flex-direction: column;
@@ -54,8 +54,15 @@
   flex-direction: column;
 }
 
+.cue-board {
+  width: 600px;
+}
+
+.associations-board {
+  width: 200px;
+}
+
 .associations-board, .cue-board {
-  width: 310px;
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -63,7 +70,7 @@
 }
 
 .example-full-width {
-  width: 280px;
+  width: 95%;
 }
 
 ::ng-deep .mat-form-field-flex {
@@ -145,7 +152,7 @@ input {
 }
 
 input, .bold-text {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: black;
   font-weight: bold;
 }

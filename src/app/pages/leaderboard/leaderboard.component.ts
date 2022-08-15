@@ -14,53 +14,53 @@ export class LeaderboardComponent implements OnInit {
   models = [
       {
           name: 'Humans',
-          '10&12': '90',
-          '5&6': '92',
-          '5&6SWOW': '95'
+          cat_1: '90',
+          cat_2: '92',
+          cat_3: '95'
       },
       {
         name: 'CLIP-RN50x64/14',
-        '10&12': '38',
-        '5&6': '50',
-        '5&6SWOW': '70'
+        cat_1: '38',
+        cat_2: '50',
+        cat_3: '70'
       },
       {
           name: 'CLIP-VIT-L/14',
-          '10&12': '40',
-          '5&6': '53',
-          '5&6SWOW': '74'
+          cat_1: '40',
+          cat_2: '53',
+          cat_3: '74'
       },
       {
           name: 'CLIP-VIT-B/32',
-          '10&12': '41',
-          '5&6': '53',
-          '5&6SWOW': '74'
+          cat_1: '41',
+          cat_2: '53',
+          cat_3: '74'
       },
       {
           name: 'CLIP-RN50',
-          '10&12': '35',
-          '5&6': '50',
-          '5&6SWOW': '73'
+          cat_1: '35',
+          cat_2: '50',
+          cat_3: '73'
       },
       {
           name: 'CLIP-VIL',
-          '10&12': '15',
-          '5&6': '47',
-          '5&6SWOW': '66'
+          cat_1: '15',
+          cat_2: '47',
+          cat_3: '66'
       },
       {
           name: 'ViLT',
-          '10&12': '52',
-          '5&6': '55',
-          '5&6SWOW': '59'
+          cat_1: '52',
+          cat_2: '55',
+          cat_3: '59'
       },
       {
           name: 'X-VLM',
-          '10&12': '46',
-          '5&6': '53',
-          '5&6SWOW': '68'
+          cat_1: '46',
+          cat_2: '53',
+          cat_3: '68'
       }
-  ].sort((a,b) => Number(b['10&12']) - Number(a['10&12']))
+  ].sort((a,b) => Number(b.cat_1) - Number(a.cat_1))
 
   constructor(private leaderboardService: LeaderboardService) {
     this.leaderboard$ = this.leaderboardService.leaderboard;

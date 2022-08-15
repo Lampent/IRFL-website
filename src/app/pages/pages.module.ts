@@ -20,7 +20,7 @@ import { PopoverModule } from 'ngx-bootstrap/popover';
 import { MainComponent } from './main/main.component';
 import {TaskBoardComponent} from '../task-bord/task-board.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { IRFLTaskComponent } from './beat-the-ai/beat-the-ai.component';
+import { ExploreComponent } from './explore/explore.component';
 import { DownloadComponent } from './download/download.component';
 import {MatInputModule} from '@angular/material/input';
 import { MturkSolveComponent } from './mturk-irfl-task/mturk-solve.component';
@@ -41,8 +41,8 @@ import {ChartModule} from 'primeng/chart';
 import {AccordionModule} from 'primeng/accordion';
 
 const routes: Routes = [
-  { path: IRFLTaskPath, component: IRFLTaskComponent },
-  // { path: beatTheAIGame, component: BeatTheAiGameComponent, canActivate: [AuthGuard] },
+  { path: IRFLTaskPath, component: ExploreComponent },
+  { path: 'explore', component: ExploreComponent},
   { path: leaderboard, component: LeaderboardComponent },
   { path: 'download', component: DownloadComponent },
   { path: 'mturk/solve/:id', component: MturkSolveComponent },
@@ -85,7 +85,7 @@ const routes: Routes = [
     MainComponent,
     NavbarComponent,
     TaskBoardComponent,
-    IRFLTaskComponent,
+    ExploreComponent,
     DownloadComponent,
     MturkSolveComponent,
     PersonalDetailsFormComponent,

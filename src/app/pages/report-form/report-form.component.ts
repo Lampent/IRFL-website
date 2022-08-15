@@ -12,7 +12,7 @@ export class ReportFormComponent implements OnInit {
   @Input() skipPersonalDetails: boolean = false;
   @Output() submit$: EventEmitter<{reason: string, details: string}> = new EventEmitter<{reason: string, details: string}>()
   @Output() close$: EventEmitter<void> = new EventEmitter<void>()
-  ages: matOptions[] = [{ value: 'inappropriateImage', viewValue: 'Inappropriate Image'}, { value: 'missingImage', viewValue: 'Missing Image'},
+  reportReasons: matOptions[] = [{ value: 'inappropriateImage', viewValue: 'Inappropriate Image'}, { value: 'missingImage', viewValue: 'Missing Image'},
     { value: 'inappropriateCue', viewValue: 'Inappropriate Cue'}, { value: 'other', viewValue: 'Other'}]
   personalDetailsForm: FormGroup;
   instructionsOk = false;
