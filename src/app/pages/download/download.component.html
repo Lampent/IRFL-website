@@ -1,0 +1,127 @@
+<app-navbar></app-navbar>
+<div class="wrapper">
+    <div class="page-header header-filter">
+
+        <div class="container center-container">
+
+            <div class="content-center brand">
+                <div class="row">
+                    <div class="col-md-10 ml-auto col-xl-6 mr-auto">
+                        <div class="card">
+                            <div class="card-header">
+                                <tabset class="nav-tabs-danger">
+                                    <tab heading="Game 10-12">
+                                        <b>Current dataset version:</b> v1.0 (released in June 2022)<br>
+                                        This CSV contains the dataset for the data collected with WinoGAViLE game, 10-12 candidates. <br><br>
+                                        <a href="https://github.com/WinoGAViL/WinoGAViL-experiments/blob/main/assets/game_10_12.csv">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license. The csv records are structured as follows:
+                                        <div class="highlight">
+                                            <code [style.color]="'black'">
+                                                candidates:       ["flood", "pancreas", "island", "godfather", "shower", "camera", "darts", "reporter", "blender", "airplane", "drool", "ark"]  #list of image candidates<br>
+                                                cue:                                                           water  #the generated cue<br>
+                                                associations:                                ["flood", "island", "shower"]  #the images associated with the cue selected by the user<br>
+                                                score_fool_the_ai:                                                      50  # the spymaster score (100 - model score) for fooling the AI, with CLIP RN50 model<br>
+                                                num_associations:                                                        3  # the number of associations<br>
+                                                num_candidates:                                                         12  # the number of candidates<br>
+                                                solvers_jaccard_mean:                                                  1.0  # three solvers scores average on the generated association instance<br>
+                                                solvers_jaccard_std:                                                   0.0  # three solvers scores standard deviation on the generated association instance<br>
+                                                ID:                                                                     10  # the ID<br>
+                                            </code>
+                                        </div>
+                                        <br>
+                                        <b>Note:</b> We do not distribute image files as we do not legally own them. The annotation files contain image URLs.<br>
+                                        <b>Usage Restrictions:</b> WinoGAViL should only be used for non-commercial research.
+                                    </tab>
+                                    <tab heading="Game 5-6">
+                                        <b>Current dataset version:</b> v1.0 (released in June 2022)<br>
+                                        This CSV contains the dataset for the data collected with WinoGAViLE game, 5-6 candidates.<br><br>
+                                        <a href="https://github.com/WinoGAViL/WinoGAViL-experiments/blob/main/assets/game_5_6.csv">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license. The csv records are structured as follows:
+                                        <div class="highlight">
+                                            <code [style.color]="'black'">
+                                                candidates:       ["bison", "shelter", "beard", "flea", "cattle", "shave"]  #list of image candidates<br>
+                                                cue:                                                           pogonophile  #the generated cue<br>
+                                                associations:                                  ["bison", "beard", "shave"]  #the images associated with the cue selected by the user<br>
+                                                score_fool_the_ai:                                                      80  # the spymaster score (100 - model score) for fooling the AI, with CLIP RN50 model<br>
+                                                num_associations:                                                        3  # the number of associations<br>
+                                                num_candidates:                                                          6  # the number of candidates<br>
+                                                solvers_jaccard_mean:                                                  1.0  # three solvers scores average on the generated association instance<br>
+                                                solvers_jaccard_std:                                                   0.0  # three solvers scores standard deviation on the generated association instance<br>
+                                                ID:                                                                    367  # the ID<br>
+                                            </code>
+                                        </div>
+                                        <br>
+                                        <b>Note:</b> We do not distribute image files as we do not legally own them. The annotation files contain image URLs.<br>
+                                        <b>Usage Restrictions:</b> WinoGAViL should only be used for non-commercial research.
+                                    </tab>
+                                    <tab heading="SWOW Vision Baseline">
+                                        <b>Current dataset version:</b> v1.0 (released in June 2022)<br>
+                                        This CSV contains the SWOW vision baseline dataset, with 5-6 candidates.<br><br>
+                                        <a href="https://github.com/WinoGAViL/WinoGAViL-experiments/blob/main/assets/swow.csv">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"> </i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license. The csv records are structured as follows:
+                                        <div class="highlight">
+                                            <code [style.color]="'black'">
+                                                candidates:       ["twins", "ice", "rhino", "car", "seaweed", "loo"]  #list of image candidates<br>
+                                                cue:                                                           horn  #the generated cue<br>
+                                                associations:                                  ["car", "rhino"]  #the images associated with the cue selected by the user<br>
+                                                num_associations:                                                        2  # the number of associations<br>
+                                                num_candidates:                                                          6  # the number of candidates<br>
+                                                solvers_jaccard_mean:                                                  1.0  # three solvers scores average on the generated association instance<br>
+                                                solvers_jaccard_std:                                                   0.0  # three solvers scores standard deviation on the generated association instance<br>
+                                                ID:                                                                    1767  # the ID<br>
+                                            </code>
+                                        </div>
+                                        <br>
+                                        <b>Note:</b> We do not distribute image files as we do not legally own them. The annotation files contain image URLs.<br>
+                                        <b>Usage Restrictions:</b> WinoGAViL should only be used for non-commercial research.
+                                    </tab>
+                                    <tab heading="Association Types Analysis">
+                                        <b>Current dataset version:</b> v1.0 (released in June 2022)<br>
+                                        This CSV contains the model analysis on different associations types.<br><br>
+                                        <a href="https://github.com/WinoGAViL/WinoGAViL-experiments/blob/main/assets/model_analysis_on_different_association_types.csv">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"> </i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license. The csv records are structured as follows:
+                                        <div class="highlight">
+                                            <code [style.color]="'black'">
+                                                candidates:       ["tea", "marshmallow", "pile", "splinter", "relic", "rose", "product", "heater", "hanger", "children", "furniture", "heroin"]  #list of image candidates<br>
+                                                cue:                                                           thorn  #the generated cue<br>
+                                                associations:                                ["splinter", "rose"]  #the images associated with the cue selected by the user<br>
+                                                score_fool_the_ai:                                                      67  # the spymaster score (100 - model score) for fooling the AI, with CLIP RN50 model<br>
+                                                num_associations:                                                        2  # the number of associations<br>
+                                                num_candidates:                                                         12  # the number of candidates<br>
+                                                annotations_label:  {{ "{" }}"rose": "Non Visual, Concept Related", "splinter": "Visually Non-Salient"{{ "}" }} # a labeled category for each of the associations, one of 7 categories (full list in the published paper) <br>
+                                                clip_vit32_predictions:                                 ["rose", "hanger"]  # the CLIP ViT32 predictions for the given association instance (top k predictions)<br>
+                                                solvers_jaccard_mean:                                                  1.0  # three solvers scores average on the generated association instance<br>
+                                                solvers_jaccard_std:                                                   0.0  # three solvers scores standard deviation on the generated association instance<br>
+                                                ID:                                                                      0  # the ID<br>
+                                            </code>
+                                        </div>
+                                        <br>
+                                        <b>Note:</b> We do not distribute image files as we do not legally own them. The annotation files contain image URLs.<br>
+                                        <b>Usage Restrictions:</b> WinoGAViL should only be used for non-commercial research.
+                                    </tab>
+                                </tabset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <a>Maintained by Ron Yosef</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+

@@ -1,0 +1,2356 @@
+{
+  "definition": "hot",
+  "definition_source": "PLM",
+  "event": "was",
+  "figurative_type": "simile",
+  "prompt": "as hot as lava",
+  "property": "hot",
+  "search_query": [
+    {
+      "length_score": 14,
+      "model": "ROBERTA",
+      "model_score": 14.329692840576172,
+      "model_score_avg": 13.13664960861206,
+      "model_score_std": 0.47570331564708634,
+      "num_search_results": 20,
+      "perplexity_score": 0.4384846346718924,
+      "query": "Very hot water",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "48758462661407682811677801642826058708246988589237312197285868825462275597989",
+          "property_ViLT_score": -4.84745454788208,
+          "query_ViLT_score": 0.68122798204422,
+          "query_vehicle_ViLT_score": 0.785379946231842,
+          "rank": 1,
+          "simile_ViLT_score": -1.5571017265319824,
+          "simile_vehicle_ViLT_score": -4.551580905914307
+        },
+        {
+          "filter_ocr": false,
+          "name": "42296693091394815054917610259836479040941386754407120990935266369783344621890",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "107864531400874436222854828538010669299958065434167114197683263540188800172697",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "69739718386072496090629745466417404814125769268375504704589589870696369532228",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "111433947097429163133598669645034473494610703907275740764265431347020604997660",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "14682498988491571678774647824311321414007232217500847563906493002312014716485",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "71271602519063341482668070558777817827367556681372739661647271722008517375869",
+          "property_ViLT_score": 0.9290135502815247,
+          "query_ViLT_score": 6.033353805541992,
+          "query_vehicle_ViLT_score": 3.6410558223724365,
+          "rank": 2,
+          "simile_ViLT_score": 6.907637596130371,
+          "simile_vehicle_ViLT_score": 3.3920252323150635
+        },
+        {
+          "filter_ocr": false,
+          "name": "14401954257475068010509899997985008293995524045095252065132408868445948363794",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "6876187171548571565806131223642241906986547858831549591260485547343813058809",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "55505069989143474384645140199209123870679163458577366528935953102136742944423",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "46120743537628111637996957960938724917961079402218404535061380729334742720499",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "9569263089441260545214035662473829152329924017075184321579273221731561159942",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "54440109886271607854305049656117812897907493622030557506327970254091065796409",
+          "property_ViLT_score": -10.773262977600098,
+          "query_ViLT_score": 4.396074295043945,
+          "query_vehicle_ViLT_score": 2.064427614212036,
+          "simile_ViLT_score": 3.851290225982666,
+          "simile_vehicle_ViLT_score": 2.7700035572052
+        },
+        {
+          "filter_ocr": true,
+          "name": "62625891040832246122365518950431821865338026492146934255191850473548079530040",
+          "property_ViLT_score": -3.6139767169952393,
+          "query_ViLT_score": 2.2773849964141846,
+          "query_vehicle_ViLT_score": -1.031090259552002,
+          "rank": 3,
+          "simile_ViLT_score": 2.6404643058776855,
+          "simile_vehicle_ViLT_score": -1.3124704360961914
+        },
+        {
+          "filter_ocr": false,
+          "name": "40447153795487845559070549413217013535341740545393703834444037698452882565262",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "69004400238215606871392741055067878273814582362864145632574115919965083919478",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "53931749500555794879069884040435657606587127333287967732757768019938288092560",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "55057256284836557051448041171667766044008916298922501087813007382803734682470",
+          "property_ViLT_score": -6.961996555328369,
+          "query_ViLT_score": -0.4652271568775177,
+          "query_vehicle_ViLT_score": -0.42563942074775696,
+          "simile_ViLT_score": 2.824281692504883,
+          "simile_vehicle_ViLT_score": 2.5610580444335938
+        },
+        {
+          "filter_ocr": false,
+          "name": "62342169094676490795088018255694862694442916226149368128465254374261000126849",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "28889673003879943631408085858673923605700695904604299804705700646276473986110",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        }
+      ],
+      "vehicle": "water"
+    },
+    {
+      "length_score": 16,
+      "model": "ROBERTA",
+      "model_score": 13.378089904785156,
+      "model_score_avg": 13.13664960861206,
+      "model_score_std": 0.47570331564708634,
+      "num_search_results": 20,
+      "perplexity_score": 0.6145597696304321,
+      "query": "Very hot volcano",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "109313242207815087412903786640955837145910350417850963647734788651108470860045",
+          "property_ViLT_score": -2.385481595993042,
+          "query_ViLT_score": 5.894796371459961,
+          "query_vehicle_ViLT_score": 4.439350128173828,
+          "simile_ViLT_score": 5.867491245269775,
+          "simile_vehicle_ViLT_score": 5.12074613571167
+        },
+        {
+          "filter_ocr": true,
+          "name": "14979798862996988259160955946281943665533533362225275086580952918286196916408",
+          "property_ViLT_score": -5.415373802185059,
+          "query_ViLT_score": 4.209625244140625,
+          "query_vehicle_ViLT_score": 2.806107997894287,
+          "simile_ViLT_score": 2.247976541519165,
+          "simile_vehicle_ViLT_score": 1.6726175546646118
+        },
+        {
+          "filter_ocr": true,
+          "name": "114603130165695966773504307180511351914571891361467016059836572107947013374154",
+          "property_ViLT_score": -7.240340232849121,
+          "query_ViLT_score": 3.94037127494812,
+          "query_vehicle_ViLT_score": 1.6060843467712402,
+          "simile_ViLT_score": 6.364503383636475,
+          "simile_vehicle_ViLT_score": 6.213993549346924
+        },
+        {
+          "filter_ocr": true,
+          "name": "56379322785155237779907724096357580111543790231701398891438390546809915841786",
+          "property_ViLT_score": -5.782677173614502,
+          "query_ViLT_score": 3.8911118507385254,
+          "query_vehicle_ViLT_score": 1.6546342372894287,
+          "simile_ViLT_score": 3.965557336807251,
+          "simile_vehicle_ViLT_score": 2.58292293548584
+        },
+        {
+          "filter_ocr": false,
+          "name": "29522353299553354269510045897515322935934658325027539105489262705895787320880",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "103203250003066260288909360456531541591329097185525947584039413239339737230348",
+          "property_ViLT_score": -5.140206336975098,
+          "query_ViLT_score": -1.2697612047195435,
+          "query_vehicle_ViLT_score": -1.966355323791504,
+          "simile_ViLT_score": 3.534876585006714,
+          "simile_vehicle_ViLT_score": 3.7713887691497803
+        },
+        {
+          "filter_ocr": true,
+          "name": "64008084584408602702009652532482885381402159412150162412945170399478944537816",
+          "property_ViLT_score": -9.037222862243652,
+          "query_ViLT_score": -2.991309404373169,
+          "query_vehicle_ViLT_score": -2.5852320194244385,
+          "simile_ViLT_score": 2.2036423683166504,
+          "simile_vehicle_ViLT_score": 2.9679195880889893
+        },
+        {
+          "filter_ocr": true,
+          "name": "9025102437367872493329277249925715207240212797750253697759469731568888573514",
+          "property_ViLT_score": -8.352851867675781,
+          "query_ViLT_score": 1.2296279668807983,
+          "query_vehicle_ViLT_score": -1.0457682609558105,
+          "simile_ViLT_score": 3.533398151397705,
+          "simile_vehicle_ViLT_score": 1.9738266468048096
+        },
+        {
+          "filter_ocr": true,
+          "name": "46033629660464090794440096748168742766655880342519668474160910349942975181216",
+          "property_ViLT_score": -3.876199722290039,
+          "query_ViLT_score": 2.5132694244384766,
+          "query_vehicle_ViLT_score": -0.1774100661277771,
+          "simile_ViLT_score": 4.646022796630859,
+          "simile_vehicle_ViLT_score": 4.107614517211914
+        },
+        {
+          "filter_ocr": true,
+          "name": "111682504590941859168164270000283156201637276883122983692137906350512953982013",
+          "property_ViLT_score": -4.6556010246276855,
+          "query_ViLT_score": -6.8832597732543945,
+          "query_vehicle_ViLT_score": -10.601715087890625,
+          "simile_ViLT_score": 3.5059289932250977,
+          "simile_vehicle_ViLT_score": 1.5484980344772339
+        },
+        {
+          "filter_ocr": true,
+          "name": "113643394515026043661369903217042551243925003106642544739559349356832530075033",
+          "property_ViLT_score": -4.9168829917907715,
+          "query_ViLT_score": 3.8901031017303467,
+          "query_vehicle_ViLT_score": 1.964212417602539,
+          "simile_ViLT_score": 5.743953704833984,
+          "simile_vehicle_ViLT_score": 5.214791297912598
+        },
+        {
+          "filter_ocr": true,
+          "name": "106586014066719828203461868645335689773826018051000771143452310995377459197713",
+          "property_ViLT_score": -4.576044082641602,
+          "query_ViLT_score": 8.01007080078125,
+          "query_vehicle_ViLT_score": 6.80463981628418,
+          "rank": 2,
+          "simile_ViLT_score": 2.998893976211548,
+          "simile_vehicle_ViLT_score": 2.2651760578155518
+        },
+        {
+          "filter_ocr": true,
+          "name": "28504803049779877146625335727044109449543773483590869584674953607047214043408",
+          "property_ViLT_score": -1.676382064819336,
+          "query_ViLT_score": -0.9798232913017273,
+          "query_vehicle_ViLT_score": -5.825830459594727,
+          "simile_ViLT_score": 5.5891923904418945,
+          "simile_vehicle_ViLT_score": 5.052734375
+        },
+        {
+          "filter_ocr": true,
+          "name": "89686988113700214133002904118546854780285780718090315839124393762337402098175",
+          "property_ViLT_score": -4.097136974334717,
+          "query_ViLT_score": 6.006558418273926,
+          "query_vehicle_ViLT_score": 4.781949043273926,
+          "simile_ViLT_score": 4.624757766723633,
+          "simile_vehicle_ViLT_score": 4.268885612487793
+        },
+        {
+          "filter_ocr": true,
+          "name": "22392322150515038164367811612587001804316549217798897524325459492483179101267",
+          "property_ViLT_score": -5.230702877044678,
+          "query_ViLT_score": -2.7305803298950195,
+          "query_vehicle_ViLT_score": -7.408772945404053,
+          "simile_ViLT_score": 8.377654075622559,
+          "simile_vehicle_ViLT_score": 8.299515724182129
+        },
+        {
+          "filter_ocr": true,
+          "name": "33758486260776275581898292750654301371605963422386043682655975535250490845254",
+          "property_ViLT_score": -1.5199567079544067,
+          "query_ViLT_score": 2.084179162979126,
+          "query_vehicle_ViLT_score": -1.705348014831543,
+          "simile_ViLT_score": 7.402751922607422,
+          "simile_vehicle_ViLT_score": 7.105236530303955
+        },
+        {
+          "filter_ocr": true,
+          "name": "51698936782578313583767399439564396182609609911376865357293013972809789556579",
+          "property_ViLT_score": -5.746671199798584,
+          "query_ViLT_score": 6.330176830291748,
+          "query_vehicle_ViLT_score": 5.0493621826171875,
+          "rank": 1,
+          "simile_ViLT_score": 1.1041855812072754,
+          "simile_vehicle_ViLT_score": -2.2922565937042236
+        },
+        {
+          "filter_ocr": true,
+          "name": "56271056965470047059203995657725538628990004432244426155835299575915185397556",
+          "property_ViLT_score": -5.7228684425354,
+          "query_ViLT_score": 1.6733843088150024,
+          "query_vehicle_ViLT_score": 0.8188337087631226,
+          "simile_ViLT_score": 4.785800457000732,
+          "simile_vehicle_ViLT_score": 4.539278030395508
+        },
+        {
+          "filter_ocr": true,
+          "name": "91659417521056316321399705911681733073335031337456098319823643261276022184610",
+          "property_ViLT_score": -8.4539155960083,
+          "query_ViLT_score": -0.5592504739761353,
+          "query_vehicle_ViLT_score": -1.8038756847381592,
+          "simile_ViLT_score": -1.4152326583862305,
+          "simile_vehicle_ViLT_score": -0.20599894225597382
+        },
+        {
+          "filter_ocr": true,
+          "name": "112051787447556693542805470015330075226403151375726220267667208579794164715069",
+          "property_ViLT_score": -3.6437528133392334,
+          "query_ViLT_score": 5.631847858428955,
+          "query_vehicle_ViLT_score": 2.7798943519592285,
+          "rank": 3,
+          "simile_ViLT_score": 4.4736528396606445,
+          "simile_vehicle_ViLT_score": 1.2853782176971436
+        }
+      ],
+      "vehicle": "volcano"
+    },
+    {
+      "length_score": 12,
+      "model": "ROBERTA",
+      "model_score": 13.32475471496582,
+      "model_score_avg": 13.13664960861206,
+      "model_score_std": 0.47570331564708634,
+      "num_search_results": 20,
+      "perplexity_score": 0.5940916140874227,
+      "query": "Very hot sun",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "62792381001452489157664195317869714958941457224521559607129664736691069529616",
+          "property_ViLT_score": -6.255047798156738,
+          "query_ViLT_score": 2.2489709854125977,
+          "query_vehicle_ViLT_score": 1.3533746004104614,
+          "simile_ViLT_score": 4.935378551483154,
+          "simile_vehicle_ViLT_score": 4.321861743927002
+        },
+        {
+          "filter_ocr": true,
+          "name": "57548404663896759678240922397055246129572035086866108890521837859371298690174",
+          "property_ViLT_score": -5.164297103881836,
+          "query_ViLT_score": 1.824289321899414,
+          "query_vehicle_ViLT_score": 1.08055579662323,
+          "simile_ViLT_score": 5.646899223327637,
+          "simile_vehicle_ViLT_score": 5.424835205078125
+        },
+        {
+          "filter_ocr": false,
+          "name": "17946272555831957254004361840922057292219686581129224891703531294545592848134",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "27475701601803191618013569091626106338219288665893606066759225283831466405210",
+          "property_ViLT_score": -7.71696138381958,
+          "query_ViLT_score": -2.637079954147339,
+          "query_vehicle_ViLT_score": -5.1777424812316895,
+          "simile_ViLT_score": -5.104310035705566,
+          "simile_vehicle_ViLT_score": -10.106244087219238
+        },
+        {
+          "filter_ocr": true,
+          "name": "110169525998970150732553236548480092771676604822705877594465543498215570758068",
+          "property_ViLT_score": -5.228711128234863,
+          "query_ViLT_score": 1.477588415145874,
+          "query_vehicle_ViLT_score": 2.661485433578491,
+          "simile_ViLT_score": 2.840696096420288,
+          "simile_vehicle_ViLT_score": 3.0245282649993896
+        },
+        {
+          "filter_ocr": true,
+          "name": "109977241663804836729957320361460297359376734389830913286417415958291471952104",
+          "property_ViLT_score": -4.875804424285889,
+          "query_ViLT_score": 6.573777675628662,
+          "query_vehicle_ViLT_score": 5.415717124938965,
+          "simile_ViLT_score": -0.9992075562477112,
+          "simile_vehicle_ViLT_score": -4.889323711395264
+        },
+        {
+          "filter_ocr": false,
+          "name": "93275477554176658818778786593076750560954113601975106383463330293174266275093",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "68527144164674401477365303822083365089430018677298021518087921607001548496859",
+          "property_ViLT_score": -9.514836311340332,
+          "query_ViLT_score": 1.6638340950012207,
+          "query_vehicle_ViLT_score": 1.5208858251571655,
+          "simile_ViLT_score": 2.4761710166931152,
+          "simile_vehicle_ViLT_score": 1.391352891921997
+        },
+        {
+          "filter_ocr": true,
+          "name": "33216155717227480823823369618783893211543017469917214681091335709593281830242",
+          "property_ViLT_score": -6.523409843444824,
+          "query_ViLT_score": 4.29458475112915,
+          "query_vehicle_ViLT_score": 3.199979305267334,
+          "simile_ViLT_score": 3.9177234172821045,
+          "simile_vehicle_ViLT_score": 3.0226263999938965
+        },
+        {
+          "filter_ocr": true,
+          "name": "4613331587853769626183207262508060936134911837865520388998385138111011889762",
+          "property_ViLT_score": -8.31340217590332,
+          "query_ViLT_score": 2.7138688564300537,
+          "query_vehicle_ViLT_score": 2.791579246520996,
+          "simile_ViLT_score": 0.8548951148986816,
+          "simile_vehicle_ViLT_score": 1.471467137336731
+        },
+        {
+          "filter_ocr": true,
+          "name": "20087570921943013858579830473792167983177533846551721675523166405580135595908",
+          "property_ViLT_score": -5.874111652374268,
+          "query_ViLT_score": 6.280745029449463,
+          "query_vehicle_ViLT_score": 6.508564472198486,
+          "simile_ViLT_score": 0.5169799327850342,
+          "simile_vehicle_ViLT_score": -0.3344601094722748
+        },
+        {
+          "filter_ocr": false,
+          "name": "4893294972693378920624491261734023481295395012883347441946599394948063740835",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "31665018128373372368369314824455369890875369090562861627301672834617870203427",
+          "property_ViLT_score": -5.943852424621582,
+          "query_ViLT_score": 4.387115478515625,
+          "query_vehicle_ViLT_score": 3.591869831085205,
+          "simile_ViLT_score": -3.745007038116455,
+          "simile_vehicle_ViLT_score": -8.350995063781738
+        },
+        {
+          "filter_ocr": true,
+          "name": "39839747503829763356856054507013900220507801227339935692242512226868179417391",
+          "property_ViLT_score": -4.132719039916992,
+          "query_ViLT_score": 2.8032190799713135,
+          "query_vehicle_ViLT_score": 1.4849153757095337,
+          "simile_ViLT_score": 4.844887733459473,
+          "simile_vehicle_ViLT_score": 4.328845977783203
+        },
+        {
+          "filter_ocr": true,
+          "name": "8138739718761057511473815809798911967334873183258829010719075504569660165104",
+          "property_ViLT_score": -7.23827600479126,
+          "query_ViLT_score": 8.265621185302734,
+          "query_vehicle_ViLT_score": 6.894968509674072,
+          "rank": 3,
+          "simile_ViLT_score": 0.36398762464523315,
+          "simile_vehicle_ViLT_score": -3.805359125137329
+        },
+        {
+          "filter_ocr": true,
+          "name": "48661489725462203762321861308292333401440046238000851654154522203606645911208",
+          "property_ViLT_score": -7.369690418243408,
+          "query_ViLT_score": 8.174225807189941,
+          "query_vehicle_ViLT_score": 7.870489120483398,
+          "rank": 2,
+          "simile_ViLT_score": -1.5579922199249268,
+          "simile_vehicle_ViLT_score": -4.076289653778076
+        },
+        {
+          "filter_ocr": false,
+          "name": "53388464597073383715794975869167695570729944622029585279008327583831410623603",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "92398976144501787735933468367337130555352910996749181623030470524661197384756",
+          "property_ViLT_score": -7.53965425491333,
+          "query_ViLT_score": 8.076417922973633,
+          "query_vehicle_ViLT_score": 7.9021830558776855,
+          "simile_ViLT_score": -1.0504835844039917,
+          "simile_vehicle_ViLT_score": -3.027435541152954
+        },
+        {
+          "filter_ocr": false,
+          "name": "99482534338688787407869601499506312228166797077049692863206853984378787780170",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "81765256991588447216096159190807890402408344183685024733322139240490793785510",
+          "property_ViLT_score": -7.179187297821045,
+          "query_ViLT_score": 8.932618141174316,
+          "query_vehicle_ViLT_score": 8.438024520874023,
+          "rank": 1,
+          "simile_ViLT_score": -2.6830251216888428,
+          "simile_vehicle_ViLT_score": -6.884697914123535
+        }
+      ],
+      "vehicle": "sun"
+    },
+    {
+      "length_score": 13,
+      "model": "ROBERTA",
+      "model_score": 13.130987167358398,
+      "model_score_avg": 13.13664960861206,
+      "model_score_std": 0.47570331564708634,
+      "num_search_results": 20,
+      "perplexity_score": 0.6479408557598407,
+      "query": "Very hot area",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "101967727647083613785934132699726847357434437918957636458482977656947280768888",
+          "property_ViLT_score": -5.623965740203857,
+          "query_ViLT_score": 2.266411542892456,
+          "query_vehicle_ViLT_score": 1.0965545177459717,
+          "rank": 3,
+          "simile_ViLT_score": 4.200835704803467,
+          "simile_vehicle_ViLT_score": 2.485116720199585
+        },
+        {
+          "filter_ocr": true,
+          "name": "98056022666140234206840480587781462188644338887865685260904023002550685562332",
+          "property_ViLT_score": -5.541048526763916,
+          "query_ViLT_score": 1.9656108617782593,
+          "query_vehicle_ViLT_score": 1.3738982677459717,
+          "rank": 2,
+          "simile_ViLT_score": -0.6069604754447937,
+          "simile_vehicle_ViLT_score": -2.524397134780884
+        },
+        {
+          "filter_ocr": true,
+          "name": "107742620785029841147576017686677977823931742038635673077422154063404038667400",
+          "property_ViLT_score": -5.7611799240112305,
+          "query_ViLT_score": 0.8818905353546143,
+          "query_vehicle_ViLT_score": 0.6113274097442627,
+          "simile_ViLT_score": -2.6032400131225586,
+          "simile_vehicle_ViLT_score": -4.266464710235596
+        },
+        {
+          "filter_ocr": true,
+          "name": "112671494200540274502702907421758554954828818917001423651914347710433344104497",
+          "property_ViLT_score": -8.114185333251953,
+          "query_ViLT_score": -1.050491452217102,
+          "query_vehicle_ViLT_score": -0.4463033080101013,
+          "simile_ViLT_score": -3.113332509994507,
+          "simile_vehicle_ViLT_score": -5.574131488800049
+        },
+        {
+          "filter_ocr": false,
+          "name": "104430772851907298637630137389465621932826480703986218225562995464122182738886",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "106429030303441729168839302223157444148842576423513990481225127001155224267151",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "75352469564650308743670322760964673530348201879869287129601958308793527949416",
+          "property_ViLT_score": -6.729288578033447,
+          "query_ViLT_score": -1.0709989070892334,
+          "query_vehicle_ViLT_score": -1.0112152099609375,
+          "simile_ViLT_score": -1.6177138090133667,
+          "simile_vehicle_ViLT_score": -8.053997039794922
+        },
+        {
+          "filter_ocr": false,
+          "name": "75953282283883326982055555976724770758085740661265450729537513025030398619965",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "61551698157017751713004222181095141027268152890900499189833509585505039631030",
+          "property_ViLT_score": -8.896750450134277,
+          "query_ViLT_score": -0.3501373529434204,
+          "query_vehicle_ViLT_score": -0.5661901235580444,
+          "simile_ViLT_score": 0.10542882233858109,
+          "simile_vehicle_ViLT_score": 0.933148205280304
+        },
+        {
+          "filter_ocr": false,
+          "name": "47258316066738903250802669607943008075378544306150966864674159924310701159771",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "28741409027445506484325063868036049188280978670626789686752933976025283675564",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "39962229670690932544087897617888398621135092772549227071468714155891589706068",
+          "property_ViLT_score": -8.70361042022705,
+          "query_ViLT_score": 0.6668134331703186,
+          "query_vehicle_ViLT_score": -0.7763515710830688,
+          "rank": 1,
+          "simile_ViLT_score": -8.037891387939453,
+          "simile_vehicle_ViLT_score": -10.766483306884766
+        },
+        {
+          "filter_ocr": true,
+          "name": "1904418786533966120695527072771329788359780441668122633577983974599975316842",
+          "property_ViLT_score": -7.9966254234313965,
+          "query_ViLT_score": 0.4546145498752594,
+          "query_vehicle_ViLT_score": 0.41358986496925354,
+          "simile_ViLT_score": -5.4929986000061035,
+          "simile_vehicle_ViLT_score": -5.244925498962402
+        },
+        {
+          "filter_ocr": true,
+          "name": "88163136902857581484817868367994818927600746192803777651636223060251718828128",
+          "property_ViLT_score": -7.607419490814209,
+          "query_ViLT_score": -1.0106134414672852,
+          "query_vehicle_ViLT_score": 0.3245536684989929,
+          "simile_ViLT_score": -6.820552349090576,
+          "simile_vehicle_ViLT_score": -7.002766132354736
+        },
+        {
+          "filter_ocr": true,
+          "name": "102260637313267189953779517528659003482429757094226273259261933429086021416840",
+          "property_ViLT_score": -3.3607919216156006,
+          "query_ViLT_score": -2.5726916790008545,
+          "query_vehicle_ViLT_score": -3.0874736309051514,
+          "simile_ViLT_score": 5.692037105560303,
+          "simile_vehicle_ViLT_score": 5.425477504730225
+        },
+        {
+          "filter_ocr": true,
+          "name": "53823695515710614311094439839526485539111101581768337358166399604604479521249",
+          "property_ViLT_score": -5.791612148284912,
+          "query_ViLT_score": 1.0557022094726562,
+          "query_vehicle_ViLT_score": 0.839161217212677,
+          "simile_ViLT_score": -2.5322258472442627,
+          "simile_vehicle_ViLT_score": -3.136664628982544
+        },
+        {
+          "filter_ocr": false,
+          "name": "101207496407061111279221145722931017341859042307216064212474415197489435641458",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "84481695941895716376417600281233934506838599248090993979799290084128016630331",
+          "property_ViLT_score": -6.229180335998535,
+          "query_ViLT_score": -2.5040574073791504,
+          "query_vehicle_ViLT_score": -1.386188268661499,
+          "simile_ViLT_score": -4.307673454284668,
+          "simile_vehicle_ViLT_score": -7.961752891540527
+        },
+        {
+          "filter_ocr": false,
+          "name": "34296178192020836790227796644779722965669646245522976325219321634427551831303",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "14211541842292837701331075926953893963992023714044245755168808270788666045299",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        }
+      ],
+      "vehicle": "area"
+    },
+    {
+      "length_score": 20,
+      "model": "ROBERTA",
+      "model_score": 13.040611267089844,
+      "model_score_avg": 13.13664960861206,
+      "model_score_std": 0.47570331564708634,
+      "num_search_results": 20,
+      "perplexity_score": 0.40281038284301757,
+      "query": "Very hot environment",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "95069060327142041523576275513355568229188816645573159526352159075407312046836",
+          "property_ViLT_score": -5.408475875854492,
+          "query_ViLT_score": -0.7904688119888306,
+          "query_vehicle_ViLT_score": -0.9341908097267151,
+          "simile_ViLT_score": -1.4072349071502686,
+          "simile_vehicle_ViLT_score": -3.9717371463775635
+        },
+        {
+          "filter_ocr": true,
+          "name": "112671494200540274502702907421758554954828818917001423651914347710433344104497",
+          "property_ViLT_score": -8.114612579345703,
+          "query_ViLT_score": -0.2015700787305832,
+          "query_vehicle_ViLT_score": -1.0074670314788818,
+          "simile_ViLT_score": -3.1124885082244873,
+          "simile_vehicle_ViLT_score": -5.574594020843506
+        },
+        {
+          "filter_ocr": true,
+          "name": "56630582892168866057811249470842251286571382602389154570958233512317860741033",
+          "property_ViLT_score": -7.850432395935059,
+          "query_ViLT_score": -1.5603443384170532,
+          "query_vehicle_ViLT_score": -0.6663286685943604,
+          "simile_ViLT_score": -4.319589614868164,
+          "simile_vehicle_ViLT_score": -4.273920059204102
+        },
+        {
+          "filter_ocr": true,
+          "name": "90478347418454835436824442237825820664342583205157290418807496593704170075014",
+          "property_ViLT_score": -6.602456569671631,
+          "query_ViLT_score": -1.0398064851760864,
+          "query_vehicle_ViLT_score": -1.1038235425949097,
+          "simile_ViLT_score": -1.6363458633422852,
+          "simile_vehicle_ViLT_score": -0.4240536391735077
+        },
+        {
+          "filter_ocr": false,
+          "name": "441400400391473593740528180950269805094549001893297944490838577626942101631",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "3921737412311488305670619702964808548932366765068431789976506359207727412634",
+          "property_ViLT_score": -7.848658084869385,
+          "query_ViLT_score": -2.441880702972412,
+          "query_vehicle_ViLT_score": -1.5556610822677612,
+          "simile_ViLT_score": -0.02585655450820923,
+          "simile_vehicle_ViLT_score": -2.4375267028808594
+        },
+        {
+          "filter_ocr": false,
+          "name": "70136119077841623801239758581971193385750222513471382564955388268900767485366",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "91236468116736138503920968756377131543216979160969539734890323616009410646980",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "56807369865436865082677167088365204827224759065757892936386512578904836092518",
+          "property_ViLT_score": -7.329975605010986,
+          "query_ViLT_score": -2.596858263015747,
+          "query_vehicle_ViLT_score": -3.030743360519409,
+          "simile_ViLT_score": -2.7847354412078857,
+          "simile_vehicle_ViLT_score": -3.0933308601379395
+        },
+        {
+          "filter_ocr": true,
+          "name": "114024797212883344086016679419361989167616851461457275919985015035663164272511",
+          "property_ViLT_score": -3.070357084274292,
+          "query_ViLT_score": -3.556436061859131,
+          "query_vehicle_ViLT_score": -0.9728636145591736,
+          "simile_ViLT_score": 0.5355737209320068,
+          "simile_vehicle_ViLT_score": -2.133807420730591
+        },
+        {
+          "filter_ocr": true,
+          "name": "54281450800951917517184389610792451139211624706301987862901185797126440462038",
+          "property_ViLT_score": -6.508089542388916,
+          "query_ViLT_score": -2.013289213180542,
+          "query_vehicle_ViLT_score": -0.9267065525054932,
+          "simile_ViLT_score": -4.472797393798828,
+          "simile_vehicle_ViLT_score": -4.85154914855957
+        },
+        {
+          "filter_ocr": true,
+          "name": "70410330554166071580843897651988198569040162937456798216119578921796545683468",
+          "property_ViLT_score": -6.497515678405762,
+          "query_ViLT_score": 1.4838443994522095,
+          "query_vehicle_ViLT_score": 0.36684268712997437,
+          "rank": 1,
+          "simile_ViLT_score": -3.97530198097229,
+          "simile_vehicle_ViLT_score": -6.178735256195068
+        },
+        {
+          "filter_ocr": true,
+          "name": "69755442410884056554327256679039407628845458767450768002296221872618517139740",
+          "property_ViLT_score": -4.145573616027832,
+          "query_ViLT_score": 0.18556886911392212,
+          "query_vehicle_ViLT_score": -1.2971570491790771,
+          "simile_ViLT_score": 0.30912137031555176,
+          "simile_vehicle_ViLT_score": -3.1789743900299072
+        },
+        {
+          "filter_ocr": false,
+          "name": "36462864569209103717571610131641706268547941401987873799117634713300990742112",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "77499436021617347115687582590593515858058336407758376733209974724512518598932",
+          "property_ViLT_score": -6.493241310119629,
+          "query_ViLT_score": -2.297774076461792,
+          "query_vehicle_ViLT_score": -2.5032339096069336,
+          "simile_ViLT_score": -2.7182085514068604,
+          "simile_vehicle_ViLT_score": -6.704302787780762
+        },
+        {
+          "filter_ocr": true,
+          "name": "1340535718646003693910235329026581667276930610078125610095164576948378505010",
+          "property_ViLT_score": -7.915502548217773,
+          "query_ViLT_score": -1.071897029876709,
+          "query_vehicle_ViLT_score": -1.1283931732177734,
+          "simile_ViLT_score": -1.3751426935195923,
+          "simile_vehicle_ViLT_score": -3.8881306648254395
+        },
+        {
+          "filter_ocr": true,
+          "name": "89684306050246171914793978271249125728452779491462017255997948485270878972640",
+          "property_ViLT_score": -6.905648708343506,
+          "query_ViLT_score": 1.9236574172973633,
+          "query_vehicle_ViLT_score": 0.4951433837413788,
+          "rank": 2,
+          "simile_ViLT_score": -0.6850501894950867,
+          "simile_vehicle_ViLT_score": -3.407883882522583
+        },
+        {
+          "filter_ocr": true,
+          "name": "19159575501028792358463306174273880440716007843194115497278319840437591472636",
+          "property_ViLT_score": 0.23506706953048706,
+          "query_ViLT_score": -0.07779470086097717,
+          "query_vehicle_ViLT_score": -3.19159197807312,
+          "simile_ViLT_score": 3.1285877227783203,
+          "simile_vehicle_ViLT_score": -5.380714416503906
+        },
+        {
+          "filter_ocr": false,
+          "name": "44707539167605605451478458128388076523133876051833493354584730629075731171918",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "104591304480369117105458118851110118261012695559934670713261133815842898808729",
+          "property_ViLT_score": -5.531687259674072,
+          "query_ViLT_score": -0.5388646125793457,
+          "query_vehicle_ViLT_score": -0.5391666293144226,
+          "rank": 3,
+          "simile_ViLT_score": -3.808222770690918,
+          "simile_vehicle_ViLT_score": -7.6221795082092285
+        }
+      ],
+      "vehicle": "environment"
+    },
+    {
+      "length_score": 13,
+      "model": "ROBERTA",
+      "model_score": 12.947542190551758,
+      "model_score_avg": 13.13664960861206,
+      "model_score_std": 0.47570331564708634,
+      "num_search_results": 20,
+      "perplexity_score": 0.6364151881291316,
+      "query": "Very hot rock",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "19574461561679389890800878188725773221827133360330461064119079911775306211046",
+          "property_ViLT_score": 0.18308749794960022,
+          "query_ViLT_score": -7.166141986846924,
+          "query_vehicle_ViLT_score": -11.121377944946289,
+          "simile_ViLT_score": 4.139249324798584,
+          "simile_vehicle_ViLT_score": -1.6526179313659668
+        },
+        {
+          "filter_ocr": true,
+          "name": "31315748175716140752880530567517798074147283431763564936774789398866216496649",
+          "property_ViLT_score": 0.5165051221847534,
+          "query_ViLT_score": 5.00037956237793,
+          "query_vehicle_ViLT_score": 3.1382246017456055,
+          "simile_ViLT_score": 5.442105293273926,
+          "simile_vehicle_ViLT_score": 3.6286447048187256
+        },
+        {
+          "filter_ocr": false,
+          "name": "78675118437261883210037490809567318266388504058921980366037337869808791329728",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "96014437826235697663145089773572526343301842813025443536321085798437725216771",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "69316166070834204016670698110817801722960840890327899783555361532544741199119",
+          "property_ViLT_score": -8.78548812866211,
+          "query_ViLT_score": 8.769858360290527,
+          "query_vehicle_ViLT_score": 9.509516716003418,
+          "rank": 1,
+          "simile_ViLT_score": -1.6415437459945679,
+          "simile_vehicle_ViLT_score": -3.06180739402771
+        },
+        {
+          "filter_ocr": true,
+          "name": "44100419579239660662425594808262273171690175803172273789576431176899092002628",
+          "property_ViLT_score": -4.465041160583496,
+          "query_ViLT_score": -2.326075315475464,
+          "query_vehicle_ViLT_score": -4.497747898101807,
+          "simile_ViLT_score": -2.2914085388183594,
+          "simile_vehicle_ViLT_score": -0.8778625130653381
+        },
+        {
+          "filter_ocr": false,
+          "name": "81090926268175888962788869299039582445187701897219279003264807757472575508790",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "47334641650942090875832491741210175687376952966699533574448119724571495095698",
+          "property_ViLT_score": -5.123559951782227,
+          "query_ViLT_score": 6.203218460083008,
+          "query_vehicle_ViLT_score": 5.707647800445557,
+          "rank": 3,
+          "simile_ViLT_score": 0.5263511538505554,
+          "simile_vehicle_ViLT_score": 0.8817353844642639
+        },
+        {
+          "filter_ocr": false,
+          "name": "51454333530189759131458127641092699563901404008940244964286940531898994797050",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "28288350245523086328356462053223144539033892034272043620633170207607927854251",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "96597303497005941955071819386707477482773737625450326098955512388158646705267",
+          "property_ViLT_score": -7.939237117767334,
+          "query_ViLT_score": 7.572911739349365,
+          "query_vehicle_ViLT_score": 7.992604732513428,
+          "rank": 2,
+          "simile_ViLT_score": -1.2328822612762451,
+          "simile_vehicle_ViLT_score": 0.8909069299697876
+        },
+        {
+          "filter_ocr": false,
+          "name": "111635138888933308809666933029230284549538222225052209565433835441044513358506",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "74915533255597921556424478377946936985001263828762263814806273712392541406397",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "69464598697940850135340255782800973097830063357730421069918447472704730339993",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "57182161384569687499163345870574977792147630660769827782326766852641119501193",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "93779567233809245370604967331939949775806317149380638694718846770891214291678",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "104129970991164798869647243700609168233347430933130742584239017567986510236088",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "67730785381596766769535363445236829623285827401916414861033989836648574924555",
+          "property_ViLT_score": -4.674060344696045,
+          "query_ViLT_score": -5.706892490386963,
+          "query_vehicle_ViLT_score": -10.24484920501709,
+          "simile_ViLT_score": -2.467211961746216,
+          "simile_vehicle_ViLT_score": -3.8603603839874268
+        },
+        {
+          "filter_ocr": true,
+          "name": "102018656331436565742347972147960645745159145896590025059789556352928202285036",
+          "property_ViLT_score": -5.495137691497803,
+          "query_ViLT_score": -7.607446193695068,
+          "query_vehicle_ViLT_score": -10.44614028930664,
+          "simile_ViLT_score": -3.455599069595337,
+          "simile_vehicle_ViLT_score": -5.007233619689941
+        },
+        {
+          "filter_ocr": false,
+          "name": "3696654393690500856900424196816170705433804486657945248561600765413996315614",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        }
+      ],
+      "vehicle": "rock"
+    },
+    {
+      "length_score": 14,
+      "model": "ROBERTA",
+      "model_score": 12.913371086120605,
+      "model_score_avg": 13.13664960861206,
+      "model_score_std": 0.47570331564708634,
+      "num_search_results": 20,
+      "perplexity_score": 0.6067816870553153,
+      "query": "Very hot earth",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "109161412305465015480412794031008092390183383514971654927450337156622917740155",
+          "property_ViLT_score": -1.1178195476531982,
+          "query_ViLT_score": -0.8180161118507385,
+          "query_vehicle_ViLT_score": -4.733337879180908,
+          "simile_ViLT_score": 5.466310024261475,
+          "simile_vehicle_ViLT_score": 4.7808051109313965
+        },
+        {
+          "filter_ocr": true,
+          "name": "77219196258215005706652696869046011392067898416244312000705908734165476259074",
+          "property_ViLT_score": -6.49502420425415,
+          "query_ViLT_score": 2.807905912399292,
+          "query_vehicle_ViLT_score": 2.818316698074341,
+          "simile_ViLT_score": 2.089729070663452,
+          "simile_vehicle_ViLT_score": 0.776839554309845
+        },
+        {
+          "filter_ocr": true,
+          "name": "80088075132924620748064815050792891758883108134190450084506727108771568267651",
+          "property_ViLT_score": -7.475772380828857,
+          "query_ViLT_score": 3.2946736812591553,
+          "query_vehicle_ViLT_score": 3.595438241958618,
+          "simile_ViLT_score": 2.5153419971466064,
+          "simile_vehicle_ViLT_score": 1.9683622121810913
+        },
+        {
+          "filter_ocr": true,
+          "name": "61398883821283780659852651162645048973278508229018380412762310735441087626379",
+          "property_ViLT_score": -3.3659634590148926,
+          "query_ViLT_score": 1.2684848308563232,
+          "query_vehicle_ViLT_score": 0.3543843924999237,
+          "simile_ViLT_score": 4.285400867462158,
+          "simile_vehicle_ViLT_score": 3.8225317001342773
+        },
+        {
+          "filter_ocr": true,
+          "name": "53196618602724281954638361036050441951213095591725728526959310427630674971244",
+          "property_ViLT_score": -2.417874813079834,
+          "query_ViLT_score": 6.442516803741455,
+          "query_vehicle_ViLT_score": 5.166386127471924,
+          "rank": 3,
+          "simile_ViLT_score": 3.42368483543396,
+          "simile_vehicle_ViLT_score": 3.5311386585235596
+        },
+        {
+          "filter_ocr": false,
+          "name": "31075909987721117648325171710302548684434310323572601445050044176459361229256",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "96608062098733329101202329431488310911919794973342044387082503687805089795966",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "107064098687074909495454741695066518153907042999559187836046352795221958388126",
+          "property_ViLT_score": -4.931185245513916,
+          "query_ViLT_score": 2.0751748085021973,
+          "query_vehicle_ViLT_score": 3.815331220626831,
+          "simile_ViLT_score": -2.4954416751861572,
+          "simile_vehicle_ViLT_score": -1.8045930862426758
+        },
+        {
+          "filter_ocr": true,
+          "name": "43422299507573646777378447676982726223329854513922929288617900426115754397362",
+          "property_ViLT_score": 0.16791391372680664,
+          "query_ViLT_score": 5.116796970367432,
+          "query_vehicle_ViLT_score": 3.9365808963775635,
+          "rank": 2,
+          "simile_ViLT_score": 2.5512197017669678,
+          "simile_vehicle_ViLT_score": 0.7993105053901672
+        },
+        {
+          "filter_ocr": true,
+          "name": "44119973262342987974817676376545647954299145934262240736635181763255194086057",
+          "property_ViLT_score": -5.206614971160889,
+          "query_ViLT_score": 2.984081983566284,
+          "query_vehicle_ViLT_score": 2.0743913650512695,
+          "simile_ViLT_score": -0.8126974105834961,
+          "simile_vehicle_ViLT_score": -1.3411781787872314
+        },
+        {
+          "filter_ocr": true,
+          "name": "115450739038516640979727168808611479605699807735826090059026850046300055154181",
+          "property_ViLT_score": -8.826508522033691,
+          "query_ViLT_score": 4.434612274169922,
+          "query_vehicle_ViLT_score": 3.831240653991699,
+          "simile_ViLT_score": 2.650956392288208,
+          "simile_vehicle_ViLT_score": 3.211233377456665
+        },
+        {
+          "filter_ocr": true,
+          "name": "45809471217102699230231369938669004238554610856163562752431173580251253170866",
+          "property_ViLT_score": -6.346353054046631,
+          "query_ViLT_score": -3.2712595462799072,
+          "query_vehicle_ViLT_score": -4.628527641296387,
+          "simile_ViLT_score": -6.845122337341309,
+          "simile_vehicle_ViLT_score": -10.255026817321777
+        },
+        {
+          "filter_ocr": false,
+          "name": "86709496114078697887673930067587752135388813585489748868784756108562951038224",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "110169525998970150732553236548480092771676604822705877594465543498215570758068",
+          "property_ViLT_score": -5.229237079620361,
+          "query_ViLT_score": 0.7535602450370789,
+          "query_vehicle_ViLT_score": 0.5644037127494812,
+          "simile_ViLT_score": 2.8374619483947754,
+          "simile_vehicle_ViLT_score": 3.0248336791992188
+        },
+        {
+          "filter_ocr": true,
+          "name": "10004419672022016241868590223010007343290128817379862720474961208654728827525",
+          "property_ViLT_score": -5.951611518859863,
+          "query_ViLT_score": 2.740382194519043,
+          "query_vehicle_ViLT_score": 2.397092580795288,
+          "simile_ViLT_score": 1.0400550365447998,
+          "simile_vehicle_ViLT_score": -0.8305394053459167
+        },
+        {
+          "filter_ocr": false,
+          "name": "4599064594506078907002481979898762953163631824800063407250207448309428133531",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "65758596930794470409438731054746651959877318207416555994367031946507112827109",
+          "property_ViLT_score": -6.400579929351807,
+          "query_ViLT_score": 3.902599811553955,
+          "query_vehicle_ViLT_score": 3.492645263671875,
+          "rank": 1,
+          "simile_ViLT_score": -0.9207574725151062,
+          "simile_vehicle_ViLT_score": -2.055521011352539
+        },
+        {
+          "filter_ocr": false,
+          "name": "5540792574602908962226705028874665958572139057658768393664934427608614186859",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "109180214061306722465085940494973855141420413190662786757907376674366671235091",
+          "property_ViLT_score": -4.851489543914795,
+          "query_ViLT_score": 4.217895984649658,
+          "query_vehicle_ViLT_score": 1.8762381076812744,
+          "simile_ViLT_score": 6.98347282409668,
+          "simile_vehicle_ViLT_score": 5.1900811195373535
+        },
+        {
+          "filter_ocr": true,
+          "name": "4887547979879133145398831587626629941543753713811720271680725135616469322553",
+          "property_ViLT_score": -7.762193202972412,
+          "query_ViLT_score": 2.9439899921417236,
+          "query_vehicle_ViLT_score": 2.55074405670166,
+          "simile_ViLT_score": 0.07656446099281311,
+          "simile_vehicle_ViLT_score": 0.08418135344982147
+        }
+      ],
+      "vehicle": "earth"
+    },
+    {
+      "length_score": 15,
+      "model": "ROBERTA",
+      "model_score": 12.863067626953125,
+      "model_score_avg": 13.13664960861206,
+      "model_score_std": 0.47570331564708634,
+      "num_search_results": 20,
+      "perplexity_score": 0.52796417872111,
+      "query": "Very hot ground",
+      "search_results": [
+        {
+          "filter_ocr": false,
+          "name": "92903924914369829116024962560827083367073840279784344363196222343219973812966",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "106422366774923592265786254668191735339016120856719076560732871810738568321135",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "50058249006788971340397659748909376652248053079236679270110363403213603940806",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "19040867905311245061667116050647287851613879869869804469102135191053472720702",
+          "property_ViLT_score": -4.617341995239258,
+          "query_ViLT_score": 5.391047954559326,
+          "query_vehicle_ViLT_score": 4.877034664154053,
+          "rank": 1,
+          "simile_ViLT_score": 2.7453453540802,
+          "simile_vehicle_ViLT_score": 2.375255823135376
+        },
+        {
+          "filter_ocr": false,
+          "name": "105425758086347959675975348321175070681367280593900550682775040577685433568262",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "63195679075123560406906266281193538740821431977432164937552976058884577742713",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "58096899326535149570130033139615000677279776208483792671212063634937077624936",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "70481823704287140176573922841451282249761762664865440253240202393685237201222",
+          "property_ViLT_score": -7.7578816413879395,
+          "query_ViLT_score": 0.6141669750213623,
+          "query_vehicle_ViLT_score": 0.6966860294342041,
+          "simile_ViLT_score": -0.35804396867752075,
+          "simile_vehicle_ViLT_score": 1.5158158540725708
+        },
+        {
+          "filter_ocr": false,
+          "name": "75520050232172898670832908128955376020949509667107403346421596675742930531308",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "94177960932532868699300614616961139695122587562991809153032626955048442649337",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "104887422909820641676836341014010766534490027309393553640691020986955305431481",
+          "property_ViLT_score": -7.665167808532715,
+          "query_ViLT_score": -4.428228855133057,
+          "query_vehicle_ViLT_score": -5.624735355377197,
+          "simile_ViLT_score": -4.532832145690918,
+          "simile_vehicle_ViLT_score": -4.070897579193115
+        },
+        {
+          "filter_ocr": true,
+          "name": "95073504656740317171775240345444104966945495425985130538014391664956836205727",
+          "property_ViLT_score": -6.714565753936768,
+          "query_ViLT_score": -0.4948255717754364,
+          "query_vehicle_ViLT_score": -3.882103443145752,
+          "rank": 2,
+          "simile_ViLT_score": 1.2363675832748413,
+          "simile_vehicle_ViLT_score": -2.2524378299713135
+        },
+        {
+          "filter_ocr": true,
+          "name": "55037984859411792626851536008469095921242021922360503596864795779666765007087",
+          "property_ViLT_score": -4.450081825256348,
+          "query_ViLT_score": 1.2924107313156128,
+          "query_vehicle_ViLT_score": -5.616572380065918,
+          "rank": 3,
+          "simile_ViLT_score": 0.3247276842594147,
+          "simile_vehicle_ViLT_score": 0.911507248878479
+        },
+        {
+          "filter_ocr": false,
+          "name": "89564156940786281126570212957075843773075530486007995627481114838408156546230",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "70180103842509821113358765530261338244547513893603629332186921579330433322037",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "109633136135424761489032871371650230582955986869722190430166740875766390070189",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "18904361599443058511496330707074929392515326469889740113066913193833382891237",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "28204752272755703404788188182766972475473404030502759402064160384893717594551",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "65412645892892969861188944234516394874309294670335683947070294804168128146035",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "51807509531119900490772980572174493873977507373420327253174334085745499251802",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        }
+      ],
+      "vehicle": "ground"
+    },
+    {
+      "length_score": 12,
+      "model": "ROBERTA",
+      "model_score": 12.745176315307617,
+      "model_score_avg": 13.13664960861206,
+      "model_score_std": 0.47570331564708634,
+      "num_search_results": 20,
+      "perplexity_score": 0.5406553347905477,
+      "query": "Very hot air",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "109135207734483423504378853036214037214234228811153024250563365101024556239080",
+          "property_ViLT_score": 1.600010871887207,
+          "query_ViLT_score": 6.944350242614746,
+          "query_vehicle_ViLT_score": 6.23936653137207,
+          "simile_ViLT_score": 1.9618486166000366,
+          "simile_vehicle_ViLT_score": -2.912571907043457
+        },
+        {
+          "filter_ocr": true,
+          "name": "20395436558808390070878014105536243480937142180301268299191179524418873265913",
+          "property_ViLT_score": 0.7434618473052979,
+          "query_ViLT_score": 7.847558498382568,
+          "query_vehicle_ViLT_score": 6.13642692565918,
+          "rank": 2,
+          "simile_ViLT_score": -2.756715774536133,
+          "simile_vehicle_ViLT_score": -8.01609992980957
+        },
+        {
+          "filter_ocr": false,
+          "name": "67832282919446172462247822520196464488463130840551804233198895727625502040424",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "81564136634815868360110385074179396200622751257246495140023604218174001206954",
+          "property_ViLT_score": 0.600511372089386,
+          "query_ViLT_score": 6.152872562408447,
+          "query_vehicle_ViLT_score": 5.3647637367248535,
+          "simile_ViLT_score": 4.567888259887695,
+          "simile_vehicle_ViLT_score": 1.475095272064209
+        },
+        {
+          "filter_ocr": true,
+          "name": "24451990399194580049647792405882290749494780753452236825825101393782122768079",
+          "property_ViLT_score": 3.0774343013763428,
+          "query_ViLT_score": 8.869990348815918,
+          "query_vehicle_ViLT_score": 7.819937229156494,
+          "simile_ViLT_score": 3.6990342140197754,
+          "simile_vehicle_ViLT_score": -3.297351360321045
+        },
+        {
+          "filter_ocr": true,
+          "name": "111089434822419828069671413780597033978021706310777280408489840045746497582020",
+          "property_ViLT_score": 0.23152869939804077,
+          "query_ViLT_score": 7.240148067474365,
+          "query_vehicle_ViLT_score": 6.855363845825195,
+          "simile_ViLT_score": 0.4866763651371002,
+          "simile_vehicle_ViLT_score": -6.306616306304932
+        },
+        {
+          "filter_ocr": true,
+          "name": "28050952061479152538483373773015614812680262332887210052964703335947206993568",
+          "property_ViLT_score": -1.7832458019256592,
+          "query_ViLT_score": 6.274839878082275,
+          "query_vehicle_ViLT_score": 5.8693976402282715,
+          "simile_ViLT_score": -1.5191646814346313,
+          "simile_vehicle_ViLT_score": -7.426634311676025
+        },
+        {
+          "filter_ocr": true,
+          "name": "26632176638904528862262006942217804122587189527311823180759728236108299826472",
+          "property_ViLT_score": 0.008710107766091824,
+          "query_ViLT_score": 5.612194061279297,
+          "query_vehicle_ViLT_score": 3.9676687717437744,
+          "simile_ViLT_score": 2.1544153690338135,
+          "simile_vehicle_ViLT_score": -2.4419381618499756
+        },
+        {
+          "filter_ocr": true,
+          "name": "2975514742860385212587085269033649021375321986912792491962362480309192874063",
+          "property_ViLT_score": -0.21370986104011536,
+          "query_ViLT_score": 7.630357265472412,
+          "query_vehicle_ViLT_score": 6.683398723602295,
+          "simile_ViLT_score": 0.3818298280239105,
+          "simile_vehicle_ViLT_score": -6.267838954925537
+        },
+        {
+          "filter_ocr": true,
+          "name": "51787004421613496135079960718836634126745454591499309128440245411132471529908",
+          "property_ViLT_score": -3.792745351791382,
+          "query_ViLT_score": 1.7123830318450928,
+          "query_vehicle_ViLT_score": 1.225105881690979,
+          "simile_ViLT_score": 1.4914312362670898,
+          "simile_vehicle_ViLT_score": 0.9331787824630737
+        },
+        {
+          "filter_ocr": false,
+          "name": "15644479825692713643105927364342997091460597168362901392196873424043856067111",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "37459337870655770322040903215189178078066151947786363413770408113665641587413",
+          "property_ViLT_score": -2.5863540172576904,
+          "query_ViLT_score": 5.213059425354004,
+          "query_vehicle_ViLT_score": 5.229775428771973,
+          "simile_ViLT_score": 2.6804184913635254,
+          "simile_vehicle_ViLT_score": 1.033368468284607
+        },
+        {
+          "filter_ocr": true,
+          "name": "94479733857995655250677904310760421910462935257046326074531117649386979223036",
+          "property_ViLT_score": 0.5601232051849365,
+          "query_ViLT_score": 6.208552360534668,
+          "query_vehicle_ViLT_score": 4.536783695220947,
+          "rank": 3,
+          "simile_ViLT_score": 0.6834235191345215,
+          "simile_vehicle_ViLT_score": -9.523645401000977
+        },
+        {
+          "filter_ocr": true,
+          "name": "66524179468953162693210184885172495712067227467834780284216280994829007652189",
+          "property_ViLT_score": 0.29665622115135193,
+          "query_ViLT_score": 6.857059955596924,
+          "query_vehicle_ViLT_score": 7.003337383270264,
+          "simile_ViLT_score": 0.7404305338859558,
+          "simile_vehicle_ViLT_score": -4.086979389190674
+        },
+        {
+          "filter_ocr": true,
+          "name": "115237418312648435508283406233491793167694710285699997751358201462847240305402",
+          "property_ViLT_score": 1.33695650100708,
+          "query_ViLT_score": 8.907510757446289,
+          "query_vehicle_ViLT_score": 8.050637245178223,
+          "simile_ViLT_score": 0.882250964641571,
+          "simile_vehicle_ViLT_score": -6.314352512359619
+        },
+        {
+          "filter_ocr": true,
+          "name": "85728058546965841978148410296755257012371596419535596562469330730053365043024",
+          "property_ViLT_score": -1.084836721420288,
+          "query_ViLT_score": 6.10444450378418,
+          "query_vehicle_ViLT_score": 5.531724452972412,
+          "simile_ViLT_score": -0.08049353212118149,
+          "simile_vehicle_ViLT_score": -4.88540506362915
+        },
+        {
+          "filter_ocr": false,
+          "name": "94041652510010369576218437933726840053409641877629000288924151136962637451074",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "102575832632627596175009792946979439291860602030661428597095572407754840095488",
+          "property_ViLT_score": 1.9088973999023438,
+          "query_ViLT_score": 9.097195625305176,
+          "query_vehicle_ViLT_score": 7.896134853363037,
+          "rank": 1,
+          "simile_ViLT_score": 0.6507733464241028,
+          "simile_vehicle_ViLT_score": -7.308422565460205
+        },
+        {
+          "filter_ocr": true,
+          "name": "6267979428171518918951204099325607821572995165645148525710807971720314482456",
+          "property_ViLT_score": 0.3209686577320099,
+          "query_ViLT_score": 5.591479301452637,
+          "query_vehicle_ViLT_score": 4.696162223815918,
+          "simile_ViLT_score": 2.205645799636841,
+          "simile_vehicle_ViLT_score": -2.1660332679748535
+        },
+        {
+          "filter_ocr": true,
+          "name": "3793818798763811250860717994602126807077742842435143988659766812276513771949",
+          "property_ViLT_score": -0.24507828056812286,
+          "query_ViLT_score": 6.379838466644287,
+          "query_vehicle_ViLT_score": 5.32506799697876,
+          "simile_ViLT_score": 1.5836973190307617,
+          "simile_vehicle_ViLT_score": -4.175097942352295
+        }
+      ],
+      "vehicle": "air"
+    },
+    {
+      "length_score": 14,
+      "model": "ROBERTA",
+      "model_score": 12.69320297241211,
+      "model_score_avg": 13.13664960861206,
+      "model_score_std": 0.47570331564708634,
+      "num_search_results": 20,
+      "perplexity_score": 0.5801570074898856,
+      "query": "Very hot place",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "107742620785029841147576017686677977823931742038635673077422154063404038667400",
+          "property_ViLT_score": -5.762945652008057,
+          "query_ViLT_score": -1.5745118856430054,
+          "query_vehicle_ViLT_score": -0.8564487099647522,
+          "simile_ViLT_score": -2.60003662109375,
+          "simile_vehicle_ViLT_score": -4.26962423324585
+        },
+        {
+          "filter_ocr": true,
+          "name": "98056022666140234206840480587781462188644338887865685260904023002550685562332",
+          "property_ViLT_score": -5.54094934463501,
+          "query_ViLT_score": -0.20076312124729156,
+          "query_vehicle_ViLT_score": 0.18997253477573395,
+          "rank": 2,
+          "simile_ViLT_score": -0.6088880896568298,
+          "simile_vehicle_ViLT_score": -2.5261030197143555
+        },
+        {
+          "filter_ocr": false,
+          "name": "54141049300390834659148164072020205889667782432333188320465083230437003495384",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "38565227300663430153716132973363438589729091881273608499255301939809463407912",
+          "property_ViLT_score": -3.7522616386413574,
+          "query_ViLT_score": -1.6344679594039917,
+          "query_vehicle_ViLT_score": -0.8962828516960144,
+          "simile_ViLT_score": 2.8538572788238525,
+          "simile_vehicle_ViLT_score": 2.790778398513794
+        },
+        {
+          "filter_ocr": true,
+          "name": "58146876519409074239710007518528767398880693132378520938711829309082968466104",
+          "property_ViLT_score": -7.912362098693848,
+          "query_ViLT_score": -3.4035000801086426,
+          "query_vehicle_ViLT_score": -1.8239609003067017,
+          "simile_ViLT_score": 0.7053279876708984,
+          "simile_vehicle_ViLT_score": 0.8589870929718018
+        },
+        {
+          "filter_ocr": true,
+          "name": "34106276557285638101072684834541333515745400784466993009488591526896663769960",
+          "property_ViLT_score": -6.772653102874756,
+          "query_ViLT_score": -3.0590505599975586,
+          "query_vehicle_ViLT_score": -0.5334829092025757,
+          "simile_ViLT_score": -2.314504384994507,
+          "simile_vehicle_ViLT_score": -0.9989625215530396
+        },
+        {
+          "filter_ocr": true,
+          "name": "88478204238770390388646409304371579337959508925852981605058245646386315189009",
+          "property_ViLT_score": -4.797990322113037,
+          "query_ViLT_score": 0.1375148594379425,
+          "query_vehicle_ViLT_score": -0.15713021159172058,
+          "rank": 3,
+          "simile_ViLT_score": 1.4601589441299438,
+          "simile_vehicle_ViLT_score": -1.601526141166687
+        },
+        {
+          "filter_ocr": true,
+          "name": "75352469564650308743670322760964673530348201879869287129601958308793527949416",
+          "property_ViLT_score": -6.73367977142334,
+          "query_ViLT_score": -1.783308982849121,
+          "query_vehicle_ViLT_score": -0.7401323318481445,
+          "rank": 1,
+          "simile_ViLT_score": -1.6186553239822388,
+          "simile_vehicle_ViLT_score": -8.055198669433594
+        },
+        {
+          "filter_ocr": true,
+          "name": "62162060703798865674780056137041438249246725796283487415269402494645431971631",
+          "property_ViLT_score": -6.6420135498046875,
+          "query_ViLT_score": -3.7623109817504883,
+          "query_vehicle_ViLT_score": -2.419893741607666,
+          "simile_ViLT_score": -2.686375379562378,
+          "simile_vehicle_ViLT_score": -1.0340774059295654
+        },
+        {
+          "filter_ocr": true,
+          "name": "40207067670113229988435034838128465727661955055426412837222257895133873754584",
+          "property_ViLT_score": -5.090792179107666,
+          "query_ViLT_score": -1.5785083770751953,
+          "query_vehicle_ViLT_score": -0.3330058753490448,
+          "simile_ViLT_score": 2.6540427207946777,
+          "simile_vehicle_ViLT_score": 1.7809938192367554
+        },
+        {
+          "filter_ocr": true,
+          "name": "4313855291958113451714925137025564308009184172671888807826328958075412311196",
+          "property_ViLT_score": -6.863890647888184,
+          "query_ViLT_score": -3.731518030166626,
+          "query_vehicle_ViLT_score": -2.1367526054382324,
+          "simile_ViLT_score": -2.3565783500671387,
+          "simile_vehicle_ViLT_score": -3.191044330596924
+        },
+        {
+          "filter_ocr": false,
+          "name": "34343092755202228915627607935691044049066255951586094013983078403470503453348",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": false,
+          "name": "55207338142417019920975041465887677487545066684560136220290713204668255610080",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "18398994438827337081578355560483421326308206674744649730152256602927302662813",
+          "property_ViLT_score": -8.7024507522583,
+          "query_ViLT_score": -4.351645469665527,
+          "query_vehicle_ViLT_score": -2.2299132347106934,
+          "simile_ViLT_score": -2.494875192642212,
+          "simile_vehicle_ViLT_score": -3.5476768016815186
+        },
+        {
+          "filter_ocr": true,
+          "name": "52614263792442027474654388892902362565405185175380598631115748055738268899781",
+          "property_ViLT_score": -5.465008735656738,
+          "query_ViLT_score": -1.6560908555984497,
+          "query_vehicle_ViLT_score": -0.09097718447446823,
+          "simile_ViLT_score": -1.2509759664535522,
+          "simile_vehicle_ViLT_score": -4.391124725341797
+        },
+        {
+          "filter_ocr": true,
+          "name": "101967727647083613785934132699726847357434437918957636458482977656947280768888",
+          "property_ViLT_score": -5.627193927764893,
+          "query_ViLT_score": -0.6441596746444702,
+          "query_vehicle_ViLT_score": -0.10714413225650787,
+          "simile_ViLT_score": 4.20071268081665,
+          "simile_vehicle_ViLT_score": 2.4822864532470703
+        },
+        {
+          "filter_ocr": true,
+          "name": "21774107394101913581697210895692525182626736187977316437339999030895562526811",
+          "property_ViLT_score": -7.144245624542236,
+          "query_ViLT_score": -2.372073173522949,
+          "query_vehicle_ViLT_score": -1.074666142463684,
+          "simile_ViLT_score": -2.787203550338745,
+          "simile_vehicle_ViLT_score": -3.8652615547180176
+        },
+        {
+          "filter_ocr": true,
+          "name": "46805730901752004850034307386541903563186604309871955928845918539237833805947",
+          "property_ViLT_score": -6.404023170471191,
+          "query_ViLT_score": -1.1110478639602661,
+          "query_vehicle_ViLT_score": -0.8009654879570007,
+          "simile_ViLT_score": 0.6885313391685486,
+          "simile_vehicle_ViLT_score": -0.8480908274650574
+        },
+        {
+          "filter_ocr": true,
+          "name": "26753388666755081751946868461335098161188126464158947779571973206606375791928",
+          "property_ViLT_score": -7.675689697265625,
+          "query_ViLT_score": -2.3440401554107666,
+          "query_vehicle_ViLT_score": -1.3710737228393555,
+          "simile_ViLT_score": -1.3443796634674072,
+          "simile_vehicle_ViLT_score": -6.528493404388428
+        },
+        {
+          "filter_ocr": true,
+          "name": "27833581268194919922437343533962348567735243306548861141576416445634875663536",
+          "property_ViLT_score": -4.719628810882568,
+          "query_ViLT_score": -0.9544176459312439,
+          "query_vehicle_ViLT_score": 0.08004797995090485,
+          "simile_ViLT_score": -1.5814359188079834,
+          "simile_vehicle_ViLT_score": -2.796680450439453
+        }
+      ],
+      "vehicle": "place"
+    },
+    {
+      "literal": true,
+      "num_search_results": 20,
+      "query": "Very hot lava",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "109313242207815087412903786640955837145910350417850963647734788651108470860045",
+          "property_ViLT_score": -2.388115882873535,
+          "query_ViLT_score": 6.12584924697876,
+          "query_vehicle_ViLT_score": 5.123658657073975,
+          "simile_ViLT_score": 5.867447376251221,
+          "simile_vehicle_ViLT_score": 5.123067378997803
+        },
+        {
+          "filter_ocr": true,
+          "name": "34824816679289715921725158809383127123273976079075461514357983019846971914343",
+          "property_ViLT_score": -5.924819469451904,
+          "query_ViLT_score": 7.102375507354736,
+          "query_vehicle_ViLT_score": 5.713222980499268,
+          "simile_ViLT_score": 5.926433086395264,
+          "simile_vehicle_ViLT_score": 5.7084760665893555
+        },
+        {
+          "filter_ocr": true,
+          "name": "100800516018196495179180347807430039486585086742268506776419294171012684920415",
+          "property_ViLT_score": -5.004929542541504,
+          "query_ViLT_score": 6.508018493652344,
+          "query_vehicle_ViLT_score": 5.599870204925537,
+          "simile_ViLT_score": 6.534275531768799,
+          "simile_vehicle_ViLT_score": 5.598651885986328
+        },
+        {
+          "filter_ocr": true,
+          "name": "14979798862996988259160955946281943665533533362225275086580952918286196916408",
+          "property_ViLT_score": -5.4174580574035645,
+          "query_ViLT_score": 3.6203508377075195,
+          "query_vehicle_ViLT_score": 1.6749811172485352,
+          "simile_ViLT_score": 2.248502492904663,
+          "simile_vehicle_ViLT_score": 1.672170639038086
+        },
+        {
+          "filter_ocr": true,
+          "name": "111007628010568121195282906507158110339194288118573818714986466808844480205075",
+          "property_ViLT_score": -4.426875114440918,
+          "query_ViLT_score": 4.334888935089111,
+          "query_vehicle_ViLT_score": 2.565678596496582,
+          "simile_ViLT_score": 3.855032444000244,
+          "simile_vehicle_ViLT_score": 2.5671284198760986
+        },
+        {
+          "filter_ocr": true,
+          "name": "30417102513710276446639195024552088265121228358224102145480841722853179008259",
+          "property_ViLT_score": -5.491888999938965,
+          "query_ViLT_score": 7.342296123504639,
+          "query_vehicle_ViLT_score": 5.418508052825928,
+          "rank": 3,
+          "simile_ViLT_score": 6.336866855621338,
+          "simile_vehicle_ViLT_score": 5.420199394226074
+        },
+        {
+          "filter_ocr": true,
+          "name": "74584451072889091527944315776685179635993363208261099360457605018117593013958",
+          "property_ViLT_score": -2.9690980911254883,
+          "query_ViLT_score": 5.6067986488342285,
+          "query_vehicle_ViLT_score": 3.7143702507019043,
+          "simile_ViLT_score": 4.837384223937988,
+          "simile_vehicle_ViLT_score": 3.7169318199157715
+        },
+        {
+          "filter_ocr": true,
+          "name": "111682504590941859168164270000283156201637276883122983692137906350512953982013",
+          "property_ViLT_score": -4.653886318206787,
+          "query_ViLT_score": 3.2284727096557617,
+          "query_vehicle_ViLT_score": 1.5494351387023926,
+          "simile_ViLT_score": 3.5027787685394287,
+          "simile_vehicle_ViLT_score": 1.5456724166870117
+        },
+        {
+          "filter_ocr": true,
+          "name": "114603130165695966773504307180511351914571891361467016059836572107947013374154",
+          "property_ViLT_score": -7.2384467124938965,
+          "query_ViLT_score": 6.958265781402588,
+          "query_vehicle_ViLT_score": 6.214958667755127,
+          "simile_ViLT_score": 6.365388870239258,
+          "simile_vehicle_ViLT_score": 6.215566635131836
+        },
+        {
+          "filter_ocr": true,
+          "name": "110869518462357669490189744605087153051260600686871236521409589427492685883340",
+          "property_ViLT_score": -4.132599353790283,
+          "query_ViLT_score": 4.226355075836182,
+          "query_vehicle_ViLT_score": 3.2165684700012207,
+          "simile_ViLT_score": 3.5990419387817383,
+          "simile_vehicle_ViLT_score": 3.208864212036133
+        },
+        {
+          "filter_ocr": true,
+          "name": "96374675224371330267810442458661221813996003482004563676844604566584539469493",
+          "property_ViLT_score": -5.178617000579834,
+          "query_ViLT_score": -1.4734245538711548,
+          "query_vehicle_ViLT_score": -3.3338093757629395,
+          "simile_ViLT_score": -0.5043468475341797,
+          "simile_vehicle_ViLT_score": -3.336423635482788
+        },
+        {
+          "filter_ocr": true,
+          "name": "103203250003066260288909360456531541591329097185525947584039413239339737230348",
+          "property_ViLT_score": -5.141915798187256,
+          "query_ViLT_score": 4.194887161254883,
+          "query_vehicle_ViLT_score": 3.7730350494384766,
+          "simile_ViLT_score": 3.5343730449676514,
+          "simile_vehicle_ViLT_score": 3.7731456756591797
+        },
+        {
+          "filter_ocr": true,
+          "name": "40765394336564688001505155040504983519455335351366927129074873713474527825075",
+          "property_ViLT_score": -3.1436526775360107,
+          "query_ViLT_score": 6.6302571296691895,
+          "query_vehicle_ViLT_score": 6.328911304473877,
+          "simile_ViLT_score": 5.371584892272949,
+          "simile_vehicle_ViLT_score": 6.324050426483154
+        },
+        {
+          "filter_ocr": true,
+          "name": "20000531736761786526069143171604910376252416926533186240268410323235188975399",
+          "property_ViLT_score": -3.727116346359253,
+          "query_ViLT_score": 2.3631134033203125,
+          "query_vehicle_ViLT_score": -0.7213528156280518,
+          "rank": 2,
+          "simile_ViLT_score": 2.226813554763794,
+          "simile_vehicle_ViLT_score": -0.7164031267166138
+        },
+        {
+          "filter_ocr": true,
+          "name": "108297842843378865575605181153235989923810705791766999048136676930215641646308",
+          "property_ViLT_score": -5.1696457862854,
+          "query_ViLT_score": 1.385443925857544,
+          "query_vehicle_ViLT_score": -0.23632635176181793,
+          "simile_ViLT_score": 0.5641200542449951,
+          "simile_vehicle_ViLT_score": -0.2361253798007965
+        },
+        {
+          "filter_ocr": true,
+          "name": "97812542315238295904664223401206675224598606921538646617617102145457841694327",
+          "property_ViLT_score": -3.0354607105255127,
+          "query_ViLT_score": 3.973095417022705,
+          "query_vehicle_ViLT_score": 2.70160174369812,
+          "simile_ViLT_score": 3.5320987701416016,
+          "simile_vehicle_ViLT_score": 2.706265687942505
+        },
+        {
+          "filter_ocr": true,
+          "name": "112991175516738167909943483596710507870736099764833496396738384845503789757106",
+          "property_ViLT_score": -6.055851459503174,
+          "query_ViLT_score": 7.560029029846191,
+          "query_vehicle_ViLT_score": 6.66372537612915,
+          "simile_ViLT_score": 7.136586666107178,
+          "simile_vehicle_ViLT_score": 6.656862258911133
+        },
+        {
+          "filter_ocr": true,
+          "name": "91657103474525078739241628316032289509344749872938211903942254365270801876765",
+          "property_ViLT_score": -3.4060332775115967,
+          "query_ViLT_score": 5.950412273406982,
+          "query_vehicle_ViLT_score": 4.420185089111328,
+          "simile_ViLT_score": 5.376684665679932,
+          "simile_vehicle_ViLT_score": 4.422105312347412
+        },
+        {
+          "filter_ocr": true,
+          "name": "105372061282960481478910249784180257723788133723579962912747188452987667151695",
+          "property_ViLT_score": -0.3065037429332733,
+          "query_ViLT_score": 9.682164192199707,
+          "query_vehicle_ViLT_score": 8.236617088317871,
+          "rank": 1,
+          "simile_ViLT_score": 7.193699359893799,
+          "simile_vehicle_ViLT_score": 8.236446380615234
+        },
+        {
+          "filter_ocr": true,
+          "name": "83258046330463752498253636385767054628423892206329380899213845678581467114391",
+          "property_ViLT_score": -4.563186168670654,
+          "query_ViLT_score": 3.139852523803711,
+          "query_vehicle_ViLT_score": 2.4413750171661377,
+          "simile_ViLT_score": 2.863088369369507,
+          "simile_vehicle_ViLT_score": 2.4401583671569824
+        }
+      ],
+      "vehicle": "lava"
+    },
+    {
+      "literal": true,
+      "num_search_results": 20,
+      "query": "as hot as lava",
+      "search_results": [
+        {
+          "filter_ocr": true,
+          "name": "19834041937582282403934749798904865716544790580949395611174785372165238205475",
+          "property_ViLT_score": -3.4962990283966064,
+          "query_ViLT_score": 3.6052327156066895,
+          "query_vehicle_ViLT_score": 2.356929302215576,
+          "simile_ViLT_score": 3.6088430881500244,
+          "simile_vehicle_ViLT_score": 2.3547894954681396
+        },
+        {
+          "filter_ocr": true,
+          "name": "109313242207815087412903786640955837145910350417850963647734788651108470860045",
+          "property_ViLT_score": -2.386467456817627,
+          "query_ViLT_score": 5.866698265075684,
+          "query_vehicle_ViLT_score": 5.122785568237305,
+          "simile_ViLT_score": 5.867807865142822,
+          "simile_vehicle_ViLT_score": 5.124663829803467
+        },
+        {
+          "filter_ocr": true,
+          "name": "111682504590941859168164270000283156201637276883122983692137906350512953982013",
+          "property_ViLT_score": -4.655697822570801,
+          "query_ViLT_score": 3.5040242671966553,
+          "query_vehicle_ViLT_score": 1.5490564107894897,
+          "rank": 3,
+          "simile_ViLT_score": 3.504314661026001,
+          "simile_vehicle_ViLT_score": 1.5489200353622437
+        },
+        {
+          "filter_ocr": true,
+          "name": "100800516018196495179180347807430039486585086742268506776419294171012684920415",
+          "property_ViLT_score": -5.006319522857666,
+          "query_ViLT_score": 6.532620429992676,
+          "query_vehicle_ViLT_score": 5.60205078125,
+          "rank": 1,
+          "simile_ViLT_score": 6.533281326293945,
+          "simile_vehicle_ViLT_score": 5.598858833312988
+        },
+        {
+          "filter_ocr": true,
+          "name": "69484627068606851531776840920826623874070392719527979818415100616672826227543",
+          "property_ViLT_score": -3.9438204765319824,
+          "query_ViLT_score": 4.892510890960693,
+          "query_vehicle_ViLT_score": 4.65641450881958,
+          "simile_ViLT_score": 4.8929057121276855,
+          "simile_vehicle_ViLT_score": 4.658420085906982
+        },
+        {
+          "filter_ocr": true,
+          "name": "103203250003066260288909360456531541591329097185525947584039413239339737230348",
+          "property_ViLT_score": -5.141368389129639,
+          "query_ViLT_score": 3.534482955932617,
+          "query_vehicle_ViLT_score": 3.7716240882873535,
+          "simile_ViLT_score": 3.5335259437561035,
+          "simile_vehicle_ViLT_score": 3.772915840148926
+        },
+        {
+          "filter_ocr": false,
+          "name": "67260193232624509648580860165470472292246007964162978144256965142567862316027",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "240059002765201546894462736027020602352959165931478648850406596727583259873",
+          "property_ViLT_score": -5.997513294219971,
+          "query_ViLT_score": 2.974653482437134,
+          "query_vehicle_ViLT_score": 2.057413339614868,
+          "simile_ViLT_score": 2.9728212356567383,
+          "simile_vehicle_ViLT_score": 2.055084228515625
+        },
+        {
+          "filter_ocr": true,
+          "name": "56379322785155237779907724096357580111543790231701398891438390546809915841786",
+          "property_ViLT_score": -5.7818193435668945,
+          "query_ViLT_score": 3.9655933380126953,
+          "query_vehicle_ViLT_score": 2.581238031387329,
+          "simile_ViLT_score": 3.964815378189087,
+          "simile_vehicle_ViLT_score": 2.581280469894409
+        },
+        {
+          "filter_ocr": true,
+          "name": "108297842843378865575605181153235989923810705791766999048136676930215641646308",
+          "property_ViLT_score": -5.1711201667785645,
+          "query_ViLT_score": 0.5620357394218445,
+          "query_vehicle_ViLT_score": -0.23484131693840027,
+          "simile_ViLT_score": 0.5624956488609314,
+          "simile_vehicle_ViLT_score": -0.2358902394771576
+        },
+        {
+          "filter_ocr": false,
+          "name": "15429969185076724290603808094615108648798547971526489972535013083744033953869",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "35520582193446657032344610285440336745905363196908371140642289614143283341154",
+          "property_ViLT_score": -5.066651344299316,
+          "query_ViLT_score": 3.778852701187134,
+          "query_vehicle_ViLT_score": 3.601332426071167,
+          "simile_ViLT_score": 3.7772209644317627,
+          "simile_vehicle_ViLT_score": 3.59940242767334
+        },
+        {
+          "filter_ocr": true,
+          "name": "97812542315238295904664223401206675224598606921538646617617102145457841694327",
+          "property_ViLT_score": -3.0344078540802,
+          "query_ViLT_score": 3.5337815284729004,
+          "query_vehicle_ViLT_score": 2.7018308639526367,
+          "simile_ViLT_score": 3.5374014377593994,
+          "simile_vehicle_ViLT_score": 2.701477289199829
+        },
+        {
+          "filter_ocr": true,
+          "name": "36725624897095038382792543693859540336131196353130752549944867191548021099137",
+          "property_ViLT_score": -7.912664413452148,
+          "query_ViLT_score": 0.6850543022155762,
+          "query_vehicle_ViLT_score": -0.9399445056915283,
+          "simile_ViLT_score": 0.6832632422447205,
+          "simile_vehicle_ViLT_score": -0.9391463398933411
+        },
+        {
+          "filter_ocr": true,
+          "name": "20615885185777205422034289621292688133810101872788042709917159590677832124523",
+          "property_ViLT_score": -3.0191588401794434,
+          "query_ViLT_score": 6.7639617919921875,
+          "query_vehicle_ViLT_score": 7.6044921875,
+          "simile_ViLT_score": 6.7667927742004395,
+          "simile_vehicle_ViLT_score": 7.606271743774414
+        },
+        {
+          "filter_ocr": true,
+          "name": "73273465687092972111587563435395243337702466028841545904817630386157991311452",
+          "property_ViLT_score": -5.323941707611084,
+          "query_ViLT_score": 5.682240962982178,
+          "query_vehicle_ViLT_score": 7.0321173667907715,
+          "simile_ViLT_score": 5.682222366333008,
+          "simile_vehicle_ViLT_score": 7.029801368713379
+        },
+        {
+          "filter_ocr": true,
+          "name": "57559097411981341210573614082238089330584043913604255334180665365401423642802",
+          "property_ViLT_score": -5.585345268249512,
+          "query_ViLT_score": 2.067039728164673,
+          "query_vehicle_ViLT_score": -0.15340952575206757,
+          "simile_ViLT_score": 2.066494941711426,
+          "simile_vehicle_ViLT_score": -0.1556258350610733
+        },
+        {
+          "filter_ocr": true,
+          "name": "82223922483508099298832359527319393936619818494900376309852967915257979696250",
+          "property_ViLT_score": -5.85718297958374,
+          "query_ViLT_score": 2.8239333629608154,
+          "query_vehicle_ViLT_score": 0.47781065106391907,
+          "rank": 2,
+          "simile_ViLT_score": 2.823272466659546,
+          "simile_vehicle_ViLT_score": 0.48038622736930847
+        },
+        {
+          "filter_ocr": false,
+          "name": "102201966820080493156244720936542760778075410624029286638596376526608851280324",
+          "property_ViLT_score": 0,
+          "query_ViLT_score": 0,
+          "query_vehicle_ViLT_score": 0,
+          "simile_ViLT_score": 0,
+          "simile_vehicle_ViLT_score": 0
+        },
+        {
+          "filter_ocr": true,
+          "name": "110869518462357669490189744605087153051260600686871236521409589427492685883340",
+          "property_ViLT_score": -4.13516092300415,
+          "query_ViLT_score": 3.598766565322876,
+          "query_vehicle_ViLT_score": 3.2075586318969727,
+          "simile_ViLT_score": 3.6016221046447754,
+          "simile_vehicle_ViLT_score": 3.2086539268493652
+        }
+      ],
+      "vehicle": "lava"
+    }
+  ],
+  "sentence": "The coffee was as hot as lava .",
+  "topic": "coffee",
+  "type": "gold",
+  "vehicle": "lava"
+}
