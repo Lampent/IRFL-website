@@ -1,7 +1,7 @@
 <canvas id="confetti" [ngStyle]="{position: 'absolute', 'pointer-events': 'none'}"></canvas>
 <h3 style="text-transform: none;">{{title}}</h3>
 <div class="analogy-container">
-    <div class="cue-line-container">
+    <div class="cue-line-container" style="padding-bottom: 20px">
         <div class="right-board-container">
             <div class="board top-board" [style.width]="'835px'">
                 <div class="main-description" *ngIf="showInfo" [innerHTML]="info">
@@ -23,16 +23,28 @@
                 </div>
             </div>
         </div>
+
+        <div class="right-board-container" *ngIf="this._irflTask.definitions.length > 0">
+            <div class="definitions-board">
+<!--                <div class="label board-title">Definitions</div>-->
+                <div class="example-full-width">
+                    <ul class="definitions-list">
+                        <li *ngFor="let definition of this._irflTask.definitions; let i = index;">{{i+1 +'. ' + definition}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="AI-response-label-container"
-         [style]="{'visibility': (!_submit) ? 'hidden' : 'visible'}">
-        <!--        *ngIf="_giveCueTask && (_giveCueTask.score | async) !== null"-->
-        <div class="AI-response-label">AI Response <img src="assets/robot-head/robot-head.png"></div>
-    </div>
+<!--    <div class="AI-response-label-container"-->
+<!--         [style]="{'visibility': (!_submit) ? 'hidden' : 'visible'}">-->
+<!--        &lt;!&ndash;        *ngIf="_giveCueTask && (_giveCueTask.score | async) !== null"&ndash;&gt;-->
+<!--        <div class="AI-response-label">AI Response <img src="assets/robot-head/robot-head.png"></div>-->
+<!--    </div>-->
     <div class="left-board-container">
         <div class="board left-board">
             <div class="images-board">
-                <div [ngClass]="{'analogy-image-container': !isSixCandidates, 'analogy-image-container-six': isSixCandidates , 'analogy-image-container-twelve': isTwelveCandidates}" *ngFor="let candidate of _candidates"
+                <div [ngClass]="{'analogy-image-container': !isSixCandidates, 'analogy-image-container-six': isSixCandidates , 'analogy-image-container-twelve': isTwelveCandidates}"
+                     *ngFor="let candidate of _candidates"
                      (click)="selectCandidate(candidate)">
                     <img src="{{candidate.img}}" [ngClass]="{'candidate-selected': candidate.userChoice}">
                     <i [style.color]="(candidate.userChoice && candidate.userChoice !== candidate.answer) ? 'red' : 'transparent'"
@@ -45,7 +57,7 @@
                 <div class="pointer-container" *ngIf="noSelection && enablePointer">
                     <div style="position:relative; width: 110px;">
                         <span class="moving-pointer">  👉 </span>
-<!--                        <i class="fa-solid fa-hand-point-left moving-pointer fa-flip-horizontal"></i>-->
+                        <!--                        <i class="fa-solid fa-hand-point-left moving-pointer fa-flip-horizontal"></i>-->
                     </div>
                     <div class="pointer-label">
                         Choose here!

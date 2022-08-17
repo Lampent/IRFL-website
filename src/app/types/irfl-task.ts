@@ -7,17 +7,19 @@ export class IRFLTask implements Jsonable {
     candidates: Candidate[];
     phrase: string;
     numOfSolution: number;
+    definitions: string[];
 
-    constructor(candidates: Candidate[], phrase: string = '', numOfSolution: number = 0, id = '') {
+    constructor(candidates: Candidate[], phrase: string = '', numOfSolution: number = 0, definitions: string[] = [], id = '') {
         this.id = id;
         this.candidates = candidates;
         this.phrase = phrase;
+        this.definitions = definitions;
         this.numOfSolution = numOfSolution;
     }
 
 
     static clone(task: IRFLTask) {
-        return new IRFLTask(JSON.parse(JSON.stringify(task.candidates)), task.phrase, task.numOfSolution, task.id)
+        return new IRFLTask(JSON.parse(JSON.stringify(task.candidates)), task.phrase, task.numOfSolution, task.definitions, task.id)
     }
 
     static jaccard_similarity(list1: string[], list2: string[]): number {

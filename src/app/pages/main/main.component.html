@@ -13,8 +13,15 @@
                     Choose the image that best visualizes the figurative form.
                     <br/>
                 </h3>
-                <app-task-board class="analogies-board" [irflTask]="task"
-                                [enablePointer]="true"></app-task-board>
+                <tabset class="nav-tabs-danger">
+                    <tab heading="Simile" (selectTab)="idiom.clearCandidates()">
+                        <app-task-board class="analogies-board" [irflTask]="simile" [enablePointer]="true"></app-task-board>
+                    </tab>
+                    <tab heading="idiom" (selectTab)="simile.clearCandidates()">
+                        <app-task-board class="analogies-board" [irflTask]="idiom" [enablePointer]="true"></app-task-board>
+                    </tab>
+                </tabset>
+
             </div>
         </div>
     </div>

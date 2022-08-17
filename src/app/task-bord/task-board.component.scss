@@ -8,8 +8,28 @@
   align-items: center;
 }
 
+.definitions-board {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.definitions-list {
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+
+.definitions-list:last-child {
+  padding-bottom: 0px;
+}
+
+
 .board {
   display: flex;
+  padding: 15px;
 }
 
 .no-underline-mat-field ::ng-deep  .mat-form-field-underline  {
@@ -258,6 +278,7 @@ img {
 
 .cue-line-container {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
 }
@@ -324,7 +345,6 @@ img {
 }
 
 .right-board-container {
-  padding-bottom: 15px;
   box-shadow: 0 0 0.2rem rgb(0 0 0 / 30%);
 }
 

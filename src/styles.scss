@@ -4,6 +4,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #4d5568 !important;
 }
 
+ul, li {
+  color: #0a0c0d !important;
+  list-style: none;
+  margin: 0 !important;
+}
+
 .flex-between {
   display: flex;
   justify-content: space-between;

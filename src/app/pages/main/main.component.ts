@@ -10,7 +10,8 @@ import {IRFLTask} from '../../types/irfl-task';
     styleUrls: ['./main.scss']
 })
 export class MainComponent implements OnInit, OnDestroy {
-    task: IRFLTask = getIRFLTask('monkey-human-swing');
+    simile: IRFLTask = getIRFLTask('simile');
+    idiom: IRFLTask = getIRFLTask('idiom');
     public window: Window = window;
 
     constructor(private router: Router, private changeDetectorRef: ChangeDetectorRef) {

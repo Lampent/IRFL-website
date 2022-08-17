@@ -3,7 +3,7 @@ import {IRFLTask} from './irfl-task';
 
 const guessTheAssociationsDictionary: Map<string, IRFLTask> = new Map<string, IRFLTask>()
 const assetsImgPath = '/assets/img/';
-const defaultCue = 'example-1';
+const defaultCue = 'idiom';
 
 
 export const createQualificationIndexIDMap = new Map();
@@ -51,7 +51,7 @@ export function getIRFLTask(figurativePhrase): IRFLTask {
 
 // examples
 
-guessTheAssociationsDictionary.set('example-1', new IRFLTask([
+guessTheAssociationsDictionary.set('simile', new IRFLTask([
     new Candidate(assetsImgPath + 'very-hot.jpeg','random_1'),
         new Candidate(assetsImgPath + 'round-item.jpeg', 'random_2'),
         new Candidate(assetsImgPath + 'slow-snail.jpeg', 'answer_1', true),
@@ -59,3 +59,12 @@ guessTheAssociationsDictionary.set('example-1', new IRFLTask([
         new Candidate(assetsImgPath + 'speed-limit.jpeg', 'answer_2', true),
     ],
     'as slow as snail', 2))
+
+guessTheAssociationsDictionary.set('idiom', new IRFLTask([
+        new Candidate(assetsImgPath + 'wide-view.jpeg','random_1'),
+        new Candidate(assetsImgPath + 'person-on-the-ropes.jpeg', 'answer_1', true),
+        new Candidate(assetsImgPath + 'drawing-cowboy.jpeg', 'random_1'),
+        new Candidate(assetsImgPath + 'birds-on-tree.jpeg', 'random_3'),
+        new Candidate(assetsImgPath + 'building-on-the-ropes.jpeg', 'answer_2', true),
+    ],
+    'on the ropes', 2, ['On the ropes.', 'Showing signs of imminent failure or collapse.']));
