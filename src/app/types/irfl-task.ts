@@ -58,10 +58,6 @@ export class IRFLTask implements Jsonable {
         return this.candidates.map((candidate: Candidate) => candidate.userChoice).filter((elem) => elem).length;
     }
 
-    getUUID() {
-        return this.candidates.map(candidate => candidate.img).sort().join('-') + '-' + this.phrase;
-    }
-
     getJSON() {
         return {...this};
     }
@@ -87,12 +83,5 @@ export class IRFLTask implements Jsonable {
             cue: this.phrase, // add
             type: 'solve_game'
         }
-        // "association_id": 1,
-        //     "candidates": ["bear", "bee", "bride", "drums", "hockey"],
-        //     "labels": ["bear", "bee"],
-        //     "user_predictions": ["bride", "bee"],
-        //     "jaccard": 33,
-        //     "cue": "RONRONRON",
-        //     "type": "solve_game"
     }
 }

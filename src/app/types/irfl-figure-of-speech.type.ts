@@ -1,0 +1,1 @@
+export type IRFLFigureOfSpeechType = 'simile' | 'idiom'
