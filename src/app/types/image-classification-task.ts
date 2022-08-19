@@ -5,16 +5,16 @@ import {IRFLFigureOfSpeechType} from './irfl-figure-of-speech.type';
 
 export class ImageClassificationTask implements Jsonable {
     id: string = '';
-    image: IRFLImage;
+    irflImage: IRFLImage;
     phrase: string;
     type: IRFLFigureOfSpeechType
     definitions: string[];
     category: ImageCategoriesEnum;
 
-    constructor(image: IRFLImage, type: IRFLFigureOfSpeechType, phrase: string = '', definitions: string[] = [], category: ImageCategoriesEnum = ImageCategoriesEnum.Default, id = '') {
+    constructor(irflImage: IRFLImage, type: IRFLFigureOfSpeechType, phrase: string = '', definitions: string[] = [], category: ImageCategoriesEnum = ImageCategoriesEnum.Default, id = '') {
         this.type = type;
         this.id = id;
-        this.image = image;
+        this.irflImage = irflImage;
         this.phrase = phrase;
         this.category = category;
         this.definitions = definitions;
@@ -22,7 +22,7 @@ export class ImageClassificationTask implements Jsonable {
 
 
     static clone(task: ImageClassificationTask) {
-        return new ImageClassificationTask(JSON.parse(JSON.stringify(task.image)), task.type, task.phrase, task.definitions, task.category, task.id)
+        return new ImageClassificationTask(JSON.parse(JSON.stringify(task.irflImage)), task.type, task.phrase, task.definitions, task.category, task.id)
     }
 
     init() {

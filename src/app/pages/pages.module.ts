@@ -32,20 +32,21 @@ import {IRFLTaskPath, leaderboard, solveCratePath} from '../app-routing.module';
 import {NavbarComponent} from '../navbar/navbar/navbar.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReportFormComponent } from './report-form/report-form.component';
-import {AngularFireModule} from '@angular/fire';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import {LeaderboardService} from '../services/leaderboard.service';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {ChartModule} from 'primeng/chart';
 import {AccordionModule} from 'primeng/accordion';
+import {ImageClassificationBoardComponent} from '../image-classification-board/image-classification-board.component';
+import { MturkImageClassificationTaskComponent } from './mturk-image-classification-task/mturk-image-classification-task.component';
 
 const routes: Routes = [
   { path: IRFLTaskPath, component: ExploreComponent },
   { path: 'explore', component: ExploreComponent},
   { path: leaderboard, component: LeaderboardComponent },
   { path: 'download', component: DownloadComponent },
-  { path: 'mturk/solve/:id', component: MturkSolveComponent },
+  {path: 'mturk/image-image-classification/:id', component: MturkImageClassificationTaskComponent},
   { path: solveCratePath, component: MturkSolveComponent },
   { path: '**', component: MainComponent },
 ]
@@ -85,12 +86,14 @@ const routes: Routes = [
     MainComponent,
     NavbarComponent,
     TaskBoardComponent,
+    ImageClassificationBoardComponent,
     ExploreComponent,
     DownloadComponent,
     MturkSolveComponent,
     PersonalDetailsFormComponent,
     ReportFormComponent,
-    LeaderboardComponent
+    LeaderboardComponent,
+    MturkImageClassificationTaskComponent
   ],
   exports: [
     MainComponent,

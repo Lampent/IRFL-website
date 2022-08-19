@@ -1,7 +1,6 @@
 import {Component, OnInit, OnDestroy, ChangeDetectorRef} from '@angular/core';
-import noUiSlider from 'nouislider';
 import {Router} from '@angular/router';
-import {getIRFLTask} from '../../types/task-dictionary';
+import {getIRFLTask, imageClassificationExampleTask} from '../../types/task-dictionary';
 import {IRFLTask} from '../../types/irfl-task';
 
 @Component({
@@ -12,6 +11,7 @@ import {IRFLTask} from '../../types/irfl-task';
 export class MainComponent implements OnInit, OnDestroy {
     simile: IRFLTask = getIRFLTask('simile');
     idiom: IRFLTask = getIRFLTask('idiom');
+    imageClassification = imageClassificationExampleTask;
     public window: Window = window;
 
     constructor(private router: Router, private changeDetectorRef: ChangeDetectorRef) {

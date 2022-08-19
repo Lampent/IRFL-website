@@ -6,8 +6,8 @@ import {GiveTheCueTask} from '../types/give-the-cue-task';
 import {IRFLTask} from '../types/irfl-task';
 import {catchError, map} from 'rxjs/operators';
 import {UserStats} from '../types/user-stats';
-import firebase from 'firebase';
-import User = firebase.User;
+import {ImageClassificationTask} from '../types/image-classification-task';
+import {imageClassificationExampleTask} from '../types/task-dictionary';
 
 // mock
 
@@ -68,6 +68,15 @@ export class ServerRequestService {
         return this.httpService.get<any>(url).pipe(map((task) => {
             return this.createNewGuessTheAssociationsTask(task);
         }));
+    }
+
+    getIRFLImageClassificationTask(id, example: boolean=false): Observable<ImageClassificationTask> {
+        // // const url = example ? `https://gvlab-backend.herokuapp.com/task/example/solve/${id}` : `https://gvlab-backend.herokuapp.com/task/mturk/solve/${id}`
+        // const url = `https://gvlab-backend.herokuapp.com/task/mturk/solve_create/${id}`
+        // return this.httpService.get<any>(url).pipe(map((task) => {
+        //     return this.createNewGuessTheAssociationsTask(task);
+        // }));
+        return of(imageClassificationExampleTask)
     }
 
     getGuessTheAssociationGameTask(candidates = 5): Observable<GiveTheCueTask> {

@@ -1,0 +1,52 @@
+<canvas id="confetti" [ngStyle]="{position: 'absolute', 'pointer-events': 'none'}"></canvas>
+<h3 style="text-transform: none;">{{title}}</h3>
+<div class="analogy-container">
+    <div class="cue-line-container" style="padding-bottom: 20px">
+            <div class="board top-board box-shadow">
+                <div class="main-description" *ngIf="showInfo" [innerHTML]="info">
+                </div>
+                <div class="cue-board">
+                    <div class="label board-title">Phrase</div>
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width no-underline-mat-field" appearance="fill">
+                            <input matInput [formControl]="phraseFormControl" [readonly]="true" autocomplete="off"/>
+                            <mat-error *ngIf="!phraseFormControl.valid && phraseFormControl.value != ''">
+                                Error
+                            </mat-error>
+                        </mat-form-field>
+                    </form>
+            </div>
+        </div>
+
+        <div style="padding-top: 10px" *ngIf="this._imageClassificationTask.definitions.length > 0">
+            <div class="definitions-board box-shadow">
+                <!--                <div class="label board-title">Definitions</div>-->
+                <div class="example-full-width">
+                    <ul class="definitions-list">
+                        <li *ngFor="let definition of this._imageClassificationTask.definitions; let i = index;">{{i+1 +'. ' + definition}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    <div class="AI-response-label-container"-->
+    <!--         [style]="{'visibility': (!_submit) ? 'hidden' : 'visible'}">-->
+    <!--        &lt;!&ndash;        *ngIf="_giveCueTask && (_giveCueTask.score | async) !== null"&ndash;&gt;-->
+    <!--        <div class="AI-response-label">AI Response <img src="assets/robot-head/robot-head.png"></div>-->
+    <!--    </div>-->
+        <div class="left-board">
+            <div class="images-board box-shadow">
+                <div>
+                    <img src="{{_imageClassificationTask.irflImage.img}}">
+                </div>
+            </div>
+
+            <div class="images-board">
+                <ul class="category-list">
+                    <li class="irfl-category" (click)="selectCategory(category)" *ngFor="let category of categories; let i = index;"
+                    [ngClass]="{'selected-category': this._imageClassificationTask.category == category}">{{category}}</li>
+                </ul>
+            </div>
+    </div>
+</div>
+

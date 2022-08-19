@@ -1,10 +1,13 @@
 import {Candidate} from './candidate';
 import {IRFLTask} from './irfl-task';
+import {ImageClassificationTask} from './image-classification-task';
+import {IRFLImage} from './IRFLImage';
 
 const guessTheAssociationsDictionary: Map<string, IRFLTask> = new Map<string, IRFLTask>()
 const assetsImgPath = '/assets/img/';
 const defaultCue = 'idiom';
-
+export const imageClassificationExampleTask = new ImageClassificationTask(new IRFLImage(assetsImgPath + 'slow-snail.jpeg', 'slow-snail'),'simile',
+    'as slow as snail');
 
 export const createQualificationIndexIDMap = new Map();
 createQualificationIndexIDMap.set(1, 'ablation_1');

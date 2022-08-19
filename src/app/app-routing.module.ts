@@ -8,6 +8,7 @@ import {DownloadComponent} from './pages/download/download.component';
 import {ExploreComponent} from './pages/explore/explore.component';
 import {MturkSolveComponent} from './pages/mturk-irfl-task/mturk-solve.component';
 import {LeaderboardComponent} from './pages/leaderboard/leaderboard.component';
+import {MturkImageClassificationTaskComponent} from './pages/mturk-image-classification-task/mturk-image-classification-task.component';
 
 export const solveCratePath = 'mturk/solve/create/:id';
 export const IRFLTaskPath = 'task';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'explore', component: ExploreComponent },
   { path: leaderboard, component: LeaderboardComponent },
   { path: 'mturk/solve/:id', component: MturkSolveComponent },
+  {path: 'mturk/image-image-classification', component: MturkImageClassificationTaskComponent},
   { path: solveCratePath, component: MturkSolveComponent }
 ];
 

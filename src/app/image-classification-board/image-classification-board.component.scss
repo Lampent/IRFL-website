@@ -1,0 +1,408 @@
+.analogy-container {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.definitions-board {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.category-list, .definitions-list {
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+}
+
+.category-list {
+  height: 100%;
+  padding-left: 0 !important;
+}
+
+.irfl-category {
+  width: 230px;
+  height: 20%;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-top: solid 2px #e2e2e2;
+  border-right: solid 2px #e2e2e2;
+  border-left: solid 2px #e2e2e2;
+}
+
+.selected-category {
+  background-color: #fd969e52;
+}
+
+.irfl-category:last-child {
+  border-bottom: solid 2px #e2e2e2;
+}
+
+.category-list, .definitions-list:last-child {
+  padding-bottom: 0;
+}
+
+.board {
+  display: flex;
+  padding: 15px;
+}
+
+.no-underline-mat-field ::ng-deep  .mat-form-field-underline  {
+  visibility: hidden !important;
+}
+
+@media (max-width: 835px) {
+  .top-board {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cue-board {
+    height: 120px !important;
+  }
+}
+
+.top-board {
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.main-description {
+  color: black;
+  position: absolute;
+  right: -260px;
+  width: 420px;
+  bottom: 80px;
+  background: #feebec;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 0.2rem rgb(0 0 0 / 30%);
+}
+
+.left-board, .right-board {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cue-board {
+  width: 600px;
+}
+
+.associations-board {
+  width: 200px;
+}
+
+.associations-board, .cue-board {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.example-full-width {
+  width: 95%;
+}
+
+::ng-deep .mat-form-field-flex {
+  padding: 0 !important;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  text-align: center;
+}
+
+.images-board {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fas {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1080px) {
+  .main-description {
+    left:0;
+    right:0;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 298px;
+    bottom: -250px;
+    z-index: 9999;
+  }
+}
+
+@media (max-width: 1080px) {
+  .analogy-image-container {
+    flex: 1 0 99% !important; /* explanation below */
+  }
+
+  .center-separator {
+    display: none !important;
+  }
+}
+
+.analogy-image-container {
+  flex: 1 0 20%; /* explanation below */
+  height: auto;
+  width: auto;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.analogy-image-container-six {
+  flex: 1 0 33%; /* explanation below */
+  height: auto;
+  width: auto;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.analogy-image-container-twelve {
+  flex: 1 0 25% !important; ; /* explanation below */
+  height: auto;
+  width: auto;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.label {
+  color: #4d5568;
+}
+
+.board-title {
+  font-size: 2rem;
+  font-family: "Cambria Math", serif;
+}
+
+input, .bold-text {
+  font-size: 1.8rem;
+  color: black;
+  font-weight: bold;
+}
+
+.shake {
+  animation-name: shake-animation;
+  animation-duration: 0.3s;
+}
+
+@keyframes shake-animation {
+  10%, 90% {
+    transform: translate3d(-0.5px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+
+
+.remove-pointer {
+  display: none !important;
+}
+
+@media (max-width: 1375px) {
+  .pointer-container {
+    display: none !important;
+  }
+}
+
+.pointer-container {
+  color: black;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: -160px;
+}
+
+.moving-pointer {
+  font-weight: 500 !important;
+  font-size: 80px;
+  animation-name: moving-pointer;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  color: black;
+}
+
+.AI-response-label-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.AI-response-label {
+  color: #666666;
+  font-size: 30px;
+}
+
+.AI-response-label > img {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes moving-pointer {
+  from {
+    margin-left: 20px;
+  }
+
+  to {
+    margin-right: 30px;
+  }
+}
+
+
+.pointer-label {
+  font-size: 19px;
+}
+
+
+img {
+  width: 237px;
+  height: 237px;
+  border: 2px transparent solid;
+}
+
+.separator-label {
+  text-align: center;
+  font-size: 100px;
+  color: black;
+}
+
+.cue-line-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 880px) {
+  .fas-container {
+    width: 30px !important;
+    height: 110px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding-left: 44px;
+  }
+
+  .dashboard-icon {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .cue-line-container {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    flex-direction: column;
+    height: 216px;
+  }
+
+  .fas-container {
+    width: 200px !important;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    padding-left: 0;
+    margin: auto;
+  }
+
+}
+
+.fas-container {
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 44px;
+}
+
+.dashboard-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.fas {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.fa-sign-out-alt {
+  color: black;
+}
+
+.fa-info-circle {
+  color: #fd969e;
+}
+
+.box-shadow {
+  box-shadow: 0 0 0.2rem rgb(0 0 0 / 30%);
+}
+
+.center-separator {
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.candidate-selected {
+  border: #ff8d72 solid 5px;
+}
+
+.AI-selected {
+  border: #ffdc00 solid 5px;
+}
+
+.alerts-border {
+  border: #ff8d72 solid 5px;
+
+  animation: blink 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: #fff;
+  }
+}
+
+//Material
+::ng-deep .mat-form-field-flex {
+  background-color: transparent !important;
+}
+
