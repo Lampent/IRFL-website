@@ -4,10 +4,10 @@ import {Candidate} from '../types/candidate';
 import {Observable, of} from 'rxjs';
 import {GiveTheCueTask} from '../types/give-the-cue-task';
 import {IRFLTask} from '../types/irfl-task';
-import {catchError, map} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 import {UserStats} from '../types/user-stats';
 import {ImageClassificationTask} from '../types/image-classification-task';
-import {getIRFLTask, imageClassificationExampleTask} from '../types/task-dictionary';
+import {getIRFLTask} from '../types/task-dictionary';
 import {IRFLImage} from '../types/IRFLImage';
 import {ServerTask} from '../types/server-task';
 import {ImageCategoriesEnum} from '../types/image-categories-enum';
@@ -31,14 +31,24 @@ function getImagePath(imgName: string) {
     // return awsURL+imgName+'.jpg';
     return imgName
 }
-// https://gvlabt-backend.herokuapp.com
+// https://irfl-app.herokuapp.com/
 // http://127t.0.0.1:1235
 
-const serverURL: string = 'http://127.0.0.1:1235'
+// const serverURL: string = 'http://127.0.0.1:1235'
+const serverURL: string = 'https://irfl-app.herokuapp.com/'
 @Injectable()
 export class ServerRequestService {
 
     constructor(private httpService: HttpClient) {
+    }
+
+    getRandomIRFLTask(id, example: boolean=false): Observable<IRFLTask> {
+        // const url = example ? `https://gvlab-backend.herokuapp.com/task/example/solve/${id}` : `https://gvlab-backend.herokuapp.com/task/mturk/solve/${id}`
+        const url = `${serverURL}/task/mturk/solve_create/${id}`
+        // return this.httpService.get<any>(url).pipe(map((task) => {
+        //     return this.createNewGuessTheAssociationsTask(task);
+        // }));
+        return of(getIRFLTask('idiom'))
     }
 
     getIRFLTask(id, example: boolean=false): Observable<IRFLTask> {

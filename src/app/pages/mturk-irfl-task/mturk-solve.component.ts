@@ -40,14 +40,14 @@ export class MturkSolveComponent extends MturkTask implements OnInit, OnDestroy 
             console.log('solve create')
         }
         if (this.id && typeof this.id === 'string') {
-            (this.solveCreate ? this.serverRequestService.getCreateGuessTheAssociationTask(this.id) : this.serverRequestService.getIRFLTask(this.id)).subscribe((task: IRFLTask) => {
-                this.isSixCandidates = task.candidates.length > 5
-                this.turkSubmitTo = this.activeRouter.snapshot.queryParams.turkSubmitTo
-                this.assignmentId = this.activeRouter.snapshot.queryParams.assignmentId
-                console.log(this.turkSubmitTo)
-                console.log(this.assignmentId)
-                this.geussTheAssociationsTask = task
-            });
+            // (this.solveCreate ? this.serverRequestService.getCreateGuessTheAssociationTask(this.id) : this.serverRequestService.getIRFLTask(this.id)).subscribe((task: IRFLTask) => {
+            //     this.isSixCandidates = task.candidates.length > 5
+            //     this.turkSubmitTo = this.activeRouter.snapshot.queryParams.turkSubmitTo
+            //     this.assignmentId = this.activeRouter.snapshot.queryParams.assignmentId
+            //     console.log(this.turkSubmitTo)
+            //     console.log(this.assignmentId)
+            //     this.geussTheAssociationsTask = task
+            // });
         }
         console.log(this.activeRouter.snapshot)
     }
