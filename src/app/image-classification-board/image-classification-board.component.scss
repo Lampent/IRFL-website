@@ -417,3 +417,24 @@ img {
   background-color: transparent !important;
 }
 
+// Image magnifier glass
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position:relative;
+}
+
+::ng-deep .img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none !important;
+  /*Set the size of the magnifier glass:*/
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+}
+
+#task-image {
+  cursor: none !important;
+}

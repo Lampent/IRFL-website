@@ -7,7 +7,10 @@ import {IRFLTask} from '../types/irfl-task';
 import {catchError, map} from 'rxjs/operators';
 import {UserStats} from '../types/user-stats';
 import {ImageClassificationTask} from '../types/image-classification-task';
-import {imageClassificationExampleTask} from '../types/task-dictionary';
+import {getIRFLTask, imageClassificationExampleTask} from '../types/task-dictionary';
+import {IRFLImage} from '../types/IRFLImage';
+import {ServerTask} from '../types/server-task';
+import {ImageCategoriesEnum} from '../types/image-categories-enum';
 
 // mock
 
@@ -30,115 +33,43 @@ function getImagePath(imgName: string) {
 }
 // https://gvlabt-backend.herokuapp.com
 // http://127t.0.0.1:1235
+
+const serverURL: string = 'http://127.0.0.1:1235'
 @Injectable()
 export class ServerRequestService {
 
     constructor(private httpService: HttpClient) {
     }
-//        new GiveTheCueTask([response.candidates.map(img => new Candidate(img)), response.candidates.map(img => new Candidate(img))], ['', ''], response.id)
-    getGiveTheCue(id, example: boolean=false): Observable<GiveTheCueTask> {
-        // const url = example ? `https://gvlab-backend.herokuapp.com/task/example/create/${id}` : `https://gvlab-backend.herokuapp.com/task/mturk/create/${id}`
-        const url = `https://gvlab-backend.herokuapp.com/task/mturk/create/${id}`
-        return this.httpService.get<any>(url, { withCredentials: true }).pipe(map((task) => {
-            return this.createNewGiveTheCueTask(task);
-        }));
-    }
-
-    getRandomGiveTheCue(candidates = 5): Observable<GiveTheCueTask> {
-        const url = `https://gvlab-backend.herokuapp.com/task/example/random_create/${candidates}`;
-        return this.httpService.get<any>(url).pipe(map((task) => {
-            return this.createNewGiveTheCueTask(task);
-        }));
-    }
-
-    getGiveTheCueGameTask(candidates = 5): Observable<GiveTheCueTask> {
-        const url = `https://gvlab-backend.herokuapp.com/game_random_create/${candidates}`;
-        return this.httpService.get<any>(url).pipe(
-            map((task) => {
-                return this.createNewGiveTheCueTask(task);
-            }), catchError(err => {
-                console.log(err)
-                return of(err)
-            }));
-    }
 
     getIRFLTask(id, example: boolean=false): Observable<IRFLTask> {
         // const url = example ? `https://gvlab-backend.herokuapp.com/task/example/solve/${id}` : `https://gvlab-backend.herokuapp.com/task/mturk/solve/${id}`
-        const url = `https://gvlab-backend.herokuapp.com/task/mturk/solve_create/${id}`
-        return this.httpService.get<any>(url).pipe(map((task) => {
-            return this.createNewGuessTheAssociationsTask(task);
-        }));
-    }
-
-    getIRFLImageClassificationTask(id, example: boolean=false): Observable<ImageClassificationTask> {
-        // // const url = example ? `https://gvlab-backend.herokuapp.com/task/example/solve/${id}` : `https://gvlab-backend.herokuapp.com/task/mturk/solve/${id}`
-        // const url = `https://gvlab-backend.herokuapp.com/task/mturk/solve_create/${id}`
+        const url = `${serverURL}/task/mturk/solve_create/${id}`
         // return this.httpService.get<any>(url).pipe(map((task) => {
         //     return this.createNewGuessTheAssociationsTask(task);
         // }));
-        return of(imageClassificationExampleTask)
+        return of(getIRFLTask('idiom'))
     }
 
-    getGuessTheAssociationGameTask(candidates = 5): Observable<GiveTheCueTask> {
-        const url = `https://gvlab-backend.herokuapp.com/get_create_to_solve/${candidates}`;
-        return this.httpService.get<any>(url).pipe(
-            map((task) => {
-                return this.createNewGuessTheAssociationsTask(task);
-            }), catchError(err => {
-                console.log(err)
-                return of(err)
-            }));
-    }
-
-    getRandomIRFLTask(candidates = 5): Observable<IRFLTask> {
-        const url = `https://gvlab-backend.herokuapp.com/task/example/random_solve/${candidates}`;
-        return this.httpService.get<any>(url).pipe(map((task) => {
-            return this.createNewGuessTheAssociationsTask(task);
+    getIRFLImageClassificationTask(id, example: boolean=false): Observable<ImageClassificationTask> {
+        const url = `${serverURL}/task/image/${id}`
+        return this.httpService.get<any>(url).pipe(map((task: ServerTask) => {
+            const irflImage: IRFLImage = new IRFLImage(task.image_url, task.image_name);
+            return new ImageClassificationTask(
+                irflImage,
+                task.type,
+                task.phrase,
+                task.type === 'idiom' ? task.definitions.map((definition: any) => definition.definition) : [],
+                ImageCategoriesEnum.Default,
+                task.ID,
+                task
+            );
         }));
-    }
-
-    getCreateGuessTheAssociationTask(id): Observable<IRFLTask> {
-        const url = `https://gvlab-backend.herokuapp.com/task/mturk/solve_create/${id}`
-        return this.httpService.get<any>(url).pipe(map((task) => {
-            return this.createNewGuessTheAssociationsTask(task);
-        }));
-    }
-
-    getAIPrediction(task: GiveTheCueTask, cueIndex=0): void {
-        this.httpService.post('https://gvlab-backend.herokuapp.com/create', task.getPredictionFormat(cueIndex)).subscribe((response: any) => {
-            task.setAIAnswers(response.clip_predictions, cueIndex)
-            task.setScore(response.human_score, cueIndex)
-        })
-    }
-
-    getAIPredictionGame(task: GiveTheCueTask, cueIndex=0): void {
-        this.httpService.post('https://gvlab-backend.herokuapp.com/create_game', task.getGamePredictionFormat(cueIndex)).subscribe((response: any) => {
-            task.setAIAnswers(response.clip_predictions, cueIndex)
-            task.setScore(response.human_score, cueIndex)
-        })
-    }
-    // gvl2ab-backend.herokuapp.com
-    solveGame(task: IRFLTask): void {
-        const url = 'https://gvlab-backend.herokuapp.com/solve_game'
-        this.httpService.post(url, task.getSolveFormat()).subscribe((response: any) => {
-            console.log('Solved successfully')
-        })
     }
 
     sendReportForm(data: object) {
         this.httpService.post('https://gvlab-backend.herokuapp.com/report', JSON.stringify(data), {headers}).subscribe((response: any) => {
             console.log('Report form was sent')
         })
-    }
-
-    createNewGuessTheAssociationsTask(task): IRFLTask {
-        const id = task.ID === undefined ? task.id : task.ID
-        return new IRFLTask(task.candidates.map((img, index) => new Candidate(getImagePath(img), task.candidates_original[index], task.associations.includes(img))), task.num_associations, id);
-    }
-
-    createNewGiveTheCueTask(task): GiveTheCueTask {
-        const id = task.ID === undefined ? task.id : task.ID
-        return new GiveTheCueTask([task.candidates.map((img, index) => new Candidate(getImagePath(img), task.candidates_original[index])), task.candidates.map((img, index) => new Candidate(getImagePath(img), task.candidates_original[index]))], ['', ''], id);
     }
 
     getLeaderboard(): Observable<UserStats[]> {
