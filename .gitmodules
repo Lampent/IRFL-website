@@ -1,0 +1,4 @@
+[submodule "src/app/pages/public"]
+	path = src/app/pages/public
+	url = https://lampent@github.com/irfl-dataset/irfl-dataset.github.io.git
+	branch = main
