@@ -1,6 +1,5 @@
 import {Candidate} from './candidate';
 import {Jsonable} from './jsonable';
-import {TaskTypeEnum} from './task-type.enum';
 
 export class IRFLTask implements Jsonable {
     id: string = '';

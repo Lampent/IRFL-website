@@ -1,3 +1,10 @@
+#confetti {
+  width: 100% !important;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+}
+
 .col-6 {
   padding-bottom: 30px !important;
   display: flex;

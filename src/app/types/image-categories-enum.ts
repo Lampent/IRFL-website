@@ -2,6 +2,6 @@ export enum ImageCategoriesEnum {
     Literal = 'Literal',
     Figurative = 'Figurative',
     None = 'None',
-    InvalidImage = 'Invalid image',
+    InvalidImage = 'Incomprehensible',
     Default = 'Default'
 }

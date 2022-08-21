@@ -2,6 +2,7 @@ import {Component, OnInit, OnDestroy, ChangeDetectorRef} from '@angular/core';
 import {Router} from '@angular/router';
 import {getIRFLTask, imageClassificationExampleTask} from '../../types/task-dictionary';
 import {IRFLTask} from '../../types/irfl-task';
+import {IRFLFigureOfSpeechType} from '../../types/irfl-figure-of-speech.type';
 
 @Component({
     selector: 'app-main',
@@ -11,6 +12,7 @@ import {IRFLTask} from '../../types/irfl-task';
 export class MainComponent implements OnInit, OnDestroy {
     simile: IRFLTask = getIRFLTask('simile');
     idiom: IRFLTask = getIRFLTask('idiom');
+    selectedFigureOfSpeech: IRFLFigureOfSpeechType = 'simile';
     imageClassification = imageClassificationExampleTask;
     public window: Window = window;
 

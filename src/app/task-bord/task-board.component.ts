@@ -10,7 +10,7 @@ import {IRFLTask} from '../types/irfl-task';
     templateUrl: './task-board.component.html',
     styleUrls: ['./task-board.component.scss']
 })
-export class TaskBoardComponent implements OnInit, OnDestroy {
+export class TaskBoardComponent implements OnInit {
     _candidates: Candidate[] = []
     _irflTask: IRFLTask = null;
     confettiSettings = {target: 'confetti'};
@@ -29,18 +29,11 @@ export class TaskBoardComponent implements OnInit, OnDestroy {
     @Input() info: string = '';
     @Output() selected$: EventEmitter<Candidate> = new EventEmitter<Candidate>();
     cueFormControl = new FormControl('');
-    cueValueChangesSubscription = new Subscription();
-    cueValueChangedSubscription = new Subscription();
 
     constructor(private changeDetectionRef: ChangeDetectorRef) {
     }
 
     ngOnInit(): void {
-    }
-
-    ngOnDestroy() {
-        this.cueValueChangesSubscription.unsubscribe()
-        this.cueValueChangesSubscription.unsubscribe()
     }
 
     init() {

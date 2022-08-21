@@ -3,10 +3,10 @@
 <div class="analogy-container">
     <div class="cue-line-container" style="padding-bottom: 20px">
         <div class="right-board-container">
-            <div class="board top-board" [style.width]="'835px'">
+            <div class="board top-board">
                 <div class="main-description" *ngIf="showInfo" [innerHTML]="info">
                 </div>
-                <div class="cue-board">
+                <div class="cue-board" [ngStyle]="{'width': this?._irflTask?.numOfSolution === 1 && '100%'}">
                     <div class="label board-title">Phrase</div>
                     <form class="example-form">
                         <mat-form-field class="example-full-width no-underline-mat-field" appearance="fill">
@@ -17,7 +17,7 @@
                         </mat-form-field>
                     </form>
                 </div>
-                <div class="associations-board">
+                <div class="associations-board" *ngIf="this?._irflTask?.numOfSolution > 1">
                     <div class="label board-title"> Solutions</div>
                     <div class="bold-text"> {{this._irflTask.numOfSolution}} </div>
                 </div>
