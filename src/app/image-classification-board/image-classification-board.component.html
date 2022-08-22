@@ -37,7 +37,7 @@
         <div class="left-board">
             <div class="images-board box-shadow">
                 <div>
-                    <img id="task-image" (mouseout)="hideZoom()"  (mouseover)="showZoom()" src="{{_imageClassificationTask.irflImage.img}}">
+                    <img [id]=imageId (mouseout)="hideZoom()"  (mouseover)="showZoom()" src="{{_imageClassificationTask.irflImage.img}}">
                 </div>
             </div>
 

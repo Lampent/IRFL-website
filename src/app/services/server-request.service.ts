@@ -11,6 +11,7 @@ import {getIRFLTask} from '../types/task-dictionary';
 import {IRFLImage} from '../types/IRFLImage';
 import {ServerTask} from '../types/server-task';
 import {ImageCategoriesEnum} from '../types/image-categories-enum';
+import {ServerTaskGroup} from '../types/server-task-group';
 
 // mock
 
@@ -73,6 +74,25 @@ export class ServerRequestService {
                 task.ID,
                 task
             );
+        }));
+    }
+
+    getIRFLImageClassificationTasks(id, example: boolean=false): Observable<ImageClassificationTask[]> {
+        const url = `${serverURL}/task/image/${id}`
+        return this.httpService.get<any>(url).pipe(map((serverTaskGroup: ServerTaskGroup) => {
+            return serverTaskGroup.tasks.map((task) => {
+                const irflImage: IRFLImage = new IRFLImage(task.image_url, task.image_name);
+                return new ImageClassificationTask(
+                    irflImage,
+                    task.type,
+                    task.phrase,
+                    task.type === 'idiom' ? task.definitions.map((definition: any) => definition.definition) : [],
+                    ImageCategoriesEnum.Default,
+                    task.ID,
+                    task,
+                    serverTaskGroup.ID
+                );
+            });
         }));
     }
 

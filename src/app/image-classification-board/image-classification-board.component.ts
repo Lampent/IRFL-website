@@ -23,7 +23,7 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
   phraseFormControl = new FormControl('');
 
   constructor(private changeDetectionRef: ChangeDetectorRef) {
-    super();
+    super(String(Math.floor(Math.random() * 10000000000)));
     this.categories.pop();
   }
 

@@ -11,8 +11,10 @@ export class ImageClassificationTask implements Jsonable {
     definitions: string[];
     category: ImageCategoriesEnum;
     serverData: object;
+    groupID: string = '';
 
-    constructor(irflImage: IRFLImage, type: IRFLFigureOfSpeechType, phrase: string = '', definitions: string[] = [], category: ImageCategoriesEnum = ImageCategoriesEnum.Default, id = '', serverData: object = {}) {
+    constructor(irflImage: IRFLImage, type: IRFLFigureOfSpeechType, phrase: string = '', definitions: string[] = [], category: ImageCategoriesEnum = ImageCategoriesEnum.Default,
+                id = '', serverData: object = {}, groupID: string ='') {
         this.type = type;
         this.id = id;
         this.serverData = serverData;
@@ -20,11 +22,12 @@ export class ImageClassificationTask implements Jsonable {
         this.phrase = phrase;
         this.category = category;
         this.definitions = definitions;
+        this.groupID = groupID;
     }
 
 
     static clone(task: ImageClassificationTask) {
-        return new ImageClassificationTask(JSON.parse(JSON.stringify(task.irflImage)), task.type, task.phrase, task.definitions, task.category, task.id, task.serverData)
+        return new ImageClassificationTask(JSON.parse(JSON.stringify(task.irflImage)), task.type, task.phrase, task.definitions, task.category, task.id, task.serverData, task.groupID)
     }
 
     init() {

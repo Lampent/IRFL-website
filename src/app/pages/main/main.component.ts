@@ -32,4 +32,14 @@ export class MainComponent implements OnInit, OnDestroy {
     navigateHome() {
         this.router.navigateByUrl(this.router.url);
     }
+
+    onSimileTabSelected() {
+        this.idiom.clearCandidates();
+        this.selectedFigureOfSpeech = 'simile';
+    }
+
+    onIdiomTabSelected() {
+        this.simile.clearCandidates()
+        this.selectedFigureOfSpeech = 'idiom';
+    }
 }

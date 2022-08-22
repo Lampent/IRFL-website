@@ -25,7 +25,7 @@ export class MturkImageClassificationTaskComponent extends MturkTask implements 
   assignmentId = '';
   solveCreate = false;
   timerSubscription = new Subscription()
-  imageClassificationTask: ImageClassificationTask = null
+  imageClassificationTasks: ImageClassificationTask[] = null
 
   constructor(private router: Router,
               private activeRouter: ActivatedRoute,
@@ -36,12 +36,12 @@ export class MturkImageClassificationTaskComponent extends MturkTask implements 
     window.name = 'IRFL'
     this.id = this.activeRouter.snapshot.params.id
     if (this.id && typeof this.id === 'string') {
-      this.serverRequestService.getIRFLImageClassificationTask(this.id).subscribe((task: ImageClassificationTask) => {
+      this.serverRequestService.getIRFLImageClassificationTasks(this.id).subscribe((tasks: ImageClassificationTask[]) => {
         this.turkSubmitTo = this.activeRouter.snapshot.queryParams.turkSubmitTo
         this.assignmentId = this.activeRouter.snapshot.queryParams.assignmentId
         console.log(this.turkSubmitTo)
         console.log(this.assignmentId)
-        this.imageClassificationTask = task
+        this.imageClassificationTasks = tasks
       });
     }
     console.log(this.activeRouter.snapshot)
@@ -63,18 +63,12 @@ export class MturkImageClassificationTaskComponent extends MturkTask implements 
     body.classList.remove('index-page');
   }
 
-  restartPractice() {
-    this._submit = false;
-    this.showHint('')
-    this.imageClassificationTask?.init();
-  }
-
   submit(): void {
-    this._submit = this.imageClassificationTask.isClassified()
+    this._submit = this.imageClassificationTasks.map(task => task.isClassified()).every(val => val === true)
     if (this._submit) {
-      this.handleSubmit(this.assignmentId, this.turkSubmitTo, this.imageClassificationTask)
+      this.handleSubmit(this.assignmentId, this.turkSubmitTo, this.imageClassificationTasks)
     } else {
-      this.showHint(this.imageClassificationTask?.getHint())
+      this.showHint('Please choose one of the categories in all of the instances.')
     }
   }
 

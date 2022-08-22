@@ -14,10 +14,10 @@
                     <br/>
                 </h3>
                 <tabset class="nav-tabs-danger">
-                    <tab heading="Simile" (selectTab)="idiom.clearCandidates() || (selectedFigureOfSpeech = 'simile')">
+                    <tab heading="Simile" (selectTab)="onSimileTabSelected()">
                         <app-task-board *ngIf="selectedFigureOfSpeech === 'simile'" class="analogies-board" [irflTask]="simile" [enablePointer]="true"></app-task-board>
                     </tab>
-                    <tab heading="idiom" (selectTab)="simile.clearCandidates() || (selectedFigureOfSpeech = 'idiom')">
+                    <tab heading="idiom" (selectTab)="onIdiomTabSelected()">
                         <app-task-board *ngIf="selectedFigureOfSpeech === 'idiom'" class="analogies-board" [irflTask]="idiom" [enablePointer]="true"></app-task-board>
                     </tab>
                 </tabset>
