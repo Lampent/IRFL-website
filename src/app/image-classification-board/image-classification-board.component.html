@@ -3,7 +3,14 @@
 <div class="analogy-container">
     <div class="cue-line-container" style="padding-bottom: 20px">
             <div class="board top-board box-shadow">
-                <div class="main-description" *ngIf="showInfo" [innerHTML]="info">
+                <div class="main-description" *ngIf="showInfo && _imageClassificationTask.type === 'idiom'">
+                    <i class="close-icon fa-solid fa-circle-xmark" (click)="toggleInfo()"></i>
+                    <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the image and the phrase.</p>
+                    <p><b>Literal:</b> The image illustrates the phrase literally, or the main objects/entities of the phrase are saliently visualized in the image.</p>
+                    <p><b>Figurative:</b> The image visualizes or convey one or more definitions of the idiom.</p>
+                    <p><b>None:</b> The image is not Literal or Figurative. It contains some objects or entities, and its idea is comprehensible.</p>
+                    <p><b>Incomprehensible:</b> The image is not Literal or Figurative. It does not contain objects or entities, or its idea is incomprehensible.</p>
+                    <p style="padding-top: 7px;">You can view the full instructions by clicking <a style="font-weight: 500" href="https://sapphire-jorey-39.tiiny.site/" target="_blank">here</a>.</p>
                 </div>
                 <div class="cue-board">
                     <div class="label board-title">Phrase</div>
@@ -15,8 +22,9 @@
                             </mat-error>
                         </mat-form-field>
                     </form>
+                </div>
+                <i class="fas fa-info-circle" aria-hidden="true" (click)="toggleInfo()"></i>
             </div>
-        </div>
 
         <div style="padding-top: 10px" *ngIf="this._imageClassificationTask.definitions.length > 0">
             <div class="definitions-board box-shadow">
