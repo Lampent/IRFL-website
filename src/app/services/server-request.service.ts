@@ -68,7 +68,7 @@ export class ServerRequestService {
                 irflImage,
                 task.type,
                 task.phrase,
-                task.type === 'idiom' ? task.definitions.map((definition: any) => definition.definition) : [],
+                task.type === 'idiom' ? task.definitions.map((definition: any) => definition.definition).sort((a,b) => a.length - b.length) : [],
                 ImageCategoriesEnum.Default,
                 task.ID,
                 task
@@ -85,7 +85,7 @@ export class ServerRequestService {
                     irflImage,
                     task.type,
                     task.phrase,
-                    task.type === 'idiom' ? task.definitions.map((definition: any) => definition.definition) : [],
+                    task.type === 'idiom' ? task.definitions.map((definition: any) => definition.definition).sort((a,b) => a.length - b.length) : [],
                     ImageCategoriesEnum.Default,
                     task.ID,
                     task,
