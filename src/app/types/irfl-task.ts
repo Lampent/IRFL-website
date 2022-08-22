@@ -1,5 +1,6 @@
 import {Candidate} from './candidate';
 import {Jsonable} from './jsonable';
+import {IRFLFigureOfSpeechType} from './irfl-figure-of-speech.type';
 
 export class IRFLTask implements Jsonable {
     id: string = '';
@@ -7,8 +8,10 @@ export class IRFLTask implements Jsonable {
     phrase: string;
     numOfSolution: number;
     definitions: string[];
+    type: IRFLFigureOfSpeechType;
 
-    constructor(candidates: Candidate[], phrase: string = '', numOfSolution: number = 0, definitions: string[] = [], id = '') {
+    constructor(type: IRFLFigureOfSpeechType, candidates: Candidate[], phrase: string = '', numOfSolution: number = 0, definitions: string[] = [], id = '') {
+        this.type = type;
         this.id = id;
         this.candidates = candidates;
         this.phrase = phrase;
@@ -18,7 +21,7 @@ export class IRFLTask implements Jsonable {
 
 
     static clone(task: IRFLTask) {
-        return new IRFLTask(JSON.parse(JSON.stringify(task.candidates)), task.phrase, task.numOfSolution, task.definitions, task.id)
+        return new IRFLTask(task.type, JSON.parse(JSON.stringify(task.candidates)), task.phrase, task.numOfSolution, task.definitions, task.id)
     }
 
     static jaccard_similarity(list1: string[], list2: string[]): number {

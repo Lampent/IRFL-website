@@ -7,7 +7,7 @@
                 <div class="main-description" *ngIf="showInfo" [innerHTML]="info">
                 </div>
                 <div class="cue-board" [ngStyle]="{'width': '100%'}">
-                    <div class="label board-title">Phrase</div>
+                    <div class="label board-title">{{_irflTask.type === 'idiom' ? 'Idiom' : 'Simile'}}</div>
                     <form class="example-form">
                         <mat-form-field class="example-full-width no-underline-mat-field" appearance="fill">
                             <input matInput [formControl]="cueFormControl" [readonly]="true" autocomplete="off"/>
@@ -29,6 +29,7 @@
 <!--                <div class="label board-title">Definitions</div>-->
                 <div class="example-full-width">
                     <ul class="definitions-list">
+                        <li style="color: #4d5568 !important;">Definitions:</li>
                         <li *ngFor="let definition of this._irflTask.definitions; let i = index;">{{i+1 +'. ' + definition}}</li>
                     </ul>
                 </div>

@@ -6,11 +6,13 @@
                 <h4 class="h1-seo">IRFL: Image Recognition of Figurative Language
                 </h4>
                 <h3 style="padding-top: 2rem">
-                    Five images are presented below.
+                    Five images and {{selectedFigureOfSpeech === 'idiom' ? 'an idiom' : 'a simile '}} are presented below.
                     <br/>
-                    A figurative phrase is given.
-                    <br/>
-                    Choose a literal and a figurative image that best visualizes the phrase.
+
+                    <h3 *ngIf="selectedFigureOfSpeech === 'idiom'"> Choose an image that illustrates the idiom literally,
+                        and an image that visualize or convey one or more definitions of the idiomatic phrase. </h3>
+                    <h3 *ngIf="selectedFigureOfSpeech === 'simile'"> Choose an image that illustrates the simile literally,
+                        and an image that visualize or convey the simile concept. </h3>
                     <br/>
                 </h3>
                 <tabset class="nav-tabs-danger">

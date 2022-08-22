@@ -54,7 +54,7 @@ export function getIRFLTask(figurativePhrase): IRFLTask {
 
 // examples
 
-guessTheAssociationsDictionary.set('simile', new IRFLTask([
+guessTheAssociationsDictionary.set('simile', new IRFLTask('simile', [
     new Candidate(assetsImgPath + 'very-hot.jpeg','random_1'),
         new Candidate(assetsImgPath + 'round-item.jpeg', 'random_2'),
         new Candidate(assetsImgPath + 'slow-snail.jpeg', 'answer_1', true),
@@ -63,7 +63,7 @@ guessTheAssociationsDictionary.set('simile', new IRFLTask([
     ],
     'as slow as snail', 2))
 
-guessTheAssociationsDictionary.set('idiom', new IRFLTask([
+guessTheAssociationsDictionary.set('idiom', new IRFLTask('idiom', [
         new Candidate(assetsImgPath + 'wide-view.jpeg','random_1'),
         new Candidate(assetsImgPath + 'person-on-the-ropes.jpeg', 'answer_1', true),
         new Candidate(assetsImgPath + 'drawing-cowboy.jpeg', 'random_1'),
