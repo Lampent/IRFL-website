@@ -3,6 +3,7 @@
         <div class="container center-container" *ngIf="imageClassificationTasks?.length">
             <div class="content-center brand" [ngClass]="{'content-center-six': isSixCandidates}">
                 <div class="task-container">
+<!--                    <app-image-classification-board [imageClassificationTask]="example" [_submit]="_submit"></app-image-classification-board>-->
                     <app-image-classification-board *ngFor="let task of imageClassificationTasks" class="analogies-board" [imageClassificationTask]="task" [submit]="_submit"
                                     [info]="'Several images are presented below. \n A cue word and number of associated images are given. \n                     Choose the images that best associates with the cue word.'">
                     </app-image-classification-board>

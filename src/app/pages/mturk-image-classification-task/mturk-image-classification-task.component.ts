@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {ServerRequestService} from '../../services/server-request.service';
 import {MturkTask} from '../../types/mturk-task';
 import {ImageClassificationTask} from '../../types/image-classification-task';
+import {imageClassificationExampleTask} from '../../types/task-dictionary';
 
 @Component({
   selector: 'app-mturk-image-classification-task',
@@ -25,6 +26,7 @@ export class MturkImageClassificationTaskComponent extends MturkTask implements 
   assignmentId = '';
   solveCreate = false;
   timerSubscription = new Subscription()
+  example = imageClassificationExampleTask;
   imageClassificationTasks: ImageClassificationTask[] = null
 
   constructor(private router: Router,

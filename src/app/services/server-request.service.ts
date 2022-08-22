@@ -22,7 +22,6 @@ function getMock(task: GiveTheCueTask): {score: number, prediction: string[]} {
     return {score: GiveTheCueTask.jaccard_similarity(selected, userChoice), prediction: selected}
 }
 
-const awsURL = 'https://gvlab-bucket.s3.amazonaws.com/';
 const headers = new HttpHeaders({
     'Content-Type': 'application/json',
     Accept: 'application/json'
