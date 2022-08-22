@@ -57,17 +57,17 @@ export function getIRFLTask(figurativePhrase): IRFLTask {
 guessTheAssociationsDictionary.set('simile', new IRFLTask([
     new Candidate(assetsImgPath + 'very-hot.jpeg','random_1'),
         new Candidate(assetsImgPath + 'round-item.jpeg', 'random_2'),
-        new Candidate(assetsImgPath + 'drawing-cowboy.jpeg', 'answer_1'),
+        new Candidate(assetsImgPath + 'slow-snail.jpeg', 'answer_1', true),
         new Candidate(assetsImgPath + 'man-riding-horse.jpeg', 'random_3'),
         new Candidate(assetsImgPath + 'speed-limit.jpeg', 'answer_2', true),
     ],
-    'as slow as snail', 1))
+    'as slow as snail', 2))
 
 guessTheAssociationsDictionary.set('idiom', new IRFLTask([
         new Candidate(assetsImgPath + 'wide-view.jpeg','random_1'),
-        new Candidate(assetsImgPath + 'slow-snail.jpeg', 'answer_1'),
-        new Candidate(assetsImgPath + 'potatoes.jpeg', 'random_1'),
+        new Candidate(assetsImgPath + 'person-on-the-ropes.jpeg', 'answer_1', true),
+        new Candidate(assetsImgPath + 'drawing-cowboy.jpeg', 'random_1'),
         new Candidate(assetsImgPath + 'birds-on-tree.jpeg', 'random_3'),
         new Candidate(assetsImgPath + 'building-on-the-ropes.jpeg', 'answer_2', true),
     ],
-    'on the ropes', 1, ['Showing signs of imminent failure or collapse.']));
+    'on the ropes', 2, ['Showing signs of imminent failure or collapse.']));

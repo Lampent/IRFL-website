@@ -6,7 +6,7 @@
             <div class="board top-board">
                 <div class="main-description" *ngIf="showInfo" [innerHTML]="info">
                 </div>
-                <div class="cue-board" [ngStyle]="{'width': this?._irflTask?.numOfSolution === 1 && '100%'}">
+                <div class="cue-board" [ngStyle]="{'width': '100%'}">
                     <div class="label board-title">Phrase</div>
                     <form class="example-form">
                         <mat-form-field class="example-full-width no-underline-mat-field" appearance="fill">
@@ -17,7 +17,7 @@
                         </mat-form-field>
                     </form>
                 </div>
-                <div class="associations-board" *ngIf="this?._irflTask?.numOfSolution > 1">
+                <div class="associations-board" *ngIf="false">
                     <div class="label board-title"> Solutions</div>
                     <div class="bold-text"> {{this._irflTask.numOfSolution}} </div>
                 </div>
