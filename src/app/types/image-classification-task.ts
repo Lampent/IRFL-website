@@ -21,8 +21,16 @@ export class ImageClassificationTask implements Jsonable {
         this.irflImage = irflImage;
         this.phrase = phrase;
         this.category = category;
-        this.definitions = definitions;
+        this.definitions = definitions.map(this.capitalizeFirstLetter);
         this.groupID = groupID;
+    }
+
+    capitalizeFirstLetter(sentence) {
+        try {
+            return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+        } catch (e) {
+            return sentence
+        }
     }
 
 
