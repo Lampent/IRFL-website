@@ -79,7 +79,7 @@ h1, h3 {
 
 .test-me-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 300px;
   padding-bottom: 20px;
@@ -131,9 +131,8 @@ h1, h3 {
 
 .hint {
   color: black;
-  height: 1.7rem;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .guess-clue-hint {

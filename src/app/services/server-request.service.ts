@@ -71,6 +71,8 @@ export class ServerRequestService {
                 task.type === 'idiom' ? task.definitions.map((definition: any) => definition.definition).sort((a,b) => a.length - b.length) : [],
                 ImageCategoriesEnum.Default,
                 task.ID,
+                task.correct_category,
+                task.hint,
                 task
             );
         }));
@@ -88,6 +90,8 @@ export class ServerRequestService {
                     task.type === 'idiom' ? task.definitions.map((definition: any) => definition.definition).sort((a,b) => a.length - b.length) : [],
                     ImageCategoriesEnum.Default,
                     task.ID,
+                    task.correct_category,
+                    task.hint,
                     task,
                     serverTaskGroup.ID
                 );

@@ -2,29 +2,36 @@
 <h3 style="text-transform: none;">{{title}}</h3>
 <div class="analogy-container">
     <div class="cue-line-container" style="padding-bottom: 20px">
-            <div class="board top-board box-shadow">
-                <div class="main-description" *ngIf="showInfo && _imageClassificationTask.type === 'idiom'">
-                    <i class="close-icon fa-solid fa-circle-xmark" (click)="toggleInfo()"></i>
-                    <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the image and the phrase.</p>
-                    <p><b>Literal:</b> The image illustrates the phrase literally, or the main objects/entities of the phrase are saliently visualized in the image.</p>
-                    <p><b>Figurative:</b> The image conveys one or more definitions of the idiom.</p>
-                    <p><b>None:</b> The image is not Literal or Figurative. It contains some objects or entities, and its idea is comprehensible.</p>
-                    <p><b>Incomprehensible:</b> The image is not Literal or Figurative. It does not contain objects or entities, <u>or</u> its idea is incomprehensible.</p>
-                    <p style="padding-top: 7px;"><b>You can view the full instructions by clicking <a style="font-weight: 500" href="https://drive.google.com/file/d/1MvHDd9lFaU10lDoqlqXwlEjzoBVAvYcA/view?usp=sharing" target="_blank">here</a>.</b></p>
-                </div>
-                <div class="cue-board">
-                    <div class="label board-title">Phrase</div>
-                    <form class="example-form">
-                        <mat-form-field class="example-full-width no-underline-mat-field" appearance="fill">
-                            <input matInput [formControl]="phraseFormControl" [readonly]="true" autocomplete="off"/>
-                            <mat-error *ngIf="!phraseFormControl.valid && phraseFormControl.value != ''">
-                                Error
-                            </mat-error>
-                        </mat-form-field>
-                    </form>
-                </div>
-                <i class="fas fa-info-circle" aria-hidden="true" (click)="toggleInfo()"></i>
+        <div class="board top-board box-shadow">
+            <div class="main-description" *ngIf="showInfo && _imageClassificationTask.type === 'idiom'">
+                <i class="close-icon fa-solid fa-circle-xmark" (click)="toggleInfo()"></i>
+                <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
+                    image and the phrase.</p>
+                <p><b>Literal:</b> The image illustrates the phrase literally, or the main objects/entities of the
+                    phrase are saliently visualized in the image.</p>
+                <p><b>Figurative:</b> The image conveys one or more definitions of the idiom.</p>
+                <p><b>None:</b> The image is not Literal or Figurative. It contains some objects or entities, and its
+                    idea is comprehensible.</p>
+                <p><b>Incomprehensible:</b> It does not contain objects or entities, <u>or</u> it is unclear what the
+                    image represents.</p>
+                <p style="padding-top: 7px;"><b>You can view the full instructions by clicking <a
+                        style="font-weight: 500"
+                        href="https://drive.google.com/file/d/1MvHDd9lFaU10lDoqlqXwlEjzoBVAvYcA/view?usp=sharing"
+                        target="_blank">here</a>.</b></p>
             </div>
+            <div class="cue-board">
+                <div class="label board-title">Phrase</div>
+                <form class="example-form">
+                    <mat-form-field class="example-full-width no-underline-mat-field" appearance="fill">
+                        <input matInput [formControl]="phraseFormControl" [readonly]="true" autocomplete="off"/>
+                        <mat-error *ngIf="!phraseFormControl.valid && phraseFormControl.value != ''">
+                            Error
+                        </mat-error>
+                    </mat-form-field>
+                </form>
+            </div>
+            <i class="fas fa-info-circle" aria-hidden="true" (click)="toggleInfo()"></i>
+        </div>
 
         <div style="padding-top: 10px" *ngIf="this._imageClassificationTask.definitions.length > 0">
             <div class="definitions-board box-shadow">
@@ -32,25 +39,40 @@
                 <div class="example-full-width">
                     <ul class="definitions-list">
                         <li style="color: #4d5568 !important;">Definitions:</li>
-                        <li style="word-break: break-word" *ngFor="let definition of this._imageClassificationTask.definitions; let i = index;">{{i+1 +'. ' + definition}}</li>
+                        <li style="word-break: break-word"
+                            *ngFor="let definition of this._imageClassificationTask.definitions; let i = index;">{{i + 1 + '. ' + definition}}</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-        <div class="left-board">
-            <div class="images-board box-shadow">
-                <div>
-                    <img class="task-image" [id]=imageId (mouseout)="hideZoom()"  (mouseover)="showZoom()" src="{{_imageClassificationTask.irflImage.img}}">
-                </div>
+    <div class="left-board">
+        <div class="images-board box-shadow">
+            <div>
+                <img class="task-image" [id]=imageId (mouseout)="hideZoom()" (mouseover)="showZoom()"
+                     src="{{_imageClassificationTask.irflImage.img}}">
             </div>
+        </div>
 
-            <div class="images-board">
-                <ul class="category-list">
-                    <li class="irfl-category" (click)="selectCategory(category)" *ngFor="let category of categories; let i = index;"
-                    [ngClass]="{'selected-category': this._imageClassificationTask.category == category}">{{category}}</li>
-                </ul>
-            </div>
+        <div class="images-board">
+            <ul class="category-list">
+                <li class="irfl-category" (click)="selectCategory(category)"
+                    *ngFor="let category of categories; let i = index;"
+                    [ngClass]="{
+                    'selected-category': this._imageClassificationTask.category == category,
+                    'correct-category': this._imageClassificationTask.correctCategory == category && showCorrectAnswer
+                    }">{{category}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="hint" [ngStyle]="{'opacity': showHint ? 1 : 0}">
+        <div style="position: absolute">
+            <i *ngIf="_imageClassificationTask.correctCategory !== this._imageClassificationTask.category" [style.color]="'red'" class="fas fa-times"></i>
+            <i *ngIf="this._imageClassificationTask.correctCategory === this._imageClassificationTask.category" [style.color]="'green'" class="fas fa-check"></i>
+        </div>
+        <div style="margin-left: 35px;">
+            <u>Hint:</u> {{this._imageClassificationTask.hint}}
+        </div>
     </div>
 </div>
 
