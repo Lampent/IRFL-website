@@ -83,7 +83,6 @@ export class MturkImageClassificationTaskComponent extends MturkTask implements 
   }
 
   submit(): void {
-    this.renderConfetti()
     if (this.isTrain) { // train case
       this.trainingSubmit();
     } else {
