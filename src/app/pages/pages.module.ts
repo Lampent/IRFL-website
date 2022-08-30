@@ -46,7 +46,7 @@ const routes: Routes = [
   { path: 'explore', component: ExploreComponent},
   { path: leaderboard, component: LeaderboardComponent },
   { path: 'download', component: DownloadComponent },
-  {path: 'mturk/image-image-classification/:id', component: MturkImageClassificationTaskComponent},
+  {path: 'mturk/image/:id', component: MturkImageClassificationTaskComponent},
   { path: solveCratePath, component: MturkSolveComponent },
   { path: '**', component: MainComponent },
 ]

@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'explore', component: ExploreComponent },
   { path: leaderboard, component: LeaderboardComponent },
   { path: 'mturk/solve/:id', component: MturkSolveComponent },
-  {path: 'mturk/image-image-classification', component: MturkImageClassificationTaskComponent},
+  {path: 'mturk/image/:id', component: MturkImageClassificationTaskComponent},
   { path: solveCratePath, component: MturkSolveComponent }
 ];
 

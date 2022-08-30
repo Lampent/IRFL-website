@@ -333,13 +333,6 @@ input, .bold-text {
   font-size: 19px;
 }
 
-
-img {
-  width: 300px;
-  height: 300px;
-  border: 2px transparent solid;
-}
-
 .separator-label {
   text-align: center;
   font-size: 100px;
@@ -464,8 +457,19 @@ img {
   pointer-events: none;
 }
 
+@media (max-width: 500px) {
+  .task-image {
+    //box-sizing: content-box;
+    width: 300px;
+    height: 300px;
+  }
+}
+
 .task-image {
   //box-sizing: content-box;
+  width: 430px;
+  height: 430px;
+  border: 2px transparent solid;
   cursor: none !important;
   background-size: cover !important;
   background-position-x: center !important;
