@@ -27,7 +27,7 @@ export class MturkImageClassificationTaskComponent extends MturkTask implements 
   turkSubmitTo = '';
   assignmentId = '';
   solveCreate = false;
-  isTrain = true;
+  isTrain = false;
   confettiShown = false;
   confetti: ConfettiGenerator;
   confettiSettings: any = {target: 'confetti', height: document.documentElement.scrollHeight};
@@ -46,6 +46,7 @@ export class MturkImageClassificationTaskComponent extends MturkTask implements 
     window.name = 'IRFL'
     this.id = this.activeRouter.snapshot.params.id
     if (this.id && typeof this.id === 'string') {
+      this.isTrain = this.id === 'train';
       this.serverRequestService.getIRFLImageClassificationTasks(this.id).subscribe((tasks: ImageClassificationTask[]) => {
         this.turkSubmitTo = this.activeRouter.snapshot.queryParams.turkSubmitTo
         this.assignmentId = this.activeRouter.snapshot.queryParams.assignmentId
