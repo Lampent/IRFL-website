@@ -68,7 +68,8 @@ export class ServerRequestService {
                 irflImage,
                 task.type,
                 task.phrase,
-                task.type === 'idiom' ? task.definitions.sort((a,b) => a.length - b.length) : [],
+                task.type === 'idiom' ? task.definitions.map((definition: any) => definition?.definition || definition)
+                    .sort((a,b) => a.length - b.length) : [],
                 ImageCategoriesEnum.Default,
                 task.ID,
                 task.correct_category,
@@ -87,7 +88,8 @@ export class ServerRequestService {
                     irflImage,
                     task.type,
                     task.phrase,
-                    task.type === 'idiom' ? task.definitions.sort((a,b) => a.length - b.length) : [],
+                    task.type === 'idiom' ? task.definitions.map((definition: any) => definition?.definition || definition)
+                        .sort((a,b) => a.length - b.length) : [],
                     ImageCategoriesEnum.Default,
                     task.ID,
                     task.correct_category,
