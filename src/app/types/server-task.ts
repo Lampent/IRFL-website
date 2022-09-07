@@ -6,7 +6,7 @@ export interface ServerTask {
     'IRFL_id': string,
     'context': object[],
     'definition': string,
-    'definitions': object[],
+    'definitions': string[],
     'image_name': string,
     'image_url': string,
     'correct_category': ImageCategoriesEnum,
