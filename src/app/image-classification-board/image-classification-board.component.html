@@ -2,17 +2,44 @@
 <h3 style="text-transform: none;">{{title}}</h3>
 <div class="analogy-container">
     <div class="cue-line-container" style="padding-bottom: 20px">
+        <div class="flex-center" style="padding-bottom: 10px; width: 100%;">
+            <div class="main-description first-main-description" *ngIf="isFirst && _imageClassificationTask.type === 'idiom'">
+                <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
+                    image and the phrase.</p>
+                <p style="padding-bottom: 8px;"><b>Figurative:</b> The image conveys one or more definitions of the
+                    idiom to
+                    some extent.</p>
+                <p style="padding-bottom: 8px;"><b>Literal:</b> The image is not <u>Figurative</u>. It illustrates the
+                    <u>phrase></u>
+                    (not the definitions) literally, <u>or</u> the main objects/entities of the phrase are visualized in
+                    the
+                    image.</p>
+                <p style="padding-bottom: 8px;"><b>None:</b> The image is not Literal or Figurative.</p>
+                <!--                <p><b>Incomprehensible:</b> It does not contain objects or entities, <u>or</u> it is unclear what the-->
+                <!--                    image represents.</p>-->
+                <p style="padding-top: 16px;"><b>You can view the full instructions by clicking <a
+                        style="font-weight: 500"
+                        href="https://drive.google.com/file/d/1MvHDd9lFaU10lDoqlqXwlEjzoBVAvYcA/view?usp=sharing"
+                        target="_blank">here</a>.</b></p>
+            </div>
+
+        </div>
         <div class="board top-board box-shadow">
             <div class="main-description" *ngIf="showInfo && _imageClassificationTask.type === 'idiom'">
                 <i class="close-icon fa-solid fa-circle-xmark" (click)="toggleInfo()"></i>
                 <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
                     image and the phrase.</p>
-                <p style="padding-bottom: 8px;"><b>Figurative:</b> The image conveys one or more definitions of the idiom to some extent.</p>
-                <p style="padding-bottom: 8px;"><b>Literal:</b> The image is not Figurative. It illustrates the phrase literally, <u>or</u> the main objects/entities of the phrase are visualized in the image.</p>
-                <p style="padding-bottom: 8px;"><b>Literal:</b> The image is not <u>Figurative</u>. It illustrates the <u>phrase></u> (not the definitions) literally, <u>or</u> the main objects/entities of the phrase are visualized in the image.</p>
+                <p style="padding-bottom: 8px;"><b>Figurative:</b> The image conveys one or more definitions of the
+                    idiom to
+                    some extent.</p>
+                <p style="padding-bottom: 8px;"><b>Literal:</b> The image is not <u>Figurative</u>. It illustrates the
+                    <u>phrase></u>
+                    (not the definitions) literally, <u>or</u> the main objects/entities of the phrase are visualized in
+                    the
+                    image.</p>
                 <p style="padding-bottom: 8px;"><b>None:</b> The image is not Literal or Figurative.</p>
-<!--                <p><b>Incomprehensible:</b> It does not contain objects or entities, <u>or</u> it is unclear what the-->
-<!--                    image represents.</p>-->
+                <!--                <p><b>Incomprehensible:</b> It does not contain objects or entities, <u>or</u> it is unclear what the-->
+                <!--                    image represents.</p>-->
                 <p style="padding-top: 16px;"><b>You can view the full instructions by clicking <a
                         style="font-weight: 500"
                         href="https://drive.google.com/file/d/1MvHDd9lFaU10lDoqlqXwlEjzoBVAvYcA/view?usp=sharing"
@@ -66,8 +93,10 @@
     </div>
     <div class="hint" [ngStyle]="{'opacity': showHint ? 1 : 0}">
         <div style="position: absolute">
-            <i *ngIf="_imageClassificationTask.correctCategory !== this._imageClassificationTask.category" [style.color]="'red'" class="fas fa-times"></i>
-            <i *ngIf="this._imageClassificationTask.correctCategory === this._imageClassificationTask.category" [style.color]="'green'" class="fas fa-check"></i>
+            <i *ngIf="_imageClassificationTask.correctCategory !== this._imageClassificationTask.category"
+               [style.color]="'red'" class="fas fa-times"></i>
+            <i *ngIf="this._imageClassificationTask.correctCategory === this._imageClassificationTask.category"
+               [style.color]="'green'" class="fas fa-check"></i>
         </div>
         <div style="margin-left: 35px;">
             <u>Hint:</u> {{this._imageClassificationTask.hint}}
