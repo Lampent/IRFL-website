@@ -2,7 +2,6 @@ export abstract class MturkTask {
     turkSubmitTo = '';
     assignmentId = '';
     id = '';
-    isSixCandidates: boolean = false;
 
     abstract showHint(...args);
 

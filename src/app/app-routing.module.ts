@@ -10,7 +10,6 @@ import {MturkSolveComponent} from './pages/mturk-irfl-task/mturk-solve.component
 import {LeaderboardComponent} from './pages/leaderboard/leaderboard.component';
 import {MturkImageClassificationTaskComponent} from './pages/mturk-image-classification-task/mturk-image-classification-task.component';
 
-export const solveCratePath = 'mturk/solve/create/:id';
 export const IRFLTaskPath = 'task';
 export const leaderboard = 'leaderboard';
 
@@ -20,9 +19,8 @@ const routes: Routes = [
   { path: 'download', component: DownloadComponent },
   { path: 'explore', component: ExploreComponent },
   { path: leaderboard, component: LeaderboardComponent },
-  { path: 'mturk/solve/:id', component: MturkSolveComponent },
+  { path: 'mturk/task/:id', component: MturkSolveComponent },
   {path: 'mturk/image/:id', component: MturkImageClassificationTaskComponent},
-  { path: solveCratePath, component: MturkSolveComponent }
 ];
 
 @NgModule({

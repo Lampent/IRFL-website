@@ -3,6 +3,8 @@
   "rules": {
     "max-line-length": false,
     "no-inferrable-types": false,
+    "no-string-literal": false,
+    "one-variable-per-declaration": false,
     "directive-selector": [
       true,
       "attribute",

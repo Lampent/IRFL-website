@@ -5,7 +5,6 @@ import {IRFLTask} from '../../types/irfl-task';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ServerRequestService} from '../../services/server-request.service';
 import {MturkTask} from '../../types/mturk-task';
-import {solveCratePath} from '../../app-routing.module';
 
 @Component({
     selector: 'app-mturk-solve',
@@ -18,14 +17,14 @@ export class MturkSolveComponent extends MturkTask implements OnInit, OnDestroy 
     pagination = 3;
     pagination1 = 1;
     answers: Map<number, Candidate> = new Map<number, Candidate>();
-    practiceMode = false;
+    testMode = false;
     _submit = false;
     // goodJobHint = 'Good Job!';
     turkSubmitTo = '';
     assignmentId = '';
     solveCreate = false;
     timerSubscription = new Subscription()
-    geussTheAssociationsTask: IRFLTask = null
+    irflTasks: IRFLTask[] = []
 
     constructor(private router: Router,
                 private activeRouter: ActivatedRoute,
@@ -35,19 +34,14 @@ export class MturkSolveComponent extends MturkTask implements OnInit, OnDestroy 
         super();
         window.name = 'IRFL'
         this.id = this.activeRouter.snapshot.params.id
-        this.solveCreate = this.activeRouter.snapshot.routeConfig.path === solveCratePath;
-        if (this.solveCreate){
-            console.log('solve create')
-        }
         if (this.id && typeof this.id === 'string') {
-            // (this.solveCreate ? this.serverRequestService.getCreateGuessTheAssociationTask(this.id) : this.serverRequestService.getIRFLTask(this.id)).subscribe((task: IRFLTask) => {
-            //     this.isSixCandidates = task.candidates.length > 5
-            //     this.turkSubmitTo = this.activeRouter.snapshot.queryParams.turkSubmitTo
-            //     this.assignmentId = this.activeRouter.snapshot.queryParams.assignmentId
-            //     console.log(this.turkSubmitTo)
-            //     console.log(this.assignmentId)
-            //     this.geussTheAssociationsTask = task
-            // });
+            this.serverRequestService.getIRFLTasks(this.id).subscribe((tasks: IRFLTask[]) => {
+                this.turkSubmitTo = this.activeRouter.snapshot.queryParams.turkSubmitTo
+                this.assignmentId = this.activeRouter.snapshot.queryParams.assignmentId
+                console.log(this.turkSubmitTo)
+                console.log(this.assignmentId)
+                this.irflTasks = tasks
+            });
         }
         console.log(this.activeRouter.snapshot)
     }
@@ -68,18 +62,18 @@ export class MturkSolveComponent extends MturkTask implements OnInit, OnDestroy 
         body.classList.remove('index-page');
     }
 
-    restartPractice() {
+    restartPractice(index) {
         this._submit = false;
         this.showHint('')
-        this.geussTheAssociationsTask?.init();
+        this.irflTasks[index]?.init();
     }
 
-    submit(): void {
-        this._submit = this.geussTheAssociationsTask.isTaskSolved(true)
+    submit(index): void {
+        this._submit = this.irflTasks[index].isTaskSolved(true)
         if (this._submit) {
-            this.handleSubmit(this.assignmentId, this.turkSubmitTo, this.geussTheAssociationsTask)
+            this.handleSubmit(this.assignmentId, this.turkSubmitTo, this.irflTasks[index])
         } else {
-            this.showHint(this.geussTheAssociationsTask?.getHint())
+            this.showHint(this.irflTasks[index]?.getHint())
         }
     }
 

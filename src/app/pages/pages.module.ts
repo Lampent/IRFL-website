@@ -28,7 +28,7 @@ import {MatOptionModule} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import { PersonalDetailsFormComponent } from './personal-details-form/personal-details-form.component';
 import {MatButtonModule} from '@angular/material/button';
-import {IRFLTaskPath, leaderboard, solveCratePath} from '../app-routing.module';
+import {IRFLTaskPath, leaderboard} from '../app-routing.module';
 import {NavbarComponent} from '../navbar/navbar/navbar.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { ReportFormComponent } from './report-form/report-form.component';
@@ -47,7 +47,7 @@ const routes: Routes = [
   { path: leaderboard, component: LeaderboardComponent },
   { path: 'download', component: DownloadComponent },
   {path: 'mturk/image/:id', component: MturkImageClassificationTaskComponent},
-  { path: solveCratePath, component: MturkSolveComponent },
+  { path: 'mturk/task/:id', component: MturkSolveComponent },
   { path: '**', component: MainComponent },
 ]
 

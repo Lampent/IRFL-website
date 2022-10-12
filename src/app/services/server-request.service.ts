@@ -52,12 +52,26 @@ export class ServerRequestService {
     }
 
     getIRFLTask(id, example: boolean=false): Observable<IRFLTask> {
-        // const url = example ? `https://gvlab-backend.herokuapp.com/task/example/solve/${id}` : `https://gvlab-backend.herokuapp.com/task/mturk/solve/${id}`
-        const url = `${serverURL}/task/mturk/solve_create/${id}`
-        // return this.httpService.get<any>(url).pipe(map((task) => {
-        //     return this.createNewGuessTheAssociationsTask(task);
-        // }));
-        return of(getIRFLTask('idiom'))
+        const url = `${serverURL}/task/${id}`
+        return this.httpService.get<any>(url).pipe(map((task: any) => {
+            return task
+        }));
+    }
+
+    getIRFLTasks(id): Observable<IRFLTask[]> {
+        const url = `${serverURL}/task/${id}`
+        return this.httpService.get<any>(url).pipe(map((tasks: any) => {
+            console.log(getIRFLTask('idiom'))
+            return tasks.map(task => new IRFLTask(
+                task['type'],
+                task['candidates'].map(candidate => new Candidate(candidate['image'], candidate['name'], candidate['answer'])),
+                task['phrase'],
+                task['numOfSolution'],
+                task['definitions'],
+                JSON.parse(task['images_metadata']),
+                task['id']
+                ))
+        }));
     }
 
     getIRFLImageClassificationTask(id, example: boolean=false): Observable<ImageClassificationTask> {

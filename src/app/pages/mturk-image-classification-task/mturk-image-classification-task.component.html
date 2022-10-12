@@ -2,13 +2,13 @@
     <canvas id="confetti" [ngStyle]="{position: 'absolute', 'pointer-events': 'none'}"></canvas>
     <div class="page-header header-filter">
         <div class="container center-container" *ngIf="imageClassificationTasks?.length">
-            <div class="content-center brand" [ngClass]="{'content-center-six': isSixCandidates}">
+            <div class="content-center brand">
                 <div class="task-container">
 <!--                    <app-image-classification-board [imageClassificationTask]="example" [_submit]="_submit"></app-image-classification-board>-->
                     <app-image-classification-board *ngFor="let task of imageClassificationTasks; let i = index;" class="analogies-board" [imageClassificationTask]="task"
                                                     [showHint]="isTrain && _submit" [showCorrectAnswer]="isTrain && _submit" [submit]="_submit" [isFirst]="i === 0">
                     </app-image-classification-board>
-                    <div class="test-me-container" [ngClass]="{'test-me-container-six': isSixCandidates}">
+                    <div class="test-me-container">
                         <button class="btn btn-neutral btn-big" [ngClass]="{'submitted': _submit}"
                                 (click)="submit()">{{ 'Submit' }}</button>
                         <button class="btn btn-neutral btn-big" *ngIf="isTrain"

@@ -1,15 +1,15 @@
 <div class="wrapper">
     <div class="page-header header-filter">
-        <div class="container center-container" *ngIf="geussTheAssociationsTask">
-            <div class="content-center brand" [ngClass]="{'content-center-six': isSixCandidates}">
+        <div *ngFor="let irflTask of irflTasks; let i = index" class="container center-container">
+            <div class="content-center brand">
                 <div class="task-container">
-                    <app-task-board class="analogies-board" [irflTask]="geussTheAssociationsTask" [enablePointer]="false"
-                                    [testMode]="true" [submit]="_submit" [disableSolutionIcons]="!solveCreate"
+                    <app-task-board class="analogies-board" [irflTask]="irflTask" [enablePointer]="false"
+                                    [testMode]="testMode" [submit]="_submit" [disableSolutionIcons]="!solveCreate"
                                     [info]="'Several images are presented below. \n A cue word and number of associated images are given. \n                     Choose the images that best associates with the cue word.'">
                     </app-task-board>
-                    <div class="test-me-container" [ngClass]="{'test-me-container-six': isSixCandidates}">
-                        <button class="btn btn-neutral btn-big" [ngClass]="{'submitted': _submit}"
-                                (click)="submit()">{{ 'Submit' }}</button>
+                    <div class="test-me-container">
+                        <button class="btn btn-neutral btn-big" *ngIf="testMode" [ngClass]="{'submitted': _submit}"
+                                (click)="submit(i)">{{ 'Submit' }}</button>
                     </div>
                     <div class="label hint" [ngClass]="{'no-clue': hint === ''}">
                         {{hint}}

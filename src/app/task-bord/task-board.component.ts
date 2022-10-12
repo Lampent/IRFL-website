@@ -1,8 +1,7 @@
-import {ChangeDetectorRef, Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
+import {ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import ConfettiGenerator from 'confetti-js';
 import {Candidate} from '../types/candidate';
 import {FormControl} from '@angular/forms';
-import {Subscription} from 'rxjs';
 import {IRFLTask} from '../types/irfl-task';
 
 @Component({
@@ -13,7 +12,8 @@ import {IRFLTask} from '../types/irfl-task';
 export class TaskBoardComponent implements OnInit {
     _candidates: Candidate[] = []
     _irflTask: IRFLTask = null;
-    confettiSettings = {target: 'confetti'};
+    confettiID = 'confetti-' + String(Math.floor(Math.random() * 10000000000))
+    confettiSettings = {target: this.confettiID};
     confetti: ConfettiGenerator;
     confettiShown = false;
     noSelection = true;
