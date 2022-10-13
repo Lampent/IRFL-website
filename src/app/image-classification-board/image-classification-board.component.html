@@ -91,6 +91,8 @@
             </ul>
         </div>
     </div>
+    <div *ngIf="annotations" class="annotations-details">{{annotations}}</div>
+
     <div class="hint" [ngStyle]="{'opacity': showHint ? 1 : 0}">
         <div style="position: absolute">
             <i *ngIf="_imageClassificationTask.correctCategory !== this._imageClassificationTask.category"

@@ -14,7 +14,7 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
   _imageClassificationTask: ImageClassificationTask = null;
   noSelection = true;
   showInfo = false;
-
+  annotations = null;
   imageLoaded = false;
   @Input() _submit = false;
   @Input() title = '';
@@ -46,6 +46,10 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
   @Input()
   set imageClassificationTask(task: ImageClassificationTask) {
     this._imageClassificationTask = task;
+    const annotationsData = this._imageClassificationTask?.serverData['annotations']
+    this.annotations = annotationsData ?
+        JSON.stringify(annotationsData.map(annotation => {return{worker: annotation['worker_id'], category: annotation['category']}})) :
+        null;
     this.init();
   }
 
