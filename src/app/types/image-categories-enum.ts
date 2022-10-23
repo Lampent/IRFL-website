@@ -1,6 +1,8 @@
 export enum ImageCategoriesEnum {
+    Figurative_Literal = 'Figurative Literal',
     Figurative = 'Figurative',
-    Literal = 'Literal',
+    Caption = 'Caption',
+    Partial_Object = 'Partial Objects',
     None = 'None',
     Default = 'Default'
 }

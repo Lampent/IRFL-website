@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Candidate} from '../types/candidate';
 import {Observable, of} from 'rxjs';
-import {GiveTheCueTask} from '../types/give-the-cue-task';
 import {IRFLTask} from '../types/irfl-task';
 import {map} from 'rxjs/operators';
 import {UserStats} from '../types/user-stats';
@@ -14,13 +13,6 @@ import {ImageCategoriesEnum} from '../types/image-categories-enum';
 import {ServerTaskGroup} from '../types/server-task-group';
 
 // mock
-
-function getMock(task: GiveTheCueTask): {score: number, prediction: string[]} {
-    const shuffle = [...task.candidates[0]].sort(() => 0.5 - Math.random()).map(candidate => candidate.img)
-    const selected = shuffle.slice(0, task.numberOfChosenCandidates(0))
-    const userChoice = task.candidates[0].filter((candidate: Candidate) => candidate.userChoice).map((candidate: Candidate) => candidate.img)
-    return {score: GiveTheCueTask.jaccard_similarity(selected, userChoice), prediction: selected}
-}
 
 const headers = new HttpHeaders({
     'Content-Type': 'application/json',
