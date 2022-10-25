@@ -26,8 +26,8 @@ function getImagePath(imgName: string) {
 // https://irfl-app.herokuapp.com/
 // http://127t.0.0.1:1235
 
-const serverURL: string = 'http://127.0.0.1:1235'
-// const serverURL: string = 'https://irfl-app.herokuapp.com/'
+// const serverURL: string = 'http://127.0.0.1:1235'
+const serverURL: string = 'https://irfl-app.herokuapp.com/'
 @Injectable()
 export class ServerRequestService {
 
