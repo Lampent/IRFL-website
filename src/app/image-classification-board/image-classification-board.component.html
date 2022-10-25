@@ -6,15 +6,13 @@
             <div class="main-description first-main-description" *ngIf="isFirst && _imageClassificationTask.type === 'idiom'">
                 <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
                     image and the phrase.</p>
-                <p style="padding-bottom: 8px;"><b>Figurative:</b> The image conveys one or more definitions of the
-                    idiom to
-                    some extent.</p>
-                <p style="padding-bottom: 8px;"><b>Literal:</b> The image is not <u>Figurative</u>. It illustrates the
-                    <u>phrase></u>
-                    (not the definitions) literally, <u>or</u> the main objects/entities of the phrase are visualized in
-                    the
-                    image.</p>
-                <p style="padding-bottom: 8px;"><b>None:</b> The image is not Literal or Figurative.</p>
+                <p style="padding-bottom: 8px;"><b>Figurative Literal:</b> The image conveys one or more definitions of the idiom to some extent, <b>and</b> it literally illustrates the phrase
+                    <b>(not the definitions) </b> <u>or</u> visualizes the phrase objects/entities.</p>
+                <p style="padding-bottom: 8px;"><b>Figurative:</b> The image conveys one or more definitions of the idiom to some extent, <b>and it does <u>not</u></b> literally illustrate the phrase
+                    or visualize its objects/entities.</p>
+                <p style="padding-bottom: 8px;"><b>Caption:</b> The image is not <u>Figurative Literal</u> and <u>Figurative</u>. It illustrates the <u>phrase</u> (not the definitions) literally.</p>
+                <p style="padding-bottom: 8px;"><b>Partial Objects:</b> The image is not <u>Figurative Literal</u>, <u>Figurative</u>, or <u>Caption</u>. The main objects/entities of the phrase are visualized in the image.</p>
+                <p style="padding-bottom: 8px;"><b>None:</b> The image is not <u>Figurative Literal</u>, <u>Figurative</u>, <u>Caption</u>, or <u>Partial Objects</u>.</p>
                 <!--                <p><b>Incomprehensible:</b> It does not contain objects or entities, <u>or</u> it is unclear what the-->
                 <!--                    image represents.</p>-->
                 <p style="padding-top: 16px;"><b>You can view the full instructions by clicking <a
@@ -29,15 +27,13 @@
                 <i class="close-icon fa-solid fa-circle-xmark" (click)="toggleInfo()"></i>
                 <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
                     image and the phrase.</p>
-                <p style="padding-bottom: 8px;"><b>Figurative:</b> The image conveys one or more definitions of the
-                    idiom to
-                    some extent.</p>
-                <p style="padding-bottom: 8px;"><b>Literal:</b> The image is not <u>Figurative</u>. It illustrates the
-                    <u>phrase></u>
-                    (not the definitions) literally, <u>or</u> the main objects/entities of the phrase are visualized in
-                    the
-                    image.</p>
-                <p style="padding-bottom: 8px;"><b>None:</b> The image is not Literal or Figurative.</p>
+                <p style="padding-bottom: 8px;"><b>Figurative Literal:</b> The image conveys one or more definitions of the idiom to some extent, <b>and</b> it literally illustrates the phrase
+                    <b>(not the definitions) </b> <u>or</u> visualizes the phrase objects/entities.</p>
+                <p style="padding-bottom: 8px;"><b>Figurative:</b> The image conveys one or more definitions of the idiom to some extent, <b>and it does <u>not</u></b> literally illustrate the phrase
+                    or visualize its objects/entities.</p>
+                <p style="padding-bottom: 8px;"><b>Caption:</b> The image is not <u>Figurative Literal</u> and <u>Figurative</u>. It illustrates the <u>phrase</u> (not the definitions) literally.</p>
+                <p style="padding-bottom: 8px;"><b>Partial Objects:</b> The image is not <u>Figurative Literal</u>, <u>Figurative</u>, or <u>Caption</u>. The main objects/entities of the phrase are visualized in the image.</p>
+                <p style="padding-bottom: 8px;"><b>None:</b> The image is not <u>Figurative Literal</u>, <u>Figurative</u>, <u>Caption</u>, or <u>Partial Objects</u>.</p>
                 <!--                <p><b>Incomprehensible:</b> It does not contain objects or entities, <u>or</u> it is unclear what the-->
                 <!--                    image represents.</p>-->
                 <p style="padding-top: 16px;"><b>You can view the full instructions by clicking <a
