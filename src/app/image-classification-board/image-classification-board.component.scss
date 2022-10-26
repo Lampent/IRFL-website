@@ -415,6 +415,7 @@ input, .bold-text {
 
 .fa-info-circle {
   color: #fd969e;
+  cursor: pointer;
 }
 
 .box-shadow {
@@ -470,6 +471,12 @@ input, .bold-text {
   width: 100px;
   height: 100px;
   pointer-events: none;
+}
+
+.tree-icon {
+  width: 36px;
+  margin-right: 4px;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {

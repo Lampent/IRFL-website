@@ -14,6 +14,7 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
   _imageClassificationTask: ImageClassificationTask = null;
   noSelection = true;
   showInfo = false;
+  showTree = false;
   annotations = null;
   imageLoaded = false;
   @Input() _submit = false;
@@ -70,6 +71,11 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
 
   toggleInfo(): void {
     this.showInfo = !this.showInfo;
+    this.detectChanges();
+  }
+
+  toggleTree(): void {
+    this.showTree = !this.showTree;
     this.detectChanges();
   }
 

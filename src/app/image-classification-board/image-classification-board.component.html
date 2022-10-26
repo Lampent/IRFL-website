@@ -23,6 +23,10 @@
 
         </div>
         <div class="board top-board box-shadow">
+            <div class="main-description" *ngIf="showTree">
+                <i class="close-icon fa-solid fa-circle-xmark" (click)="toggleTree()"></i>
+                <img src="assets/img/steps%20tree.PNG">
+            </div>
             <div class="main-description" *ngIf="showInfo && _imageClassificationTask.type === 'idiom'">
                 <i class="close-icon fa-solid fa-circle-xmark" (click)="toggleInfo()"></i>
                 <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
@@ -52,6 +56,7 @@
                     </mat-form-field>
                 </form>
             </div>
+            <img class="tree-icon" src="assets/img/tree%20icon.png" (click)="toggleTree()">
             <i class="fas fa-info-circle" aria-hidden="true" (click)="toggleInfo()"></i>
         </div>
 
