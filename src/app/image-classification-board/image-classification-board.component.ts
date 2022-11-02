@@ -16,6 +16,8 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
   showInfo = false;
   showTree = false;
   annotations = null;
+  annotationsAgreement = null;
+  workerStar = null;
   imageLoaded = false;
   @Input() _submit = false;
   @Input() title = '';
@@ -51,6 +53,11 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
     this.annotations = annotationsData ?
         JSON.stringify(annotationsData.map(annotation => {return{worker: annotation['worker_id'], category: annotation['category']}})) :
         null;
+    if (this.annotations != null) {
+      const annotationDetails = this.getAgreementDetails(this.annotations);
+      this.annotationsAgreement = annotationDetails.agreement;
+      this.workerStar = annotationDetails.star;
+    }
     this.init();
   }
 
@@ -101,5 +108,24 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
     };
   }
 
+  getAgreementDetails(annotations) {
+    const parsedAnnotations = JSON.parse(annotations);
+    const annotatedCategories = parsedAnnotations.map(annotation => annotation['category'])
+    const mostCommon = this.getMostCommonElement(annotatedCategories)
+    const agreement = annotatedCategories.filter(x => x === mostCommon).length / annotatedCategories.length
+    if (agreement < 0.5) {
+      const leastCommon = this.getMostCommonElement(annotatedCategories, true)
+      return {agreement, star: parsedAnnotations.find(anot => anot['category'] === leastCommon)['worker']}
+    }
+    return {agreement, star: null}
+  }
+
+
+  getMostCommonElement(arr, revert = false) {
+      const store = {}
+      arr.forEach((num) => store[num] ? store[num] += 1 : store[num] = 1)
+      const arrSorted = Object.keys(store).sort((a, b) => store[b] - store[a])
+      return revert ? arrSorted.reverse()[0] : arrSorted[0]
+  }
 
 }

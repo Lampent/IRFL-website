@@ -93,6 +93,8 @@
         </div>
     </div>
     <div *ngIf="annotations" class="annotations-details">{{annotations}}</div>
+    <div *ngIf="annotations" class="annotations-details">{{'Agreement: ' + annotationsAgreement}}</div>
+    <div *ngIf="workerStar" class="annotations-details">{{'Star: ' + workerStar}}</div>
 
     <div class="hint" [ngStyle]="{'opacity': showHint ? 1 : 0}">
         <div style="position: absolute">
