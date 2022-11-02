@@ -17,6 +17,14 @@
   justify-content: center;
 }
 
+.category-list, .definitions-list {
+  text-align: start;
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+  max-height: 280px;
+}
+
+
 .definitions-list {
   font-size: 1.2rem;
   padding-bottom: 5px;

@@ -59,7 +59,7 @@ export class ServerRequestService {
                 task['candidates'].map(candidate => new Candidate(candidate['image'], candidate['name'], candidate['answer'])),
                 task['phrase'],
                 task['numOfSolution'],
-                task['definitions'],
+                task['definitions'].sort((a,b) => a.length - b.length),
                 JSON.parse(task['images_metadata']),
                 task['id']
                 ))
