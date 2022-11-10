@@ -24,6 +24,7 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
   @Input() showHint = false;
   @Input() showCorrectAnswer = false;
   @Input() isFirst = false;
+  @Input() reviewMode = false;
   @Output() selected$: EventEmitter<ImageClassificationTask> = new EventEmitter<ImageClassificationTask>();
   phraseFormControl = new FormControl('');
 

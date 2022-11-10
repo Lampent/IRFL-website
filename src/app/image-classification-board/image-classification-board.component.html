@@ -3,7 +3,7 @@
 <div class="analogy-container">
     <div class="cue-line-container" style="padding-bottom: 20px">
         <div class="flex-center" style="padding-bottom: 10px; width: 100%;">
-            <div class="main-description first-main-description" *ngIf="isFirst && _imageClassificationTask.type === 'idiom'">
+            <div class="main-description first-main-description" *ngIf="isFirst && _imageClassificationTask.type === 'idiom' && !reviewMode">
                 <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
                     image and the phrase.</p>
                 <p style="padding-bottom: 8px;"><b>Figurative Literal:</b> The image conveys one or more definitions of the idiom to some extent, <b>and</b> it literally illustrates the phrase
@@ -81,14 +81,40 @@
             </div>
         </div>
 
-        <div class="images-board">
-            <ul class="category-list">
+        <div class="images-board" >
+            <ul class="category-list" *ngIf="!reviewMode">
                 <li class="irfl-category" (click)="selectCategory(category)"
                     *ngFor="let category of categories; let i = index;"
                     [ngClass]="{
                     'selected-category': this._imageClassificationTask.category == category,
                     'correct-category': this._imageClassificationTask.correctCategory == category && showCorrectAnswer
                     }">{{category}}</li>
+            </ul>
+            <ul class="category-list" *ngIf="reviewMode">
+                <li class="irfl-review-div" *ngIf="_imageClassificationTask.serverData['no_agreement_with_majority_of_four']">
+                    <div class="irfl-review-div-item">
+                        <u>Four annotators</u> chose <b>{{_imageClassificationTask.serverData['category']}}</b>
+                    </div>
+                    <div class="irfl-review-div-item">
+                        You chose <b>{{_imageClassificationTask.serverData['worker_label']}}</b>
+                    </div>
+                </li>
+                <li class="irfl-review-div" *ngIf="_imageClassificationTask.serverData['answer_family_different_from_two_options_with_different_family']">
+                    <div class="irfl-review-div-item">
+                        There was a split decision (2 vs 2) between two <u>unrelated</u> types <b>{{_imageClassificationTask.serverData['options'][0]}}</b> and  <b>{{_imageClassificationTask.serverData['options'][1]}}</b>
+                    </div>
+                    <div class="irfl-review-div-item">
+                        You chose <b>{{_imageClassificationTask.serverData['worker_label']}}</b>
+                    </div>
+                </li>
+                <li class="irfl-review-div" *ngIf="_imageClassificationTask.serverData['answer_family_different_from_two_options_with_same_family']">
+                    <div class="irfl-review-div-item">
+                        There was a split decision (2 vs 2) between two <u>related</u> types <b>{{_imageClassificationTask.serverData['options'][0]}}</b> and  <b>{{_imageClassificationTask.serverData['options'][1]}}</b>
+                    </div>
+                    <div class="irfl-review-div-item">
+                        You chose <b>{{_imageClassificationTask.serverData['worker_label']}}</b>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

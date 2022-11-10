@@ -2,9 +2,10 @@ import {ChangeDetectorRef, Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import {Candidate} from '../../types/candidate';
-import {Observable, Subject, Subscription, timer} from 'rxjs';
+import {Observable, of, Subject, Subscription, timer} from 'rxjs';
 import {ServerRequestService} from '../../services/server-request.service';
 import {
+    getIRFLTask,
     irflExampleIndexIDMap,
 } from '../../types/task-dictionary';
 import {IRFLTask} from '../../types/irfl-task';
@@ -107,7 +108,7 @@ export class ExploreComponent implements OnInit, OnDestroy {
     getTaskFromServer(index: number): Observable<any> {
         const id = this.getQualificationId(index);
         if (id === undefined) {
-            const response$: Observable<any> = this.serverRequestService.getRandomIRFLTask(this.selectedCandidates)
+            const response$: Observable<any> = of(getIRFLTask('idiom'))
             return response$.pipe(tap((task) => irflExampleIndexIDMap.set(index, task.id)))
         }
         return this.serverRequestService.getIRFLTask(id, true);

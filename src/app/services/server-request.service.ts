@@ -34,13 +34,34 @@ export class ServerRequestService {
     constructor(private httpService: HttpClient) {
     }
 
-    getRandomIRFLTask(id, example: boolean=false): Observable<IRFLTask> {
-        // const url = example ? `https://gvlab-backend.herokuapp.com/task/example/solve/${id}` : `https://gvlab-backend.herokuapp.com/task/mturk/solve/${id}`
-        const url = `${serverURL}/task/mturk/solve_create/${id}`
-        // return this.httpService.get<any>(url).pipe(map((task) => {
-        //     return this.createNewGuessTheAssociationsTask(task);
-        // }));
-        return of(getIRFLTask('idiom'))
+
+    getWorkerStats(id): Observable<any> {
+        const url = `${serverURL}/statistics/${id}`
+        return this.httpService.get<any>(url).pipe(map((task: any) => {
+            return task
+        }));
+    }
+
+    getWorkerSpacialAnswers(id): Observable<any> {
+        const url = `${serverURL}/spacial-answers/${id}`
+        return this.httpService.get<any>(url).pipe(map((serverTaskGroup: ServerTaskGroup) => {
+            return serverTaskGroup.tasks.map((task: any) => {
+                const irflImage: IRFLImage = new IRFLImage(task.image_url, task.image_name);
+                return new ImageClassificationTask(
+                    irflImage,
+                    task.type,
+                    task.phrase,
+                    task.type === 'idiom' ? task.definitions.map((definition: any) => definition?.definition || definition)
+                        .sort((a,b) => a.length - b.length) : [],
+                    ImageCategoriesEnum.Default,
+                    task.id,
+                    task.category,
+                    task.hint,
+                    task,
+                    serverTaskGroup.ID
+                );
+            });
+        }));
     }
 
     getIRFLTask(id, example: boolean=false): Observable<IRFLTask> {

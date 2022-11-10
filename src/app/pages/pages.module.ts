@@ -40,6 +40,7 @@ import {ChartModule} from 'primeng/chart';
 import {AccordionModule} from 'primeng/accordion';
 import {ImageClassificationBoardComponent} from '../image-classification-board/image-classification-board.component';
 import { MturkImageClassificationTaskComponent } from './mturk-image-classification-task/mturk-image-classification-task.component';
+import {MurkPersonalProfileComponent} from './mturk-personal-profile/murk-personal-profile.component';
 
 const routes: Routes = [
   { path: IRFLTaskPath, component: ExploreComponent },
@@ -93,7 +94,8 @@ const routes: Routes = [
     PersonalDetailsFormComponent,
     ReportFormComponent,
     LeaderboardComponent,
-    MturkImageClassificationTaskComponent
+    MturkImageClassificationTaskComponent,
+    MurkPersonalProfileComponent
   ],
   exports: [
     MainComponent,
