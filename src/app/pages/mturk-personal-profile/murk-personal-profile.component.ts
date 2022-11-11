@@ -46,11 +46,13 @@ export class MurkPersonalProfileComponent extends MturkTask implements OnInit, O
     window.name = 'IRFL'
     this.id = this.activeRouter.snapshot.params.id
     if (this.id && typeof this.id === 'string') {
+      const plusAnalysis = this.id.includes('+')
+      this.id = this.id.split('+')[0]
       this.serverRequestService.getWorkerStats(this.id).subscribe(stats => this.workerStats = stats)
       this.serverRequestService.getWorkerSpacialAnswers(this.id).subscribe((tasks: ImageClassificationTask[]) => {
+        this.imageClassificationTasks = tasks.filter((task: any) => plusAnalysis || !task.serverData['answer_family_different_from_two_options_with_different_family'])
         this.turkSubmitTo = this.activeRouter.snapshot.queryParams.turkSubmitTo
         this.assignmentId = this.activeRouter.snapshot.queryParams.assignmentId
-        this.imageClassificationTasks = tasks
       });
     }
     console.log(this.activeRouter.snapshot)
