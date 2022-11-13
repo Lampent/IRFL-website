@@ -121,6 +121,8 @@
     <div *ngIf="annotations" class="annotations-details">{{annotations}}</div>
     <div *ngIf="annotations" class="annotations-details">{{'Agreement: ' + annotationsAgreement}}</div>
     <div *ngIf="workerStar" class="annotations-details">{{'Star: ' + workerStar}}</div>
+    <div *ngIf="annotations" class="annotations-details">{{'IRFL_id: ' + this._imageClassificationTask.irflImage.name + '_' + this._imageClassificationTask.phrase}}</div>
+    <div *ngIf="annotations" class="annotations-details">{{'UUID: ' + this._imageClassificationTask.id + '_' + this._imageClassificationTask.phrase}}</div>
 
     <div class="hint" [ngStyle]="{'opacity': showHint ? 1 : 0}">
         <div style="position: absolute">
