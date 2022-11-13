@@ -3,11 +3,11 @@
 <div class="analogy-container">
     <div class="cue-line-container" style="padding-bottom: 20px">
         <div class="flex-center" style="padding-bottom: 10px; width: 100%;">
-            <div class="main-description first-main-description" *ngIf="isFirst && _imageClassificationTask.type === 'idiom' && !reviewMode">
+            <div class="main-description first-main-description" id="pink-box" *ngIf="isFirst && _imageClassificationTask.type === 'idiom' && !reviewMode">
                 <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
                     image and the phrase.</p>
-                <p style="padding-bottom: 8px;"><b>Figurative Literal:</b> The image conveys one or more definitions of the idiom to some extent, <b>and</b> it literally illustrates the phrase
-                    <b>(not the definitions) </b> <u>or</u> visualizes the phrase objects/entities.</p>
+                <p style="padding-bottom: 8px;"><b>Figurative Literal:</b> The image conveys one or more definitions of the idiom to some extent, <b>and</b> it literally illustrates the <b>phrase </b>
+                    <u>or</u> visualizes the <b>phrase</b> objects/entities.</p>
                 <p style="padding-bottom: 8px;"><b>Figurative:</b> The image conveys one or more definitions of the idiom to some extent, <b>and it does <u>not</u></b> literally illustrate the phrase
                     or visualize its objects/entities.</p>
                 <p style="padding-bottom: 8px;"><b>Caption:</b> The image is not <u>Figurative Literal</u> and <u>Figurative</u>. It illustrates the <u>phrase</u> (not the definitions) literally.</p>
@@ -31,8 +31,8 @@
                 <i class="close-icon fa-solid fa-circle-xmark" (click)="toggleInfo()"></i>
                 <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
                     image and the phrase.</p>
-                <p style="padding-bottom: 8px;"><b>Figurative Literal:</b> The image conveys one or more definitions of the idiom to some extent, <b>and</b> it literally illustrates the phrase
-                    <b>(not the definitions) </b> <u>or</u> visualizes the phrase objects/entities.</p>
+                <p style="padding-bottom: 8px;"><b>Figurative Literal:</b> The image conveys one or more definitions of the idiom to some extent, <b>and</b> it literally illustrates the <b>phrase </b>
+                    <u>or</u> visualizes the <b>phrase</b> objects/entities.</p>
                 <p style="padding-bottom: 8px;"><b>Figurative:</b> The image conveys one or more definitions of the idiom to some extent, <b>and it does <u>not</u></b> literally illustrate the phrase
                     or visualize its objects/entities.</p>
                 <p style="padding-bottom: 8px;"><b>Caption:</b> The image is not <u>Figurative Literal</u> and <u>Figurative</u>. It illustrates the <u>phrase</u> (not the definitions) literally.</p>
@@ -46,7 +46,7 @@
                         target="_blank">here</a>.</b></p>
             </div>
             <div class="cue-board">
-                <div class="label board-title">Phrase</div>
+                <div class="label board-title pink-box" id='phrase-title'>Phrase</div>
                 <form class="example-form">
                     <mat-form-field class="example-full-width no-underline-mat-field" appearance="fill">
                         <input matInput [formControl]="phraseFormControl" [readonly]="true" autocomplete="off"/>
@@ -56,8 +56,8 @@
                     </mat-form-field>
                 </form>
             </div>
-            <img class="tree-icon" src="assets/img/tree%20icon.png" (click)="toggleTree()">
-            <i class="fas fa-info-circle" aria-hidden="true" (click)="toggleInfo()"></i>
+            <img class="tree-icon" src="assets/img/tree%20icon.png" id="tree-button" (click)="toggleTree()">
+            <i class="fas fa-info-circle" aria-hidden="true" id='instructions-icon'  (click)="toggleInfo()"></i>
         </div>
 
         <div style="padding-top: 10px" *ngIf="this._imageClassificationTask.definitions.length > 0">
@@ -65,7 +65,7 @@
                 <!--                <div class="label board-title">Definitions</div>-->
                 <div class="example-full-width">
                     <ul class="definitions-list">
-                        <li style="color: #4d5568 !important;">Definitions:</li>
+                        <li style="color: #4d5568 !important;" id="definitions-title">Definitions:</li>
                         <li style="word-break: break-word"
                             *ngFor="let definition of this._imageClassificationTask.definitions; let i = index;">{{i + 1 + '. ' + definition}}</li>
                     </ul>
