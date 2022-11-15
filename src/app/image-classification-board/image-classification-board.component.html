@@ -115,6 +115,14 @@
                         You chose <b>{{_imageClassificationTask.serverData['worker_label']}}</b>
                     </div>
                 </li>
+                <li class="irfl-review-div" *ngIf="_imageClassificationTask.serverData['answer_specified']">
+                    <div class="irfl-review-div-item">
+                        There correct category is <b>{{_imageClassificationTask.serverData['category']}}</b>
+                    </div>
+                    <div class="irfl-review-div-item">
+                        You chose <b>{{_imageClassificationTask.serverData['worker_label']}}</b>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
