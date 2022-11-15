@@ -1,7 +1,7 @@
 <div class="wrapper">
     <canvas id="confetti" [ngStyle]="{position: 'absolute', 'pointer-events': 'none'}"></canvas>
     <div class="page-header header-filter">
-        <div class="container center-container" *ngIf="imageClassificationTasks?.length">
+        <div class="container center-container" *ngIf="imageClassificationTasks?.length || workerStats">
             <div class="content-center brand">
                 <div style="color:black; font-size: 30px; padding-bottom: 20px">
                     Dear worker, this is your personal profile page.<br>
