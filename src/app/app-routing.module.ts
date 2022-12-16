@@ -10,6 +10,7 @@ import {MturkSolveComponent} from './pages/mturk-irfl-task/mturk-solve.component
 import {LeaderboardComponent} from './pages/leaderboard/leaderboard.component';
 import {MturkImageClassificationTaskComponent} from './pages/mturk-image-classification-task/mturk-image-classification-task.component';
 import {MurkPersonalProfileComponent} from './pages/mturk-personal-profile/murk-personal-profile.component';
+import {MturkLeaderboardComponent} from './pages/mturk leaderboard/mturk-leaderboard.component';
 
 export const IRFLTaskPath = 'task';
 export const leaderboard = 'leaderboard';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'download', component: DownloadComponent },
   { path: 'explore', component: ExploreComponent },
   { path: leaderboard, component: LeaderboardComponent },
+  { path: 'mturk/leaderboard', component: MturkLeaderboardComponent },
   { path: 'mturk/task/:id', component: MturkSolveComponent },
   {path: 'mturk/image/:id', component: MturkImageClassificationTaskComponent},
   {path: 'profile/:id', component: MurkPersonalProfileComponent},

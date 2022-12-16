@@ -1,0 +1,48 @@
+<app-navbar [isCollapsed]="isCollapsed"></app-navbar>
+<div class="wrapper">
+    <div class="page-header header-filter">
+        <div class="container center-container">
+            <div class="nav-tabs-danger">
+                    <div class="content-center brand ai-leaderboard">
+                        <h4 class="main-label">
+                            Mturk Leaderboard 🏆
+                        </h4>
+                        <div class="leaderboard-container">
+                            <div class="container">
+                                <ul class="responsive-table">
+                                    <li class="table-header">
+                                        <div class="col-leaderboard col-2-AI-leaderboard">Worker</div>
+                                        <div class="col-leaderboard col-3-leaderboard">Figurative Literal</div>
+                                        <div class="col-leaderboard col-3-leaderboard">Figurative</div>
+                                        <div class="col-leaderboard col-3-leaderboard">Caption</div>
+                                        <div class="col-leaderboard col-3-leaderboard">Partial Objects</div>
+                                        <div class="col-leaderboard col-3-leaderboard">None</div>
+                                        <div class="col-leaderboard col-3-leaderboard">Images</div>
+                                    </li>
+
+                                    <li class="table-row" *ngFor="let index of indexes$ | async">
+                                        <div class="col-leaderboard col-2-AI-leaderboard" data-label="Worker">{{(leaderboard$ | async)?.worker_id[index]}}</div>
+                                        <div class="col-leaderboard" data-label="Figurative Literal">{{((leaderboard$ | async)?.Figurative_Literal_agreement[index] * 100).toFixed(2)}}</div>
+                                        <div class="col-leaderboard" data-label="Figurative">{{((leaderboard$ | async)?.Figurative_agreement[index] * 100).toFixed(2)}}</div>
+                                        <div class="col-leaderboard" data-label="Caption">{{((leaderboard$ | async)?.Caption_agreement[index] * 100).toFixed(2)}}</div>
+                                        <div class="col-leaderboard" data-label="Partial Objects">{{((leaderboard$ | async)?.Partial_Objects_agreement[index] * 100).toFixed(2)}}</div>
+                                        <div class="col-leaderboard" data-label="None">{{((leaderboard$ | async)?.None_agreement[index] * 100).toFixed(2)}}</div>
+                                        <div class="col-leaderboard" data-label="Images">{{(leaderboard$ | async)?.images_annotated[index]}}</div>
+<!--                                        <div class="col-leaderboard col-4-leaderboard" data-label="cat_2">{{model['cat_2']}}</div>-->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <a>Maintained by Lampent</a>
+            </div>
+        </div>
+    </footer>
+</div>

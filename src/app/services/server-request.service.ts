@@ -34,7 +34,6 @@ export class ServerRequestService {
     constructor(private httpService: HttpClient) {
     }
 
-
     getWorkerStats(id): Observable<any> {
         const url = `${serverURL}/statistics/${id}`
         return this.httpService.get<any>(url).pipe(map((task: any) => {
@@ -126,6 +125,11 @@ export class ServerRequestService {
                 );
             });
         }));
+    }
+
+    getMturkLeaderboard(): Observable<any> {
+        const url = `${serverURL}/mturk/leaderboard`;
+        return this.httpService.get<any>(url);
     }
 
     sendReportForm(data: object) {
