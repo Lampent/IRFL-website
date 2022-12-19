@@ -7,7 +7,7 @@
                 <div class="main-description" *ngIf="showInfo" [innerHTML]="info">
                 </div>
                 <div class="cue-board" [ngStyle]="{'width': '100%'}">
-                    <div class="label board-title">{{_irflTask.type === 'idiom' ? 'Idiom' : 'Simile'}}</div>
+                    <div class="label board-title">{{_irflTask.type === 'idiom' ? 'Idiom' : 'Idiom'}}</div>
                     <form class="example-form">
                         <mat-form-field class="example-full-width no-underline-mat-field" appearance="fill">
                             <input matInput [formControl]="cueFormControl" [readonly]="true" autocomplete="off"/>
