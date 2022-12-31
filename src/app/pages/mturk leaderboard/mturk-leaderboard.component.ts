@@ -23,20 +23,19 @@ export class MturkLeaderboardComponent implements OnInit {
     serverRequestService.getMturkLeaderboard().subscribe(leaderboard => this.leaderboard$.next(leaderboard));
     this.indexes$ = this.leaderboard$.pipe(map(table =>
         [...Array(table['worker_id'].length).keys()]
-        .filter((index) => table['images_annotated'][index] > 50)
+        .filter((index) => table['images_annotated'][index] > 250)
         .sort((a,b) => this.calculate_worker_score(table, b) - this.calculate_worker_score(table, a))))
     this.leaderboard$.subscribe(l => console.log(l))
     this.indexes$.subscribe(l => console.log(l))
   }
 
   calculate_worker_score(table, index) {
-    const scalar = (100/6) / 100
+    const scalar = (100/5) / 100
     return table['Figurative_Literal_agreement'][index] * scalar +
     table['Figurative_agreement'][index] * scalar +
     table['Caption_agreement'][index] * scalar +
     table['Partial_Objects_agreement'][index] * scalar +
-    table['None_agreement'][index] * scalar +
-    table['images_annotated'][index] * scalar;
+    table['None_agreement'][index] * scalar;
   }
 
   ngOnInit(): void {

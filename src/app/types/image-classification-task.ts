@@ -1,18 +1,21 @@
 import {Jsonable} from './jsonable';
-import {ImageCategoriesEnum} from './image-categories-enum';
+import {ImageCategoriesEnum, SimilesConceptsCategoriesEnum} from './image-categories-enum';
 import {IRFLImage} from './IRFLImage';
 import {IRFLFigureOfSpeechType} from './irfl-figure-of-speech.type';
 
 export class ImageClassificationTask implements Jsonable {
 
     constructor(irflImage: IRFLImage, type: IRFLFigureOfSpeechType, phrase: string = '', definitions: string[] = [], category: ImageCategoriesEnum = ImageCategoriesEnum.Default,
-                id = '', correctCategory: ImageCategoriesEnum = ImageCategoriesEnum.Default, hint = '', serverData: object = {}, groupID: string = '') {
-        this.type = type;
+                id = '', correctCategory: ImageCategoriesEnum = ImageCategoriesEnum.Default, hint = '', serverData: object = {}, groupID: string = '',
+                secondaryCategory = SimilesConceptsCategoriesEnum.Default, correctSecondaryCategory = SimilesConceptsCategoriesEnum.Default) {
+        this.type = 'simile';
         this.id = id;
         this.serverData = serverData;
         this.irflImage = irflImage;
         this.phrase = phrase;
         this.category = category;
+        this.secondaryCategory = secondaryCategory;
+        this.correctSecondaryCategory = correctSecondaryCategory;
         this.correctCategory = correctCategory;
         this.hint = hint;
         this.definitions = definitions.map(this.capitalizeFirstLetter);
@@ -23,6 +26,8 @@ export class ImageClassificationTask implements Jsonable {
     phrase: string;
     type: IRFLFigureOfSpeechType
     definitions: string[];
+    secondaryCategory: SimilesConceptsCategoriesEnum;
+    correctSecondaryCategory: SimilesConceptsCategoriesEnum;
     category: ImageCategoriesEnum;
     correctCategory: ImageCategoriesEnum;
     hint: string;
@@ -32,7 +37,7 @@ export class ImageClassificationTask implements Jsonable {
 
     static clone(task: ImageClassificationTask) {
         return new ImageClassificationTask(JSON.parse(JSON.stringify(task.irflImage)), task.type, task.phrase, task.definitions,
-            task.category, task.id, task.correctCategory, task.hint, task.serverData, task.groupID)
+            task.category, task.id, task.correctCategory, task.hint, task.serverData, task.groupID, task.secondaryCategory, task.correctSecondaryCategory)
     }
 
     capitalizeFirstLetter(sentence) {
@@ -48,11 +53,18 @@ export class ImageClassificationTask implements Jsonable {
     }
 
     isClassified() {
-        return this.category !== ImageCategoriesEnum.Default;
+        return this.type === 'simile' ? (this.category !== ImageCategoriesEnum.Default && this.secondaryCategory !== SimilesConceptsCategoriesEnum.Default)
+            : this.category !== ImageCategoriesEnum.Default;
     }
 
     isClassifiedCorrect() {
-        return this.category !== ImageCategoriesEnum.Default && this.category === this.correctCategory;
+        if (this.isClassified()){
+            if (this.type === 'simile') {
+                return this.category === this.correctCategory && this.secondaryCategory === this.correctSecondaryCategory;
+            } else {
+                return this.category === this.correctCategory;
+            }
+        }
     }
 
     getHint() {
@@ -65,6 +77,7 @@ export class ImageClassificationTask implements Jsonable {
 
     clear() {
         this.category = ImageCategoriesEnum.Default;
+        this.secondaryCategory = SimilesConceptsCategoriesEnum.Default;
     }
 
     getJSON() {

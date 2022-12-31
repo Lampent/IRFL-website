@@ -1,7 +1,7 @@
 import {AfterViewInit, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {ImageClassificationTask} from '../types/image-classification-task';
-import {ImageCategoriesEnum} from '../types/image-categories-enum';
+import {ImageCategoriesEnum, SimilesConceptsCategoriesEnum, SimilesImagesCategoriesEnum} from '../types/image-categories-enum';
 import {Magnify} from '../types/magnify';
 
 @Component({
@@ -10,8 +10,10 @@ import {Magnify} from '../types/magnify';
   styleUrls: ['./image-classification-board.component.scss']
 })
 export class ImageClassificationBoardComponent extends Magnify implements OnInit, AfterViewInit {
-  categories = Object.values(ImageCategoriesEnum)
+  secondaryCategories = Object.values(SimilesConceptsCategoriesEnum)
+  categories = Object.values(ImageCategoriesEnum);
   _imageClassificationTask: ImageClassificationTask = null;
+  isSimile = false;
   noSelection = true;
   showInfo = false;
   showTree = false;
@@ -30,7 +32,8 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
 
   constructor(private changeDetectionRef: ChangeDetectorRef) {
     super(String(Math.floor(Math.random() * 10000000000)));
-    this.categories.pop();
+    this.secondaryCategories.pop();
+
   }
 
   ngOnInit(): void {
@@ -50,6 +53,9 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
   @Input()
   set imageClassificationTask(task: ImageClassificationTask) {
     this._imageClassificationTask = task;
+    this.isSimile = this._imageClassificationTask.type === 'simile';
+    this.categories = this.isSimile ? Object.values(SimilesImagesCategoriesEnum) as any : Object.values(ImageCategoriesEnum) as any
+    this.categories.pop();
     const annotationsData = this._imageClassificationTask?.serverData['annotations']
     this.annotations = annotationsData ?
         JSON.stringify(annotationsData.map(annotation => {return{worker: annotation['worker_id'], category: annotation['category']}})) :
@@ -67,9 +73,10 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
     this._submit = status;
   }
 
-  selectCategory(category: ImageCategoriesEnum): void {
+  selectCategory(category: ImageCategoriesEnum, secondCategory: SimilesConceptsCategoriesEnum=null): void {
     if (!this._submit && this.imageLoaded) {
-      this._imageClassificationTask.category = category;
+      this._imageClassificationTask.category = !!category ? category : this._imageClassificationTask.category;
+      this._imageClassificationTask.secondaryCategory = !!secondCategory ? secondCategory : this._imageClassificationTask.secondaryCategory;
       if (this._imageClassificationTask.isClassified()) {
         this.selected$.emit(this._imageClassificationTask);
       }

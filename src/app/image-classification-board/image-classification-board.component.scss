@@ -17,6 +17,17 @@
   justify-content: center;
 }
 
+.secondary-category-list {
+  display: flex;
+  text-align: start;
+  font-size: 1rem;
+  padding-bottom: 5px;
+  max-height: 60px;
+  height: 100%;
+  width: 230px;
+  padding-left: 0 !important;
+}
+
 .category-list, .definitions-list {
   text-align: start;
   font-size: 1.2rem;
@@ -27,6 +38,11 @@
 .category-list {
   height: 100%;
   padding-left: 0 !important;
+}
+
+.irfl-secondary-category {
+  border: solid 2px #e2e2e2 !important;
+  height: 100% !important;
 }
 
 .irfl-category, .irfl-review-div {
@@ -207,7 +223,7 @@ text-align: center;
 .images-board {
 position: relative;
 display: flex;
-flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .fas {

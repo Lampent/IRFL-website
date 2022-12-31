@@ -6,3 +6,17 @@ export enum ImageCategoriesEnum {
     None = 'None',
     Default = 'Default'
 }
+
+export enum SimilesImagesCategoriesEnum {
+    Figurative = 'Figurative',
+    Opposite = 'Opposite',
+    Natural = 'Natural',
+    Default = 'Default'
+}
+
+export enum SimilesConceptsCategoriesEnum {
+    Target = 'Target',
+    Source = 'Source',
+    None = 'None',
+    Default = 'Default'
+}

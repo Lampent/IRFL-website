@@ -57,7 +57,9 @@ export class ServerRequestService {
                     task.category,
                     task.hint,
                     task,
-                    serverTaskGroup.ID
+                    serverTaskGroup.ID,
+                    task.secondary_category,
+                    task.correct_secondary_category
                 );
             });
         }));
@@ -86,29 +88,10 @@ export class ServerRequestService {
         }));
     }
 
-    getIRFLImageClassificationTask(id, example: boolean=false): Observable<ImageClassificationTask> {
-        const url = `${serverURL}/task/image/${id}`
-        return this.httpService.get<any>(url).pipe(map((task: ServerTask) => {
-            const irflImage: IRFLImage = new IRFLImage(task.image_url, task.image_name);
-            return new ImageClassificationTask(
-                irflImage,
-                task.type,
-                task.phrase,
-                task.type === 'idiom' ? task.definitions.map((definition: any) => definition?.definition || definition)
-                    .sort((a,b) => a.length - b.length) : [],
-                ImageCategoriesEnum.Default,
-                task.ID,
-                task.correct_category,
-                task.hint,
-                task
-            );
-        }));
-    }
-
     getIRFLImageClassificationTasks(id, example: boolean=false): Observable<ImageClassificationTask[]> {
         const url = `${serverURL}/task/image/${id}`
         return this.httpService.get<any>(url).pipe(map((serverTaskGroup: ServerTaskGroup) => {
-            return serverTaskGroup.tasks.map((task) => {
+            return serverTaskGroup.tasks.map((task: any) => {
                 const irflImage: IRFLImage = new IRFLImage(task.image_url, task.image_name);
                 return new ImageClassificationTask(
                     irflImage,
@@ -121,7 +104,9 @@ export class ServerRequestService {
                     task.correct_category,
                     task.hint,
                     task,
-                    serverTaskGroup.ID
+                    serverTaskGroup.ID,
+                    task.secondary_category,
+                    task.correct_secondary_category
                 );
             });
         }));

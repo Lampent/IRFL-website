@@ -60,7 +60,7 @@
             <i class="fas fa-info-circle" aria-hidden="true" id='instructions-icon'  (click)="toggleInfo()"></i>
         </div>
 
-        <div style="padding-top: 10px" *ngIf="this._imageClassificationTask.definitions.length > 0">
+        <div style="padding-top: 10px" *ngIf="this._imageClassificationTask.definitions.length > 0 && _imageClassificationTask.type != 'simile'">
             <div class="definitions-board box-shadow">
                 <!--                <div class="label board-title">Definitions</div>-->
                 <div class="example-full-width">
@@ -82,7 +82,15 @@
         </div>
 
         <div class="images-board" >
-            <ul class="category-list" *ngIf="!reviewMode">
+            <ul class="secondary-category-list" *ngIf="!reviewMode && isSimile">
+                <li class="irfl-category irfl-secondary-category" (click)="selectCategory(null, category)"
+                    *ngFor="let category of secondaryCategories; let i = index;"
+                    [ngClass]="{
+                    'selected-category': this._imageClassificationTask.secondaryCategory == category,
+                    'correct-category': this._imageClassificationTask.correctSecondaryCategory == category && showCorrectAnswer
+                    }">{{category}}</li>
+            </ul>
+            <ul class="category-list" [style]="{'padding-top': isSimile ? '12px !important' : '0'}" *ngIf="!reviewMode">
                 <li class="irfl-category" (click)="selectCategory(category)"
                     *ngFor="let category of categories; let i = index;"
                     [ngClass]="{

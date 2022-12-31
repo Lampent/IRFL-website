@@ -10,6 +10,7 @@ export interface ServerTask {
     'image_name': string,
     'image_url': string,
     'correct_category': ImageCategoriesEnum,
+    'correct_secondary_category': ImageCategoriesEnum,
     'hint': string,
     'literal': boolean,
     'phrase': string,

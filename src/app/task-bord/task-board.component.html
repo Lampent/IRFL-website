@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="right-board-container" *ngIf="this._irflTask.definitions.length > 0">
+        <div class="right-board-container" *ngIf="this._irflTask.type === 'idiom' && this._irflTask.definitions.length > 0">
             <div class="definitions-board">
 <!--                <div class="label board-title">Definitions</div>-->
                 <div class="example-full-width">
