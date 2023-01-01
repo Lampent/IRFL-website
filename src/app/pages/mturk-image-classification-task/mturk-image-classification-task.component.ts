@@ -15,7 +15,6 @@ import {filter, takeUntil, throttleTime} from 'rxjs/operators';
   styleUrls: ['./mturk-image-classification-task.component.scss']
 })
 export class MturkImageClassificationTaskComponent extends MturkTask implements OnInit, OnDestroy, AfterContentChecked {
-
   hint = ''
   date = new Date();
   pagination = 3;

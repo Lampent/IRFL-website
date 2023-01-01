@@ -46,7 +46,9 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
   }
 
   init() {
-    this.phraseFormControl.setValue(this._imageClassificationTask.phrase)
+    const phrase = this.isSimile ? `The ${this._imageClassificationTask.serverData['target_concept']} is ${this._imageClassificationTask.phrase}` :
+        this._imageClassificationTask.phrase;
+    this.phraseFormControl.setValue(phrase)
     this.detectChanges();
   }
 
@@ -77,6 +79,19 @@ export class ImageClassificationBoardComponent extends Magnify implements OnInit
     if (!this._submit && this.imageLoaded) {
       this._imageClassificationTask.category = !!category ? category : this._imageClassificationTask.category;
       this._imageClassificationTask.secondaryCategory = !!secondCategory ? secondCategory : this._imageClassificationTask.secondaryCategory;
+      if (!!secondCategory) {
+        this._imageClassificationTask.category = SimilesImagesCategoriesEnum.Default as any
+        this.categories = Object.values(SimilesImagesCategoriesEnum) as any
+        this.categories.pop()
+        if (this._imageClassificationTask.secondaryCategory === SimilesConceptsCategoriesEnum.Source) {
+          const natural =  this.categories.pop()
+          this.categories.pop()
+          this.categories.push(natural)
+        } else if (this._imageClassificationTask.secondaryCategory === SimilesConceptsCategoriesEnum.None) {
+          this.categories = [SimilesImagesCategoriesEnum.Natural] as any
+          this._imageClassificationTask.category = SimilesImagesCategoriesEnum.Natural as any
+        }
+      }
       if (this._imageClassificationTask.isClassified()) {
         this.selected$.emit(this._imageClassificationTask);
       }
