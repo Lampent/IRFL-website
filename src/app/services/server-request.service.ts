@@ -74,9 +74,9 @@ export class ServerRequestService {
 
     getIRFLTasks(id): Observable<IRFLTask[]> {
         const url = `${serverURL}/task/${id}`
-        return this.httpService.get<any>(url).pipe(map((tasks: any) => {
+        return this.httpService.get<any>(url).pipe(map((task: any) => {
             console.log(getIRFLTask('idiom'))
-            return tasks.map(task => new IRFLTask(
+            return [new IRFLTask(
                 task['type'],
                 task['candidates'].map(candidate => new Candidate(candidate['image'], candidate['name'], candidate['answer'])),
                 task['phrase'],
@@ -84,7 +84,7 @@ export class ServerRequestService {
                 task['definitions'].sort((a,b) => a.length - b.length),
                 JSON.parse(task['images_metadata']),
                 task['id']
-                ))
+                )]
         }));
     }
 

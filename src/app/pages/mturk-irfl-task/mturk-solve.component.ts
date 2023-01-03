@@ -17,7 +17,7 @@ export class MturkSolveComponent extends MturkTask implements OnInit, OnDestroy 
     pagination = 3;
     pagination1 = 1;
     answers: Map<number, Candidate> = new Map<number, Candidate>();
-    testMode = false;
+    testMode = true;
     _submit = false;
     // goodJobHint = 'Good Job!';
     turkSubmitTo = '';
