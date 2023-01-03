@@ -8,7 +8,6 @@ export class ImageClassificationTask implements Jsonable {
     constructor(irflImage: IRFLImage, type: IRFLFigureOfSpeechType, phrase: string = '', definitions: string[] = [], category: ImageCategoriesEnum = ImageCategoriesEnum.Default,
                 id = '', correctCategory: ImageCategoriesEnum = ImageCategoriesEnum.Default, hint = '', serverData: object = {}, groupID: string = '',
                 secondaryCategory = SimilesConceptsCategoriesEnum.Default, correctSecondaryCategory = SimilesConceptsCategoriesEnum.Default) {
-        this.type = 'simile';
         this.id = id;
         this.serverData = serverData;
         this.irflImage = irflImage;

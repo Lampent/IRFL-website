@@ -3,7 +3,7 @@
 <div class="analogy-container">
     <div class="cue-line-container" style="padding-bottom: 20px">
         <div class="flex-center" style="padding-bottom: 10px; width: 100%;">
-            <div class="main-description first-main-description" id="pink-box" *ngIf="isFirst && _imageClassificationTask.type === 'idiom' && !reviewMode">
+            <div class="main-description first-main-description" id="pink-box" *ngIf="isFirst && !isSimile && !reviewMode">
                 <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
                     image and the phrase.</p>
                 <p style="padding-bottom: 8px;"><b>Figurative Literal:</b> The image conveys one or more definitions of the idiom to some extent, <b>and</b> it literally illustrates the <b>phrase </b>
@@ -27,7 +27,7 @@
                 <i class="close-icon fa-solid fa-circle-xmark" (click)="toggleTree()"></i>
                 <img src="assets/img/steps%20tree.PNG">
             </div>
-            <div class="main-description" *ngIf="showInfo && _imageClassificationTask.type === 'idiom'">
+            <div class="main-description" *ngIf="showInfo && !isSimile">
                 <i class="close-icon fa-solid fa-circle-xmark" (click)="toggleInfo()"></i>
                 <p style="padding-bottom: 7px;">Choose the most correct category that describe the relation between the
                     image and the phrase.</p>
@@ -60,7 +60,7 @@
             <i class="fas fa-info-circle" aria-hidden="true" id='instructions-icon'  (click)="toggleInfo()"></i>
         </div>
 
-        <div style="padding-top: 10px" *ngIf="this._imageClassificationTask.definitions.length > 0 && _imageClassificationTask.type != 'simile'">
+        <div style="padding-top: 10px" *ngIf="this._imageClassificationTask.definitions.length > 0 && !isSimile">
             <div class="definitions-board box-shadow">
                 <!--                <div class="label board-title">Definitions</div>-->
                 <div class="example-full-width">
