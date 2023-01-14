@@ -75,16 +75,29 @@ export class ServerRequestService {
     getIRFLTasks(id): Observable<IRFLTask[]> {
         const url = `${serverURL}/task/${id}`
         return this.httpService.get<any>(url).pipe(map((task: any) => {
-            console.log(getIRFLTask('idiom'))
-            return [new IRFLTask(
-                task['type'],
-                task['candidates'].map(candidate => new Candidate(candidate['image'], candidate['name'], candidate['answer'])),
-                task['phrase'],
-                task['numOfSolution'],
-                task['definitions'].sort((a,b) => a.length - b.length),
-                JSON.parse(task['images_metadata']),
-                task['id']
+            if (task['number_of_tasks'] === 200) {
+                return task['tasks'].map((subTask: any) => {
+                    return new IRFLTask(
+                        subTask['type'],
+                        subTask['candidates'].map(candidate => new Candidate(candidate['image'], candidate['name'], candidate['answer'])),
+                        subTask['phrase'],
+                        subTask['numOfSolution'],
+                        subTask['definitions'] ? subTask['definitions'].sort((a,b) => a.length - b.length) : [],
+                        JSON.parse(subTask['images_metadata']),
+                        subTask['id']
+                    )
+                })
+            } else {
+                return [new IRFLTask(
+                    task['type'],
+                    task['candidates'].map(candidate => new Candidate(candidate['image'], candidate['name'], candidate['answer'])),
+                    task['phrase'],
+                    task['numOfSolution'],
+                    task['definitions'] ? task['definitions'].sort((a,b) => a.length - b.length) : [],
+                    JSON.parse(task['images_metadata']),
+                    task['id']
                 )]
+            }
         }));
     }
 
