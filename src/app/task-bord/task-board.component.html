@@ -1,13 +1,13 @@
 <canvas [id]="confettiID" class="confetti" [ngStyle]="{position: 'absolute', 'pointer-events': 'none'}"></canvas>
 <h3 style="text-transform: none;">{{title}}</h3>
 <div class="analogy-container">
-    <div class="cue-line-container" style="padding-bottom: 20px">
+    <div class="cue-line-container" style="padding-bottom: 10px">
         <div class="right-board-container">
             <div class="board top-board">
                 <div class="main-description" *ngIf="showInfo" [innerHTML]="info">
                 </div>
                 <div class="cue-board" [ngStyle]="{'width': '100%'}">
-                    <div class="label board-title">{{_irflTask.type === 'idiom' ? 'Idiom' : 'Idiom'}}</div>
+<!--                    <div class="label board-title">{{_irflTask.type}}</div>-->
                     <form class="example-form">
                         <mat-form-field class="example-full-width no-underline-mat-field" appearance="fill">
                             <input matInput [formControl]="cueFormControl" [readonly]="true" autocomplete="off"/>
@@ -29,7 +29,6 @@
 <!--                <div class="label board-title">Definitions</div>-->
                 <div class="example-full-width">
                     <ul class="definitions-list">
-                        <li style="color: #4d5568 !important;">Definitions:</li>
                         <li *ngFor="let definition of this._irflTask.definitions; let i = index;">{{i+1 +'. ' + definition}}</li>
                     </ul>
                 </div>
