@@ -83,7 +83,7 @@ export class ServerRequestService {
                         subTask['phrase'],
                         subTask['numOfSolution'],
                         subTask['definitions'] ? subTask['definitions'].sort((a,b) => a.length - b.length) : [],
-                        JSON.parse(subTask['images_metadata']),
+                        task,
                         subTask['id']
                     )
                 })
@@ -94,7 +94,7 @@ export class ServerRequestService {
                     task['phrase'],
                     task['numOfSolution'],
                     task['definitions'] ? task['definitions'].sort((a,b) => a.length - b.length) : [],
-                    JSON.parse(task['images_metadata']),
+                    task,
                     task['id']
                 )]
             }
