@@ -2,6 +2,9 @@ import {Jsonable} from './jsonable';
 import {ImageCategoriesEnum, SimilesConceptsCategoriesEnum} from './image-categories-enum';
 import {IRFLImage} from './IRFLImage';
 import {IRFLFigureOfSpeechType} from './irfl-figure-of-speech.type';
+import {QUERIES_BLACKLIST} from '../../assets/constants';
+
+
 
 export class ImageClassificationTask implements Jsonable {
 
@@ -17,7 +20,7 @@ export class ImageClassificationTask implements Jsonable {
         this.correctSecondaryCategory = correctSecondaryCategory;
         this.correctCategory = correctCategory;
         this.hint = hint;
-        this.definitions = definitions.map(this.capitalizeFirstLetter);
+        this.definitions = definitions.filter((query: string) => !QUERIES_BLACKLIST.includes(query.toLowerCase())).map(this.capitalizeFirstLetter);
         this.groupID = groupID;
     }
     id: string = '';
