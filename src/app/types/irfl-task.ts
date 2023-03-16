@@ -1,6 +1,7 @@
 import {Candidate} from './candidate';
 import {Jsonable} from './jsonable';
 import {IRFLFigureOfSpeechType} from './irfl-figure-of-speech.type';
+import {QUERIES_BLACKLIST} from '../../assets/constants';
 
 export class IRFLTask implements Jsonable {
     id: string = '';
@@ -16,7 +17,7 @@ export class IRFLTask implements Jsonable {
         this.id = id;
         this.candidates = candidates;
         this.phrase = phrase;
-        this.definitions = definitions;
+        this.definitions = definitions.filter((query: string) => !QUERIES_BLACKLIST.includes(query.toLowerCase())).map(this.capitalizeFirstLetter);
         this.numOfSolution = numOfSolution;
         this.serverData = serverData;
     }
@@ -33,6 +34,14 @@ export class IRFLTask implements Jsonable {
 
     init() {
         this.clearCandidates()
+    }
+
+    capitalizeFirstLetter(sentence) {
+        try {
+            return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+        } catch (e) {
+            return sentence
+        }
     }
 
     isTaskSolved(mturk = false) {
