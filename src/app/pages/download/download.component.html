@@ -10,30 +10,145 @@
                         <div class="card">
                             <div class="card-header">
                                 <tabset class="nav-tabs-danger">
-                                    <tab heading="5 candidates">
-                                        <b>Current dataset version:</b> v1.0 (released in October 2022)<br>
-                                        This CSV contains the dataset IRFL, 5 candidates.<br><br>
-                                        <a>
+                                    <h2>Dataset</h2>
+                                    <tab heading="Idioms" (selectTab)="onSelectedTab($event)">
+                                        <b>Current dataset version:</b> v1.0 (released in March 2023)<br>
+                                        This JSON contains the dataset of idioms and their matching images.<br><br>
+                                        <a href="https://github.com/irfl-dataset/IRFL/blob/main/assets/dataset/idioms.json" target="_blank">
                                             <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
                                         </a><br>
-                                        This file is under the CC-BY 4.0 license. The csv records are structured as follows:
-                                        <div class="highlight">
-                                            <code [style.color]="'black'">
-                                                candidates:       ...<br>
-                                                solutions:       ...<br>
-                                                num_solutions:                                                        ...<br>
-                                                num_candidates:                                                          ...<br>
-                                                phrase:                                                          ...<br>
-                                                definitions:                                  ....<br>
-                                                jaccard_mean:                                                 ...<br>
-                                                jaccard_std:                                                   ...<br>
-                                                ID:                                                                    ...<br>
-                                            </code>
-                                        </div>
-                                        <br>
-                                        <b>Note:</b> We do not distribute image files as we do not legally own them. The annotation files contain image URLs.<br>
-                                        <b>Usage Restrictions:</b> IRFL should only be used for non-commercial research.
+                                        This file is under the CC-BY 4.0 license.<br/>
+                                        The keys are idioms and the values are a list of matching images. Each image looks as follow:
                                     </tab>
+                                    <tab heading="Metaphors" (selectTab)="onSelectedTab($event)">
+                                        <b>Current dataset version:</b> v1.0 (released in March 2023)<br>
+                                        This JSON contains the dataset of metaphors and their matching images.<br><br>
+                                        <a href="https://github.com/irfl-dataset/IRFL/blob/main/assets/dataset/metaphors.json" target="_blank">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license.<br/>
+                                        The keys are metaphors and the values are a list of matching images. Each image looks as follow:
+                                    </tab>
+                                    <tab heading="Similes" (selectTab)="onSelectedTab($event)">
+                                        <b>Current dataset version:</b> v1.0 (released in March 2023)<br>
+                                        This JSON contains the dataset of similes and their matching images.<br><br>
+                                        <a href="https://github.com/irfl-dataset/IRFL/blob/main/assets/dataset/similes.json" target="_blank">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license.<br/>
+                                        The keys are similes and the values are a list of matching images. Each image looks as follow:
+                                    </tab>
+                                    <div class="highlight">
+                                        <code [style.color]="'black'">
+                                            annotations:       ...<br>
+                                            category:       ...<br>
+                                            definitions:                                                        ...<br>
+                                            img:                                                          ...<br>
+                                            literal_candidate:                                                          ...<br>
+                                            phrase:                                  ....<br>
+                                            query:                                                 ...<br>
+                                            rank:                                                   ...<br>
+                                            source:                                                                    ...<br>
+                                            uuid:                                                                   ...<br>
+                                            IRFL_id:                                                                   ...<br>
+                                        </code>
+                                    </div>
+                                    <br>
+                                    <b>Note:</b> We do not distribute image files as we do not legally own them. The annotation files contain image URLs.<br>
+                                    <b>Usage Restrictions:</b> IRFL should only be used for non-commercial research.<br><br>
+                                    <h2>Understanding Task</h2>
+                                    <div *ngIf="selectedTab === 'Idioms'">
+                                        This CSV contains the understanding task of idioms.<br><br>
+                                        <a href="https://github.com/irfl-dataset/IRFL/blob/main/assets/tasks/idiom_understanding_task.csv" target="_blank">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license.<br/>
+                                    </div>
+                                    <div *ngIf="selectedTab === 'Metaphors'">
+                                        This CSV contains the understanding task of metaphors.<br><br>
+                                        <a href="https://github.com/irfl-dataset/IRFL/blob/main/assets/tasks/metaphor_understanding_task.csv" target="_blank">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license.<br/>
+                                    </div>
+                                    <div *ngIf="selectedTab === 'Similes'">
+                                        This CSV contains the understanding task of similes.<br><br>
+                                        <a href="https://github.com/irfl-dataset/IRFL/blob/main/assets/tasks/simile_understanding_task.csv" target="_blank">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license.<br/>
+                                    </div>
+                                    <div class="highlight" *ngIf="selectedTab == 'Idioms'">
+                                        <code [style.color]="'black'">
+                                            phrase: ...<br>
+                                            query:  ...<br>
+                                            distractors:  ...<br>
+                                            answer: ...<br>
+                                            figurative_type: ...<br>
+                                            images_metadata: ...<br>
+                                            type: ...<br>
+                                            definition: ...<br>
+                                        </code>
+                                    </div>
+                                    <div class="highlight" *ngIf="selectedTab != 'Idioms'">
+                                        <code [style.color]="'black'">
+                                            phrase: ...<br>
+                                            distractors:  ...<br>
+                                            answer: ...<br>
+                                            figurative_type: ...<br>
+                                            images_metadata: ...<br>
+                                            type: ...<br>
+                                        </code>
+                                    </div>
+                                    <br>
+                                    <b>Note:</b> We do not distribute image files as we do not legally own them. The annotation files contain image URLs.<br>
+                                    <b>Usage Restrictions:</b> IRFL should only be used for non-commercial research.<br><br>
+                                    <h2>Preference Task</h2>
+                                    <div *ngIf="selectedTab === 'Idioms'">
+                                        This CSV contains the preference task of idioms.<br><br>
+                                        <a href="https://github.com/irfl-dataset/IRFL/blob/main/assets/tasks/idiom_preference_task.csv" target="_blank">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license.<br/>
+                                    </div>
+                                    <div *ngIf="selectedTab === 'Metaphors'">
+                                        This CSV contains the preference task of metaphors.<br><br>
+                                        <a href="https://github.com/irfl-dataset/IRFL/blob/main/assets/tasks/metaphor_preference_task.csv" target="_blank">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license.<br/>
+                                    </div>
+                                    <div *ngIf="selectedTab === 'Similes'">
+                                        This CSV contains the preference task of similes.<br><br>
+                                        <a href="https://github.com/irfl-dataset/IRFL/blob/main/assets/tasks/simile_preference_task.csv" target="_blank">
+                                            <button class="btn btn-neutral"><i class="download-icon tim-icons icon-cloud-download-93"></i>Download </button>
+                                        </a><br>
+                                        This file is under the CC-BY 4.0 license.<br/>
+                                    </div>
+                                    <div class="highlight" *ngIf="selectedTab == 'Idioms'">
+                                        <code [style.color]="'black'">
+                                            phrase: ...<br>
+                                            definition: ...<br>
+                                            first_category: ...<br>
+                                            second_category: ...<br>
+                                            type: ...<br>
+                                            figurative_type: ...<br>
+                                            images_metadata: ...<br>
+                                        </code>
+                                    </div>
+                                    <div class="highlight" *ngIf="selectedTab != 'Idioms'">
+                                        <code [style.color]="'black'">
+                                            phrase: ...<br>
+                                            first_category: ...<br>
+                                            second_category: ...<br>
+                                            type: ...<br>
+                                            figurative_type: ...<br>
+                                            images_metadata: ...<br>
+                                        </code>
+                                    </div>
+                                    <br>
+                                    <b>Note:</b> We do not distribute image files as we do not legally own them. The annotation files contain image URLs.<br>
+                                    <b>Usage Restrictions:</b> IRFL should only be used for non-commercial research.<br><br>
                                 </tabset>
                             </div>
                         </div>

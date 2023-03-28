@@ -6,21 +6,22 @@
                 <h4 class="h1-seo">IRFL: Image Recognition of Figurative Language
                 </h4>
                 <h3 style="padding-top: 2rem">
-                    Five images and {{selectedFigureOfSpeech === 'idiom' ? 'an idiom' : 'a simile '}} are presented below.
+                    Four images and {{selectedFigureOfSpeech}} are presented below.
                     <br/>
-
-                    <h3 *ngIf="selectedFigureOfSpeech === 'idiom'"> Choose an image that illustrates the idiom literally,
-                        and an image that visualize or convey one or more definitions of the idiomatic phrase. </h3>
-                    <h3 *ngIf="selectedFigureOfSpeech === 'simile'"> Choose an image that illustrates the simile literally,
-                        and an image that visualize or convey the simile concept. </h3>
+                    <h3 *ngIf="selectedFigureOfSpeech === 'an idiom'"> Choose the image that conveys one or more definitions of the idiom. </h3>
+                    <h3 *ngIf="selectedFigureOfSpeech === 'a metaphor'"> Choose the image that conveys the metaphorical message. </h3>
+                    <h3 *ngIf="selectedFigureOfSpeech === 'a simile'"> Choose the image that matches the simile. </h3>
                     <br/>
                 </h3>
                 <tabset class="nav-tabs-danger">
-                    <tab heading="Simile" (selectTab)="onSimileTabSelected()">
-                        <app-task-board *ngIf="selectedFigureOfSpeech === 'simile'" class="analogies-board" [irflTask]="simile" [enablePointer]="true"></app-task-board>
+                    <tab heading="Idiom" (selectTab)="onIdiomTabSelected()">
+                        <app-task-board *ngIf="selectedFigureOfSpeech === 'an idiom'" class="analogies-board" [irflTask]="idiom" [enablePointer]="true"></app-task-board>
                     </tab>
-                    <tab heading="idiom" (selectTab)="onIdiomTabSelected()">
-                        <app-task-board *ngIf="selectedFigureOfSpeech === 'idiom'" class="analogies-board" [irflTask]="idiom" [enablePointer]="true"></app-task-board>
+                    <tab heading="Simile" (selectTab)="onSimileTabSelected()">
+                        <app-task-board *ngIf="selectedFigureOfSpeech === 'a simile'" class="analogies-board" [irflTask]="simile" [enablePointer]="true"></app-task-board>
+                    </tab>
+                    <tab heading="Metaphor" (selectTab)="onMetaphorTabSelected()">
+                        <app-task-board *ngIf="selectedFigureOfSpeech === 'a metaphor'" class="analogies-board" [irflTask]="metaphor" [enablePointer]="true"></app-task-board>
                     </tab>
                 </tabset>
 
@@ -36,14 +37,14 @@
                 <div class="stats-row">
                     <div class="stats-block">
                         <div class="stat-label">10K+</div>
-                        <div class="stat-description">Tasks</div>
+                        <div class="stat-description">Images</div>
                     </div>
                     <div class="stats-block">
-                        <div class="stat-label"><60%</div>
+                        <div class="stat-label"><52%</div>
                         <div class="stat-description">Model Success Rate</div>
                     </div>
                     <div class="stats-block">
-                        <div class="stat-label">>90%</div>
+                        <div class="stat-label">>97%</div>
                         <div class="stat-description">Human Successes Rate</div>
                     </div>
                 </div>
@@ -55,6 +56,15 @@
             <div class="container">
                 <h3 class="mb-5 sub-title">Paper</h3>
                 <div class="abstract">
+                    <img src="/assets/img/paper/ACL23__IRFL%20(7)_page-0001.jpg"/>
+                    <img src="/assets/img/paper/ACL23__IRFL%20(7)_page-0002.jpg"/>
+                    <img src="/assets/img/paper/ACL23__IRFL%20(7)_page-0003.jpg"/>
+                    <img src="/assets/img/paper/ACL23__IRFL%20(7)_page-0004.jpg"/>
+                    <img src="/assets/img/paper/ACL23__IRFL%20(7)_page-0005.jpg"/>
+                    <img src="/assets/img/paper/ACL23__IRFL%20(7)_page-0006.jpg"/>
+                    <img src="/assets/img/paper/ACL23__IRFL%20(7)_page-0007.jpg"/>
+                    <img src="/assets/img/paper/ACL23__IRFL%20(7)_page-0008.jpg"/>
+                    <img src="/assets/img/paper/ACL23__IRFL%20(7)_page-0009.jpg"/>
                 </div>
             </div>
         </div>
@@ -63,18 +73,6 @@
                 <div id="images">
                     <h3 class="mb-5 sub-title">Authors</h3>
                     <div class="row">
-                        <div class="col-sm-3 col-6 mt-5 mt-sm-0">
-                            <small class="d-block text-uppercase font-weight-bold mb-4">
-                                    Pikachu
-                            </small>
-                            <a>
-                                <img
-                                        alt="Raised image"
-                                        class="img-fluid rounded shadow-lg"
-                                        src="/assets/img/pikachu.jpg"
-                                />
-                            </a>
-                        </div>
                         <div class="col-sm-3 col-6 mt-5 mt-sm-0">
                             <small class="d-block text-uppercase font-weight-bold mb-4">
                                     Lampent

@@ -42,7 +42,7 @@
 <!--    </div>-->
     <div class="left-board-container">
         <div class="board left-board">
-            <div class="images-board">
+            <div class="images-board" [ngClass]="{'images-board-pointer': enablePointer}">
                 <div [ngClass]="{'analogy-image-container': !isSixCandidates, 'analogy-image-container-six': isSixCandidates , 'analogy-image-container-twelve': isTwelveCandidates}"
                      *ngFor="let candidate of _candidates"
                      (click)="selectCandidate(candidate)">

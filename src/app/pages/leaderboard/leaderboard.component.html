@@ -7,20 +7,33 @@
                         <h4 class="main-label">
                             AI Models Leaderboard 🏆
                         </h4>
-                        <div class="medium-note padding-bottom">To submit your model performance to our leaderboard, send us the details to <a href="mailto:ron.yosef@mail.huji.ac.il">ron.yosef@mail.huji.ac.il</a>.</div>
+                        <div class="submit-label">To submit your model performance to our leaderboard, send us the details to <a href="mailto:irfl.dataset@gmail.com
+">irfl.dataset@gmail.com</a>.
+
+                        </div>
+                        <tabset class="task-tabs">
+                            <tab heading="Understanding Task" (selectTab)="onUnderstandingTaskSelected()">
+
+                            </tab>
+                            <tab heading="Preference Task" (selectTab)="onPreferenceTaskSelected()">
+
+                            </tab>
+                        </tabset>
                         <div class="leaderboard-container">
                             <div class="container">
                                 <ul class="responsive-table">
                                     <li class="table-header">
                                         <div class="col-leaderboard col-2-AI-leaderboard">Model</div>
-                                        <div class="col-leaderboard col-3-leaderboard">cat_1</div>
-                                        <div class="col-leaderboard col-4-leaderboard">cat_2</div>
+                                        <div class="col-leaderboard col-3-leaderboard">Idiom</div>
+                                        <div class="col-leaderboard col-5-leaderboard">Metaphor</div>
+                                        <div class="col-leaderboard col-4-leaderboard">Simile</div>
                                     </li>
 
-                                    <li class="table-row" *ngFor="let model of models">
+                                    <li class="table-row" *ngFor="let model of (selectedTask == 'understanding' ? understandingTaskModels : preferenceTaskModels)">
                                         <div class="col-leaderboard col-2-AI-leaderboard" data-label="Model">{{model.name}}</div>
-                                        <div class="col-leaderboard col-3-leaderboard" data-label="cat_1">{{model["cat_1"]}}</div>
-                                        <div class="col-leaderboard col-4-leaderboard" data-label="cat_2">{{model['cat_2']}}</div>
+                                        <div class="col-leaderboard col-3-leaderboard" data-label="cat_1">{{model["cat_1"] != '-' && selectedTask == 'understanding' ? (model["cat_1"] + '%') : model["cat_1"]}}</div>
+                                        <div class="col-leaderboard col-4-leaderboard" data-label="cat_2">{{selectedTask == 'understanding' ? (model["cat_2"] + '%') : model["cat_2"]}}</div>
+                                        <div class="col-leaderboard col-5-leaderboard" data-label="cat_3">{{selectedTask == 'understanding' ? (model["cat_3"] + '%') : model["cat_3"]}}</div>
                                     </li>
                                 </ul>
                             </div>

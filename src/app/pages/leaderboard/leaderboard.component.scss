@@ -13,8 +13,12 @@
   padding-top: 1rem;
 }
 
-.padding-bottom {
-  padding-bottom: 5rem;
+.submit-label {
+  padding-bottom: 4rem;
+}
+
+.task-tabs {
+  padding-bottom: 1rem;
 }
 
 .main-label {
@@ -68,12 +72,8 @@ h2 {
   color: #fd969e !important;
 }
 
-.medium-note {
-  //max-width: 590px;
-}
-
 ::ng-deep .nav-tabs {
-  width: 300px;
+  width: 460px;
   display: flex;
   justify-content: space-around;
 }

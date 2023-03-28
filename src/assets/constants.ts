@@ -15,5 +15,6 @@ export const QUERIES_BLACKLIST = [
     'not available',
     'of or pertaining to the spending of cash rather than using credit',
     'to disillusion',
-    ''
+    '',
+    'synonym of go down the toilet: to fail'
 ]

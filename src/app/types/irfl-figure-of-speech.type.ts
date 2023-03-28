@@ -1,1 +1,1 @@
-export type IRFLFigureOfSpeechType = 'simile' | 'idiom'
+export type IRFLFigureOfSpeechType = 'simile' | 'idiom' | 'metaphor'

@@ -13,6 +13,7 @@ export class DownloadComponent implements OnInit, OnDestroy {
   date = new Date();
   pagination = 3;
   pagination1 = 1;
+  selectedTab = 'Idioms'
 
   constructor() {
     window.name = 'IRFL'
@@ -24,5 +25,9 @@ export class DownloadComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     const body = document.getElementsByTagName('body')[0];
     body.classList.remove('index-page');
+  }
+
+  onSelectedTab(event) {
+    this.selectedTab = event['heading']
   }
 }

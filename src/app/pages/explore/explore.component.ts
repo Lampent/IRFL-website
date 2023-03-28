@@ -30,14 +30,13 @@ export class ExploreComponent implements OnInit, OnDestroy {
     responseTextColor = '';
     cancel$ = new Subject();
     irflTask: IRFLTask;
-    selectedCandidates = 5;
-    showReportForm = false;
+    selectedCandidates = 'idiom';
     beatTheAIMode = false;
     candidates = [
-        {value: '5', viewValue: '5'},
-        {value: '6', viewValue: '6'},
-        {value: '10', viewValue: '10'},
-        {value: '12', viewValue: '12'}
+        {value: 'idiom', viewValue: 'Idioms'},
+        {value: 'simile', viewValue: 'Similes'},
+        {value: 'metaphor', viewValue: 'Metaphors'},
+        {value: 'random', viewValue: 'Random'}
     ];
 
     constructor(private router: Router,
@@ -56,28 +55,11 @@ export class ExploreComponent implements OnInit, OnDestroy {
     }
 
     init() {
-        this.showReportForm = false;
         this.practiceMode = false;
         this.exampleIndex = 1;
         this.initExample(1)
     }
 
-
-    closeReportForm($event) {
-        this.showReportForm = false;
-    }
-
-    onReportFormSubmit(details) {
-        try {
-            details.task = this.irflTask.getJSON();
-            details.userID = '';
-            this.serverRequestService.sendReportForm(details)
-        } catch (error) {
-            console.log('Failed to send report form')
-            console.log(error)
-        }
-        this.showReportForm = false;
-    }
 
     initExample(index: number) {
         this.cancel$.next();
@@ -101,17 +83,8 @@ export class ExploreComponent implements OnInit, OnDestroy {
         this.selectedCandidates = candidateOption;
     }
 
-    getQualificationId(index: number) {
-        return irflExampleIndexIDMap.get(index);
-    }
-
     getTaskFromServer(index: number): Observable<any> {
-        const id = this.getQualificationId(index);
-        if (id === undefined) {
-            const response$: Observable<any> = of(getIRFLTask('idiom'))
-            return response$.pipe(tap((task) => irflExampleIndexIDMap.set(index, task.id)))
-        }
-        return this.serverRequestService.getIRFLTask(id, true);
+        return this.serverRequestService.getIRFLTaskEXPLORE(this.selectedCandidates, index);
     }
 
     ngOnDestroy() {

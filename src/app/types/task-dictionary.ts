@@ -54,20 +54,26 @@ export function getIRFLTask(figurativePhrase): IRFLTask {
 
 // examples
 
-guessTheAssociationsDictionary.set('simile', new IRFLTask('simile', [
-    new Candidate(assetsImgPath + 'very-hot.jpeg','random_1'),
-        new Candidate(assetsImgPath + 'round-item.jpeg', 'random_2'),
-        new Candidate(assetsImgPath + 'slow-snail.jpeg', 'answer_1', true),
-        new Candidate(assetsImgPath + 'man-riding-horse.jpeg', 'random_3'),
-        new Candidate(assetsImgPath + 'speed-limit.jpeg', 'answer_2', true),
+guessTheAssociationsDictionary.set('metaphor', new IRFLTask('simile', [
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/36744670862470155497506491464655066946444157754124231517934597776014629841407.jpeg','answer_1', true),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/52288967107188279750550127343755254242956664383648015428849282822431101617588.jpeg', 'random_1'),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/111273200017433720975817290298617695688707084380559820045777847633001713148558.jpeg', 'random_3'),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/1449179304419101242365574356623624414168632003493781599709689619578193643031.jpeg', 'random_2'),
     ],
-    'as slow as snail', 2))
+    'Heart of gold', 1))
+
+guessTheAssociationsDictionary.set('simile', new IRFLTask('simile', [
+    new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/105794735729343558758791773159209313980420667188564839483272499642914406345873.jpeg','random_1'),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/70943955354752672470954323413718219290641183553464951812863941201688356128994.jpeg', 'random_2'),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/35585095411820107275112939303214814215267273998842620789697502632451909082380.jpeg', 'random_3'),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/4430939744430221964616925504651660373662400747811679665458586737286802240835.jpeg', 'answer_2', true),
+    ],
+    'The car is as fast as a cheetah', 1))
 
 guessTheAssociationsDictionary.set('idiom', new IRFLTask('idiom', [
-        new Candidate(assetsImgPath + 'wide-view.jpeg','random_1'),
-        new Candidate(assetsImgPath + 'person-on-the-ropes.jpeg', 'answer_1', true),
-        new Candidate(assetsImgPath + 'drawing-cowboy.jpeg', 'random_1'),
-        new Candidate(assetsImgPath + 'birds-on-tree.jpeg', 'random_3'),
-        new Candidate(assetsImgPath + 'building-on-the-ropes.jpeg', 'answer_2', true),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/96513601428146548879915809708794498353805953083950107152956190180651243664837.jpeg','random_1'),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/47736125946551640474953308455878898556045914017010472446975956290250488934872.jpeg','answer_1', true),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/109972964254647002137339729367011731459704246355181090936177957432479398861860.jpeg', 'random_3'),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/23796295827032113290887548429653331884267814392517910583547523684491604394470.jpeg', 'random_2'),
     ],
-    'on the ropes', 2, ['Showing signs of imminent failure or collapse.']));
+    'On the ropes', 1, ['Showing signs of imminent failure or collapse.']));

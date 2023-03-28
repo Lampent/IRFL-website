@@ -2,7 +2,6 @@ import {Component, OnInit, OnDestroy, ChangeDetectorRef} from '@angular/core';
 import {Router} from '@angular/router';
 import {getIRFLTask, imageClassificationExampleTask} from '../../types/task-dictionary';
 import {IRFLTask} from '../../types/irfl-task';
-import {IRFLFigureOfSpeechType} from '../../types/irfl-figure-of-speech.type';
 
 @Component({
     selector: 'app-main',
@@ -12,7 +11,8 @@ import {IRFLFigureOfSpeechType} from '../../types/irfl-figure-of-speech.type';
 export class MainComponent implements OnInit, OnDestroy {
     simile: IRFLTask = getIRFLTask('simile');
     idiom: IRFLTask = getIRFLTask('idiom');
-    selectedFigureOfSpeech: IRFLFigureOfSpeechType = 'simile';
+    metaphor: IRFLTask = getIRFLTask('metaphor');
+    selectedFigureOfSpeech: 'a simile' | 'an idiom' | 'a metaphor' = 'an idiom';
     imageClassification = imageClassificationExampleTask;
     public window: Window = window;
 
@@ -35,11 +35,16 @@ export class MainComponent implements OnInit, OnDestroy {
 
     onSimileTabSelected() {
         this.idiom.clearCandidates();
-        this.selectedFigureOfSpeech = 'simile';
+        this.selectedFigureOfSpeech = 'a simile';
     }
 
     onIdiomTabSelected() {
         this.simile.clearCandidates()
-        this.selectedFigureOfSpeech = 'idiom';
+        this.selectedFigureOfSpeech = 'an idiom';
+    }
+
+    onMetaphorTabSelected() {
+        this.metaphor.clearCandidates()
+        this.selectedFigureOfSpeech = 'a metaphor';
     }
 }

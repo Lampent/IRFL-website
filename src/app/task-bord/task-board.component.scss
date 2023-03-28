@@ -154,6 +154,9 @@ input {
   width: auto;
   padding: 0.5rem;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .analogy-image-container-six {
@@ -358,6 +361,10 @@ img {
 
 .candidate-selected {
   border: #ff3d0f85 solid 5px;
+}
+
+.images-board-pointer {
+  width: 670px !important;
 }
 
 .AI-selected {

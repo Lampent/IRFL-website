@@ -65,6 +65,20 @@ export class ServerRequestService {
         }));
     }
 
+    getIRFLTaskEXPLORE(type, index): Observable<IRFLTask> {
+        const url = `${serverURL}/task/${type}/${index}`
+        return this.httpService.get<any>(url).pipe(map((task: any) => {
+            return new IRFLTask(
+                task['type'],
+                task['candidates'].map(candidate => new Candidate(candidate['image'], candidate['name'], candidate['answer'])),
+                task['phrase'],
+                task['numOfSolution'],
+                task['definitions'] ? task['definitions'].sort((a,b) => a.length - b.length) : [],
+                task,
+                task['id'])
+        }));
+    }
+
     getIRFLTask(id, example: boolean=false): Observable<IRFLTask> {
         const url = `${serverURL}/task/${id}`
         return this.httpService.get<any>(url).pipe(map((task: any) => {
