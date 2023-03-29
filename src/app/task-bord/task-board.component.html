@@ -9,12 +9,9 @@
                 <div class="cue-board" [ngStyle]="{'width': '100%'}">
 <!--                    <div class="label board-title">{{_irflTask.type}}</div>-->
                     <form class="example-form">
-                        <mat-form-field class="example-full-width no-underline-mat-field" appearance="fill">
-                            <input matInput [formControl]="cueFormControl" [readonly]="true" autocomplete="off"/>
-                            <mat-error *ngIf="!cueFormControl.valid && cueFormControl.value != ''">
-                                Error
-                            </mat-error>
-                        </mat-form-field>
+                        <div class="example-full-width no-underline-mat-field figurative-phrase" style="color: black" appearance="fill">
+                            {{figurativePhrase}}
+                        </div>
                     </form>
                 </div>
                 <div class="associations-board" *ngIf="false">

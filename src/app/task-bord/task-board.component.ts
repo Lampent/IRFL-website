@@ -20,6 +20,7 @@ export class TaskBoardComponent implements OnInit {
     showInfo = false;
     isSixCandidates = false;
     isTwelveCandidates = false;
+    figurativePhrase = '';
     @Input() enableSelection = true;
     @Input() testMode = false;
     @Input() disableSolutionIcons = false;
@@ -28,7 +29,6 @@ export class TaskBoardComponent implements OnInit {
     @Input() enablePointer = false;
     @Input() info: string = '';
     @Output() selected$: EventEmitter<Candidate> = new EventEmitter<Candidate>();
-    cueFormControl = new FormControl('');
 
     constructor(private changeDetectionRef: ChangeDetectorRef) {
     }
@@ -38,7 +38,7 @@ export class TaskBoardComponent implements OnInit {
 
     init() {
         this.clearConfetti();
-        this.cueFormControl.setValue(this._irflTask.phrase)
+        this.figurativePhrase = this._irflTask.phrase
         this.detectChanges();
     }
 

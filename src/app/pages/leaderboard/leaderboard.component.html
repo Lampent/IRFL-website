@@ -31,9 +31,9 @@
 
                                     <li class="table-row" *ngFor="let model of (selectedTask == 'understanding' ? understandingTaskModels : preferenceTaskModels)">
                                         <div class="col-leaderboard col-2-AI-leaderboard" data-label="Model">{{model.name}}</div>
-                                        <div class="col-leaderboard col-3-leaderboard" data-label="cat_1">{{model["cat_1"] != '-' && selectedTask == 'understanding' ? (model["cat_1"] + '%') : model["cat_1"]}}</div>
-                                        <div class="col-leaderboard col-4-leaderboard" data-label="cat_2">{{selectedTask == 'understanding' ? (model["cat_2"] + '%') : model["cat_2"]}}</div>
-                                        <div class="col-leaderboard col-5-leaderboard" data-label="cat_3">{{selectedTask == 'understanding' ? (model["cat_3"] + '%') : model["cat_3"]}}</div>
+                                        <div class="col-leaderboard col-3-leaderboard" data-label="Idiom">{{model["Idiom"] != '-' && selectedTask == 'understanding' ? (model["Idiom"] + '%') : model["Idiom"]}}</div>
+                                        <div class="col-leaderboard col-4-leaderboard" data-label="Metaphor">{{selectedTask == 'understanding' ? (model["Metaphor"] + '%') : model["Metaphor"]}}</div>
+                                        <div class="col-leaderboard col-5-leaderboard" data-label="Simile">{{selectedTask == 'understanding' ? (model["Simile"] + '%') : model["Simile"]}}</div>
                                     </li>
                                 </ul>
                             </div>

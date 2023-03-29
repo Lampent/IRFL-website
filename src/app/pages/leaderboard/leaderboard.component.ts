@@ -15,46 +15,46 @@ export class LeaderboardComponent implements OnInit {
   understandingTaskModels = [
       {
           name: 'Humans',
-          cat_1: '97',
-          cat_2: '99.7',
-          cat_3: '100'
+          Idiom: '97',
+          Metaphor: '99.7',
+          Simile: '100'
       },
       {
           name: 'CLIP-VIT-L/14',
-          cat_1: '17',
-          cat_2: '25',
-          cat_3: '52'
+          Idiom: '17',
+          Metaphor: '25',
+          Simile: '52'
       },
       {
           name: 'CLIP-VIT-B/32',
-          cat_1: '16',
-          cat_2: '23',
-          cat_3: '45'
+          Idiom: '16',
+          Metaphor: '23',
+          Simile: '45'
       },
 
       {
           name: 'CLIP-RN50',
-          cat_1: '14',
-          cat_2: '27',
-          cat_3: '47'
+          Idiom: '14',
+          Metaphor: '27',
+          Simile: '47'
       },
       {
           name: 'CLIP-RN50x64/14',
-          cat_1: '22',
-          cat_2: '30',
-          cat_3: '52'
+          Idiom: '22',
+          Metaphor: '30',
+          Simile: '52'
       },
       {
           name: 'LiT',
-          cat_1: '27',
-          cat_2: '21',
-          cat_3: '19'
+          Idiom: '27',
+          Metaphor: '21',
+          Simile: '19'
       },
       {
           name: 'ViLT',
-          cat_1: '-',
-          cat_2: '23',
-          cat_3: '40'
+          Idiom: '-',
+          Metaphor: '23',
+          Simile: '40'
       }
       // {
       //     name: 'X-VLM',
@@ -62,45 +62,45 @@ export class LeaderboardComponent implements OnInit {
       //     cat_2: '53',
       //     cat_3: '68'
       // }
-  ].sort((a,b) => (Number(b.cat_1) - Number(a.cat_1)) + (Number(b.cat_2) - Number(a.cat_2)) + (Number(b.cat_3) - Number(a.cat_3)))
+  ].sort((a,b) => (Number(b.Idiom) - Number(a.Idiom)) + (Number(b.Metaphor) - Number(a.Metaphor)) + (Number(b.Simile) - Number(a.Simile)))
 
     preferenceTaskModels = [
         {
             name: 'CLIP-VIT-L/14',
-            cat_1: '37',
-            cat_2: '26',
-            cat_3: '44'
+            Idiom: '37',
+            Metaphor: '26',
+            Simile: '44'
         },
         {
             name: 'CLIP-VIT-B/32',
-            cat_1: '36',
-            cat_2: '22',
-            cat_3: '38'
+            Idiom: '36',
+            Metaphor: '22',
+            Simile: '38'
         },
 
         {
             name: 'CLIP-RN50',
-            cat_1: '37',
-            cat_2: '25',
-            cat_3: '38'
+            Idiom: '37',
+            Metaphor: '25',
+            Simile: '38'
         },
         {
             name: 'CLIP-RN50x64/14',
-            cat_1: '39',
-            cat_2: '29',
-            cat_3: '43'
+            Idiom: '39',
+            Metaphor: '29',
+            Simile: '43'
         },
         {
             name: 'LiT',
-            cat_1: '56',
-            cat_2: '25',
-            cat_3: '25'
+            Idiom: '56',
+            Metaphor: '25',
+            Simile: '25'
         },
         {
             name: 'ViLT',
-            cat_1: '-',
-            cat_2: '23',
-            cat_3: '34'
+            Idiom: '-',
+            Metaphor: '23',
+            Simile: '34'
         }
         // {
         //     name: 'X-VLM',
@@ -108,7 +108,7 @@ export class LeaderboardComponent implements OnInit {
         //     cat_2: '53',
         //     cat_3: '68'
         // }
-    ].sort((a,b) => (Number(b.cat_1) - Number(a.cat_1)) + (Number(b.cat_2) - Number(a.cat_2)) + (Number(b.cat_3) - Number(a.cat_3)))
+    ].sort((a,b) => (Number(b.Idiom) - Number(a.Idiom)) + (Number(b.Metaphor) - Number(a.Metaphor)) + (Number(b.Simile) - Number(a.Simile)))
 
   constructor(private leaderboardService: LeaderboardService) {
     this.leaderboard$ = this.leaderboardService.leaderboard;

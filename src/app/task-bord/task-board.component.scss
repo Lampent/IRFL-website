@@ -46,6 +46,14 @@
 }
 
 @media (max-width: 835px) {
+  .analogy-container {
+    max-width: 100vw;
+  }
+
+  .figurative-phrase {
+    padding-top: 10px;
+  }
+
   .top-board {
     display: flex;
     flex-direction: column;
@@ -97,6 +105,14 @@
   justify-content: space-between;
 }
 
+
+
+.figurative-phrase {
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 700;
+}
+
 .example-full-width {
   width: 95%;
 }
@@ -116,8 +132,14 @@ input {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 600px;
+  width: 1188px;
   justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .images-board {
+    width: 670px;
+  }
 }
 
 .fas {
@@ -138,7 +160,10 @@ input {
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 680px) {
+  .images-board {
+    width: 400px;
+  }
   .analogy-image-container {
     flex: 1 0 99% !important; /* explanation below */
   }
@@ -154,6 +179,7 @@ input {
   width: auto;
   padding: 0.5rem;
   cursor: pointer;
+  align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -300,10 +326,8 @@ img {
 @media (max-width: 520px) {
   .cue-line-container {
     display: flex;
-    width: auto;
     justify-content: center;
     flex-direction: column;
-    height: 216px;
   }
 
   .fas-container {
@@ -361,10 +385,6 @@ img {
 
 .candidate-selected {
   border: #ff3d0f85 solid 5px;
-}
-
-.images-board-pointer {
-  width: 670px !important;
 }
 
 .AI-selected {
