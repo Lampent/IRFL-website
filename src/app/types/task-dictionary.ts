@@ -71,9 +71,9 @@ guessTheAssociationsDictionary.set('simile', new IRFLTask('simile', [
     'The car is as fast as a cheetah', 1))
 
 guessTheAssociationsDictionary.set('idiom', new IRFLTask('idiom', [
-        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/96513601428146548879915809708794498353805953083950107152956190180651243664837.jpeg','random_1'),
-        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/47736125946551640474953308455878898556045914017010472446975956290250488934872.jpeg','answer_1', true),
-        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/109972964254647002137339729367011731459704246355181090936177957432479398861860.jpeg', 'random_3'),
-        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/23796295827032113290887548429653331884267814392517910583547523684491604394470.jpeg', 'random_2'),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/66020487709109997092215777699719991374741530395205454421118838028195257364402.jpeg', 'random_1'),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/24885222685426153086889657229090037687514005093093887827369836047343411742552.jpeg','random_2'),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/43961378535185985650180900584580673046708862632076695614527595777841577655561.jpeg','answer_1', true),
+        new Candidate('https://d3f6n9ckq6wheg.cloudfront.net/87000359395187297123922380769873951446814264510785151267015015874517313800304.jpeg', 'random_3'),
     ],
-    'On the ropes', 1, ['Showing signs of imminent failure or collapse.']));
+    'Up a tree', 1, ['Cornered', 'At a loss', 'In or into a disadvantaged or difficult situation']));

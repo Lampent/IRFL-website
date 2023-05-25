@@ -11,6 +11,7 @@
                     {{hint}}
                 </div>
                 <div class="task-container">
+                    <div *ngIf="loadingFirstExample" class="lds-facebook"><div></div><div></div><div></div></div>
                     <app-task-board class="analogies-board" [irflTask]="irflTask"
                                     [enablePointer]="true" [submit]="_submit"
                                     [info]="'Several images are presented below. \n A figurative phrase and number of associated images are given. \n                     Choose the images that best visualize the figurative phrase.'"
