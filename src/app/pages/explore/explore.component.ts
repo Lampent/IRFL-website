@@ -65,7 +65,7 @@ export class ExploreComponent implements OnInit, OnDestroy {
     initExample(index: number) {
         this.cancel$.next();
         this._submit = false;
-        const loadingTimer$ = timer(150).subscribe(() => this.loadingFirstExample = true);
+        const loadingTimer$ = timer(500).subscribe(() => this.loadingFirstExample = true);
         this.showHint('')
             this.getTaskFromServer(index).pipe(takeUntil(this.cancel$)).subscribe((task) => {
                 this.irflTask = task;
