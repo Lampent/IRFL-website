@@ -24,16 +24,20 @@
                                 <ul class="responsive-table">
                                     <li class="table-header">
                                         <div class="col-leaderboard col-2-AI-leaderboard">Model</div>
-                                        <div class="col-leaderboard col-3-leaderboard">Idiom</div>
+                                        <div class="col-leaderboard col-3-leaderboard">Idiom - Figurative</div>
+                                        <div class="col-leaderboard col-3-leaderboard">Idiom - Figurative Literal</div>
                                         <div class="col-leaderboard col-5-leaderboard">Metaphor</div>
-                                        <div class="col-leaderboard col-4-leaderboard">Simile</div>
+                                        <div class="col-leaderboard col-4-leaderboard">Open <br> Simile</div>
+                                        <div class="col-leaderboard col-4-leaderboard">Closed <br> Simile</div>
                                     </li>
 
                                     <li class="table-row" *ngFor="let model of (selectedTask == 'understanding' ? understandingTaskModels : preferenceTaskModels)">
                                         <div class="col-leaderboard col-2-AI-leaderboard" data-label="Model">{{model.name}}</div>
-                                        <div class="col-leaderboard col-3-leaderboard" data-label="Idiom">{{model["Idiom"] != '-' && selectedTask == 'understanding' ? (model["Idiom"] + '%') : model["Idiom"]}}</div>
+                                        <div class="col-leaderboard col-3-leaderboard" data-label="Idiom - Figurative">{{model["IdiomFigurative"] != '-' && selectedTask == 'understanding' ? (model["IdiomFigurative"] + '%') : model["IdiomFigurative"]}}</div>
+                                        <div class="col-leaderboard col-3-leaderboard" data-label="Idiom - Figurative Literal">{{model["IdiomFigurativeLiteral"] != '-' && selectedTask == 'understanding' ? (model["IdiomFigurativeLiteral"] + '%') : model["IdiomFigurativeLiteral"]}}</div>
                                         <div class="col-leaderboard col-4-leaderboard" data-label="Metaphor">{{selectedTask == 'understanding' ? (model["Metaphor"] + '%') : model["Metaphor"]}}</div>
-                                        <div class="col-leaderboard col-5-leaderboard" data-label="Simile">{{selectedTask == 'understanding' ? (model["Simile"] + '%') : model["Simile"]}}</div>
+                                        <div class="col-leaderboard col-5-leaderboard" data-label="Open Simile">{{selectedTask == 'understanding' ? (model["OpenSimile"] + '%') : model["OpenSimile"]}}</div>
+                                        <div class="col-leaderboard col-5-leaderboard" data-label="Closed Simile">{{selectedTask == 'understanding' ? (model["ClosedSimile"] + '%') : model["ClosedSimile"]}}</div>
                                     </li>
                                 </ul>
                             </div>

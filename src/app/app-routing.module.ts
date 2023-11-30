@@ -18,7 +18,6 @@ export const leaderboard = 'leaderboard';
 const routes: Routes = [
   { path: '*', component: MainComponent},
   { path: 'main', component: MainComponent },
-  { path: 'download', component: DownloadComponent },
   { path: 'explore', component: ExploreComponent },
   { path: leaderboard, component: LeaderboardComponent },
   { path: 'mturk/leaderboard', component: MturkLeaderboardComponent },
